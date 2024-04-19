@@ -1,0 +1,435 @@
+<html>
+    <head>
+        <title>Driver Payment Service Form</title>
+        <link rel="icon" href="pcpllogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html{
+                font-size: 10px;
+            }
+            h2{
+                text-align: center;
+                font-size: 2.4rem;
+            }
+            #outer{
+                width: 100%;
+                height: 100%;
+            }
+            #menu{
+                height: 5rem;
+                width: 100%;
+                background: linear-gradient(to right,rgb(225, 135, 93) 0%,rgb(219, 217, 87) 100%);
+            }
+            #entery,#search{
+                height:4.5rem;
+                width: 15rem;
+                margin-top: .5rem;
+                border: none;
+                border-radius: 1rem 1rem 0 0;
+                cursor: pointer;
+                font-size: 1.4rem;
+            }
+            #entery{
+                margin-left: .5rem;
+                background-color: rgb(217, 186, 106);
+            }
+            #search{
+                background-color: #78de93;
+            }
+            #home{
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: blue;
+                margin: 1.7rem 5%;
+                float: right;
+            }
+            body{
+                background: linear-gradient(to bottom,#78de93 0%,#6991c7 100%);
+            }
+            #body{
+                width: 95%;
+                margin: auto;
+            }
+            #d1{
+                height: 3.5rem;
+                width: 100%;
+                background-color: rgb(230, 236, 238);
+                padding-top: 1px;
+                margin-top: 3rem;
+                padding-bottom:3rem;
+            }
+            option{
+                padding-left: 2rem;
+            }
+            #t1{
+                color: white;
+                height: 10rem;
+                width: 100%;
+                font-size: 2.2rem;
+            }
+            td{
+                width: 25%;
+            }
+            #s1,#s2,#s3,#s4{
+                width: 90%;
+                height: 3rem;
+                border-radius:.5rem;
+                margin-top: .5rem;
+            }
+            #da1,#da2{
+                height: 3rem;
+                width: 50%;
+                margin-left: 10%;
+                border-radius: 5px;
+            }
+            #d22{
+                height: 5rem;
+                width: 40rem;
+                margin: auto;
+            }
+            #b01,#b02{
+                height: 3rem;
+                width: 12rem;
+                border-radius: 5rem;
+                background-position: left;
+                background-repeat: no-repeat;
+                background-color: white;
+                border: 1px solid rgb(41, 39, 39);
+                cursor: pointer;
+                font-size: 1.7rem;
+            }
+            #b01{
+                background-image: url(search.png);
+            }
+            #b02{
+                background-image: url(refresh.png);
+                margin-left: 15rem;
+            }
+            #dd{
+                height: auto;
+                width: 100%;
+                margin: auto;
+            }
+            .print{
+                background-color: rgb(81, 10, 223);
+            }
+            .b1{
+                background-color: rgb(28, 169, 28);
+                margin-left: 2%;
+            }
+            .b2{
+                background-color: red;
+                margin-left: 2%;
+            }
+            .pr{
+                background-color: blue;
+                margin:0% 2% 0% 58%;
+            }
+            #b1 {
+                height: 3rem;
+                width: 8%;
+                border: 0;
+                border-radius: 5.6rem;
+                color: #fff;
+                cursor: pointer;
+                font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+                font-size: 1.8rem;
+                transition: all .3s;
+            }
+            #b1:before {
+                background-color: initial;
+                background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+                border-radius: 12.5rem;
+                content: "";
+                opacity: .5;
+                transition: all .3s;
+            }
+            #b1:hover {
+                box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+                transform: scale(1.05);
+            }
+            #t2{
+                width: 100%;
+                border-collapse:collapse;
+                background-color: white;
+                text-align: center;
+            }
+            #t2 th{
+                background-color: wheat;
+                position: sticky;
+                top: 0;
+            }
+            #t2 tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+            #t2 th,#t2 td{
+                height: 3rem;
+                width: 5rem;
+                border: 1px solid black;
+            }
+            #t21{
+                text-align: right;
+            }
+            #t22{
+                height: 250px;
+                overflow-y: auto;
+            }
+            .b1 {
+                height: 3rem;
+                margin-right: 3rem;
+                width: 9%;
+                border: 0;
+                border-radius: 5.6rem;
+                color: #fff;
+                cursor: pointer;
+                font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+                font-size: 1.8rem;
+                transition: all .3s;
+            }
+            .b1:before {
+                background-color: initial;
+                background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+                border-radius: 12.5rem;
+                content: "";
+                opacity: .5;
+                transition: all .3s;
+            }
+            .b1:hover {
+                box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+                transform: scale(1.05);
+            }
+            #b3{
+                background-color: blue;
+                width: 11%;
+            }
+            #b4{
+                background-color: green;
+            }
+            #b5{
+                background-color: red;
+            }
+            @media (max-width:998px) {
+                html{
+                    font-size: 55%;
+                }
+            }
+            @media (max-width:768px) {
+                html{
+                    font-size: 45%;
+                }
+            }
+        </style>
+    </head>
+    <body oncontextmenu="return false;" style="user-select: none;">
+        <div id="outer">
+            <div id="menu">
+                <a href="Drv_Pay.html"><button id="entery">Entry Form</button></a>
+                <a href="Drv_Pay_Ser.html"><button id="search">Service Form</button></a>
+                <a href="dashboard_pl.html" id="home"><font size="4rem">&#x1F3E0;</font> HOME</a>
+            </div>
+            <div id="body">
+                <div id="d1">
+                    <h2>DRIVER &nbsp;&nbsp;&nbsp; PAYMENT &nbsp;&nbsp;&nbsp; SERVICE &nbsp;&nbsp;&nbsp; FORM</h2>
+                </div>
+                <form>
+                    
+                <div id="d2">  
+                    <div id="d21">
+                        <table id="t1">
+                            <tr>
+                                <td>
+                                    <b>Vehicle &nbsp;&nbsp; Number</b> <br> 
+                                    <select id="s1">
+                                        <option disabled selected align="center" value="">---Select Vehicle Number---</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <b>Driver &nbsp;&nbsp; Name</b> <br>
+                                    <select id="s2">
+                                        <option disabled selected align="center" value="">---Select Driver Name---</option>
+                                    </select>
+                                </td>
+                                <td><b>From &nbsp; Date</b><br><input type="date" id="s3"></td>
+                                <td><b>To&nbsp; Date</b><br><input type="date" id="s4"></td>
+                            </tr>
+                        </table>
+                    </div><br><br>
+                    <div id="d22">
+                        <input type="button" id="b01" value="Search" onclick="ser()">
+                        <input type="reset" id="b02" value="Refresh">
+                    </div>
+                </form>
+                </div>
+                <div id="dd">
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                a=document.referrer;
+                if(!(a=='http://localhost/pl_test/Drv_Pay.html' || a=='http://localhost/pl_test/Drv_Pay_Ser.html'))
+                    window.location.href='index.html';
+            });
+            function date(){
+                var dt=new Date()
+                dd=dt.getDate()
+                yy=dt.getFullYear()
+                mm=dt.getMonth()+1
+                if (dd<10)
+                    dd='0'+dd
+                if (mm<10)
+                    mm='0'+mm
+                cd=yy+'-'+mm+'-'+dd;
+                $('#s3').attr('max',cd);
+                $('#s4').attr('max',cd);
+                // var b=new Date().toLocaleDateString().split('/')
+                // // alert(b)
+                // $('#s3').attr('max',b[2]+'-'+b[1]+'-'+b[0])
+            }
+            $(document).on('click','#b3',function(){
+                var conf=confirm("Are you sure want to Download All Record!");
+                if(conf){
+                    $("#t2").table2excel({
+                        exclude: "#th1",
+                        filename: "Driver_Payment.xls"
+                    });
+                }
+            });  
+            function ready1(){
+                $.ajax({
+                    url:'vehicle_expense.py',
+                    method:'post',
+                    data:{
+                        t:'load_drv'
+                    },
+                    success: function(data){
+                        var j=data.split(',,,')
+                        $('#s1').append(j[0]);
+                        $('#s2').append(j[1]);
+                    }
+                });
+            }
+            $(document).ready(function(){
+                ready1();
+                date();
+            });
+            function ser(){
+                flag=true
+                e=$('#s3').val()
+                f=$('#s4').val()
+                if(e=='' && f!=''){
+                    flag=false
+                    alert('Please Enter Statring Date!')
+                    $('#s3').focus()
+                }
+                if(f=='' && e!=''){
+                    flag=false
+                    alert('Please Enter Ending Date!')
+                    $('#s4').focus()
+                }
+                if(e!='' && f!=''){
+                    if(e>f){
+                        flag=false;
+                        alert("From Date Cannot be greater than To Date!")
+                    }
+                }
+                if (flag){
+                    $.ajax({
+                        url:'vehicle_expense.py',
+                        method:'post',
+                        data:{
+                            t:'search_drv',
+                            t1:$("#s1 option:selected").val(),
+                            t2:$("#s2 option:selected").val(),
+                            t3:e,
+                            t4:f
+                        },
+                        success:function(data){
+                            console.log(data)
+                            var j=data.split(',,,')
+                            if(j[1]==10){
+                                $('#dd').html('')
+                                alert(j[0])
+                            }
+                            else
+                                $('#dd').html(j[0])
+                        }
+                    })
+                }
+            }
+            $('#b02').click(function(){
+                // location.reload()
+                $('#dd').html('');
+            })
+        // $(document).on('click', '#r', function () {
+        //     $(this).closest('tr').css("background-color","white")
+        //     if ($(this).prop('checked')) 
+        //     {
+        //         $(this).closest('tr').css("background-color","yellow")
+        //     }
+        // });
+        $(document).on('click', '#b5', function () {
+            var cell=$('input[name="a"]:checked').closest('tr').children("td").text().split('   ');
+            if(cell[0]!=''){
+                var conf=confirm("Are you sure want to Delete Record!")
+                if(conf)
+                {
+                    $.ajax({
+                        url:'vehicle_expense.py',
+                        method:'post',
+                        data:{
+                            t:'delete_drv',
+                            t1:cell[0]
+                        },
+                        success:function(data){
+                            alert(data)
+                            $('input[name="a"]:checked').closest('tr').remove();
+                        }
+                    })
+                }
+            }
+            else
+                alert('Please Select Any Row!')
+        })
+        $(document).on('click','#b4',function(){
+                var j=$('input[name="a"]:checked').closest('tr').children("td").text().split('   ');
+                if(j[0]!=''){
+                    var conf=confirm("Are you sure want to Update Record!")
+                    if(conf){
+                        $.ajax({
+                            url:'vehicle_expense.py',
+                            method:'post',
+                            data:{
+                                t:'update_drv',
+                                t1:j[0],
+                                t2:j[1],
+                                t3:j[2],
+                                t4:j[3],
+                                t5:j[4],
+                                t6:j[5]
+                            },
+                            success:function(data){
+                                alert(data)
+                            }
+                        });
+                    }
+                }
+                else
+                    alert("Please Select Any Row!")
+            });
+            $(document).on('keydown','#e',function(){
+                $(this).css('color','green')
+            });
+            $(document).on('blur','#e',function(){
+                a=$(this).text()
+                $(this).text(a+'   ')
+            });
+            $(document).on('focus','#e',function(){
+                a=$(this).text().trim()
+                $(this).text(a)
+            })
+        </script>
+    </body>
+</html>

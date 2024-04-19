@@ -1,0 +1,332 @@
+<html>
+    <head>
+        <title>Vehicle Exp Service Form</title>
+        <link rel="icon" href="pcpllogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html{
+                font-size: 10px;
+            }
+            h2{
+                text-align: center;
+                font-size: 2.4rem;
+            }
+            #outer{
+                width: 100%;
+                height: 100%;
+            }
+            #menu{
+                height: 5rem;
+                width: 100%;
+                background: linear-gradient(to right,rgb(225, 135, 93) 0%,rgb(219, 217, 87) 100%);
+            }
+            #entery,#search{
+                height:4.5rem;
+                width: 15rem;
+                margin-top: .5rem;
+                border: none;
+                border-radius: 1rem 1rem 0 0;
+                cursor: pointer;
+                font-size: 1.4rem;
+            }
+            #entery{
+                margin-left: .5rem;
+                background-color: rgb(217, 186, 106);
+            }
+            #search{
+                background-color: #78de93;
+            }
+            #home{
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: blue;
+                margin: 1.7rem 5%;
+                float: right;
+            }
+            body{
+                background: linear-gradient(to bottom,#78de93 0%,#6991c7 100%);
+            }
+            #body{
+                width: 95%;
+                margin: auto;
+            }
+            #d1{
+                height: 3.5rem;
+                width: 100%;
+                background-color: rgb(230, 236, 238);
+                padding-top: 1px;
+                margin-top: 3rem;
+                padding-bottom:3rem;
+            }
+            #t1{
+                width: 100%;
+                font-size: 2.2rem;
+            }
+            #t1 td{
+                width: 33%;
+            }
+            #s1,#dt1,#dt2{
+                height: 3.5rem;
+                width:90%;
+            }
+            #d22{
+                text-align: center;
+            }
+            #b1,#b2{
+                height: 3rem;
+                width: 12rem;
+                border-radius: 5rem;
+                background-repeat: no-repeat;
+                background-color: white;
+                border: 1px solid rgb(41, 39, 39);
+                cursor: pointer;
+                font-size: 1.7rem;
+                background-size: 22% 90%;
+            }
+            #b1{
+                background-image: url(search.png);
+                background-position: 5px 3px;
+            }
+            #b2{
+                background-image: url(refresh.png);
+                background-position: 2px 2px;
+                margin-left: 15rem;
+            }
+            #dd{
+                height: 400px;
+            }
+            #t2{
+                width: 100%;
+                border-collapse:collapse;
+                background-color: white;
+                text-align: center;
+            }
+            #t2 th{
+                background-color: wheat;
+                position: sticky;
+                top: 0;
+            }
+            #t2 th,#t2 td{
+                height: 3rem;
+                border: 1px solid black;
+            }
+            #t21{
+                text-align: right;
+            }
+            #t22{
+                height: 370px;
+                overflow-y: auto;
+            }
+            .b1 {
+                height: 3rem;
+                margin-right: 3rem;
+                width: 9%;
+                border: 0;
+                border-radius: 5.6rem;
+                color: #fff;
+                cursor: pointer;
+                font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+                font-size: 1.8rem;
+                transition: all .3s;
+            }
+            .b1:before {
+                background-color: initial;
+                background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+                border-radius: 12.5rem;
+                content: "";
+                opacity: .5;
+                transition: all .3s;
+            }
+            .b1:hover {
+                box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+                transform: scale(1.05);
+            }
+            #b3{
+                background-color: blue;
+                width: 11%;
+            }
+            #b4{
+                background-color: green;
+            }
+            #b5{
+                background-color: red;
+            }
+            @media (max-width:998px) {
+                html{
+                    font-size: 55%;
+                }
+            }
+            @media (max-width:768px) {
+                html{
+                    font-size: 45%;
+                }
+            }
+        </style>
+    </head>
+    <body oncontextmenu="return false;" style="user-select: none;">
+        <div id="outer">
+            <div id="menu">
+                <a href="vehicle_expenses.html"><button id="entery">Entry Form</button></a>
+                <a href="vehicle_exp_service.html"><button id="search">Service Form</button></a>
+                <a href="dashboard_pl.html" id="home"><font size="4rem">&#x1F3E0;</font> HOME</a>
+            </div>
+            <div id="body">
+                <div id="d1">
+                    <h2><b>VEHICLE &nbsp; EXPENSE &nbsp; SERVICE &nbsp; FORM</b></h2>
+                </div>
+                <form>
+                    
+                <div id="d2">  
+                    <div id="d21"><br>
+                        <table id="t1">
+                            <tr><td><b>Vehicle No.</b></td><td><b>From</b></td><td><b>To</b></td></tr>
+                            <tr>
+                                <td><select id="s1"><option align="center" value="" selected disabled>----- Vehicle No. -----</option></select></td>
+                                <td><input type="date" value="" id="dt1"></td>
+                                <td><input type="date" value="" id="dt2"></td>
+                            </tr>
+                        </table>
+                    </div><br><br>
+                    <div id="d22">
+                        <input type="button" id="b1" value="Search">
+                        <input type="reset" id="b2" value="Refresh">
+                    </div>
+                </form>
+                </div>
+                <div id="dd">
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                a=document.referrer;
+                if(!(a=='http://localhost/pl_test/vehicle_expenses.html' || a=='http://localhost/pl_test/vehicle_exp_service.html'))
+                    window.location.href='index.html';
+            });
+            $(document).on('click','#b3',function(){
+                $("#t2").table2excel({
+                    exclude: "#th1",
+                    filename: "vehicle_exp.xls"
+               });
+            });
+            $(document).ready(function(){
+                    b=new Date().toLocaleDateString().split('/')
+                    $('#dt1,#dt2').attr('max',b[2]+'-'+b[1]+'-'+b[0])
+                $.ajax({
+                    url:'vehicle_expense.py',
+                    method:'post',  
+                    data:{
+                        t:'load'
+                    },
+                    success:function(data){
+                        $('#s1').append(data)
+                    }
+                });
+            });
+            flag=true;
+            function dt(){
+                a=$('#dt1').val()
+                b=$('#dt2').val()
+                if(a!='' && b=='' || a=='' && b!=''){
+                    flag=false;
+                    alert('Both Date is required!');
+                }
+                else{
+                    if(a>b){
+                        flag=false;
+                        alert('start date can\'t be less then end date!')
+                    }
+                    else
+                        flag=true;
+                }
+            }
+            $('#b1').click(function(){
+                dt()
+                if(flag)
+                $.ajax({
+                    url:'vehicle_expense.py',
+                    method:'post',  
+                    data:{
+                        t:'search',
+                        t1:$('#s1').val(),
+                        t2:$('#dt1').val(),
+                        t3:$('#dt2').val()
+                    },
+                    success:function(data){
+                        if(data==0){
+                            alert('Record not found!')
+                            $('#dd').html('')
+                        }
+                        else
+                            $('#dd').html(data)
+                        // alert(data)
+                    }
+                });
+            })
+            $('#b2').click(function(){
+                location.reload()
+            })
+        $(document).on('click', '#b5', function () {
+            var cell=$('input[name="a"]:checked').closest('tr').children("td").text().split('   ');
+            d1=cell[0]
+            if(d1){
+                var flag=confirm("Are you sure want to delete!")
+                if(flag)
+                $.ajax({
+                    url:'vehicle_expense.py',
+                    method:'post',
+                    data:{
+                            t:'delete',
+                            t1:d1
+                        },
+                        success:function(data){
+                            alert(data)
+                            $('input[name="a"]:checked').closest('tr').remove()
+                        }
+                })
+            }
+            else
+                alert('Please select any row!')
+        })
+        $(document).on('blur','#e',function(){
+            a=$(this).text()
+            $(this).text(a+"   ")
+        });
+        $(document).on('focus','#e',function(){
+            a=$(this).text().trim()
+            $(this).text(a)
+        });
+        $(document).on('click','#b4',function(){
+            var cell=$('input[name="a"]:checked').closest('tr').children("td").text().split('   ');
+            var d1=cell[0]
+            if(d1){
+                var flag=confirm("Are you sure want to Update!")
+                if(flag)
+                $.ajax({
+                    url:'vehicle_expense.py',
+                    method:'post',
+                    data:{
+                            t:'update',
+                            t1:d1,
+                            t2:cell[1],
+                            t3:cell[2],
+                            t4:cell[3],
+                            t5:cell[4],
+                            t6:cell[5],
+                            t7:cell[6],
+                            t8:cell[7],
+                            t9:cell[8],
+                        },
+                        success:function(data){
+                            alert(data)
+                        }
+                })
+            }
+            else
+                alert('Please select any row!')
+        })
+        </script>
+    </body>
+</html>

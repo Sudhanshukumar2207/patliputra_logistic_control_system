@@ -1,0 +1,358 @@
+<html>
+    <head>
+        <title>Depot Service Form</title>
+        <link rel="icon" href="pcpllogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <style>
+            html{
+                font-size: 10px;
+            }
+            h2{
+                text-align: center;
+                font-size: 2.4rem;
+            }
+            #outer{
+                width: 100%;
+                height: 100%;
+            }
+            #menu{
+                height: 5rem;
+                width: 100%;
+                background: linear-gradient(to right,rgb(225, 135, 93) 0%,rgb(219, 217, 87) 100%);
+            }
+            #entery,#search{
+                height:4.5rem;
+                width: 15rem;
+                margin-top: .5rem;
+                border: none;
+                border-radius: 1rem 1rem 0 0;
+                cursor: pointer;
+                font-size: 1.4rem;
+            }
+            #entery{
+                margin-left: .5rem;
+                background-color: rgb(217, 186, 106);
+            }
+            #search{
+                background-color: #78de93;
+            }
+            #home{
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: blue;
+                margin: 1.7rem 5%;
+                float: right;
+            }
+            body{
+                background: linear-gradient(to bottom,#78de93 0%,#6991c7 100%);
+            }
+            #body{
+                width: 85%;
+                margin: auto;
+            }
+            #d1{
+                height: 3.5rem;
+                background-color: rgb(230, 236, 238);
+                padding-top: .1rem;
+                padding-bottom: 2rem;
+                margin-top: 3rem;
+                padding-bottom: 2rem;
+            }
+            #t1{
+                color: white;
+                height: 10rem;
+                width: 100%;
+                font-size: 2rem;
+            }
+            #t1 td{
+                width: 33.33%;
+            }
+            #s1,#s2{
+                width: 95%;
+                height: 3rem;
+                border-radius: .5rem;
+                margin-top: .5rem;
+                text-align: center;
+            }
+            #d22{
+                height: 50px;
+                width: 500px;
+                margin: auto;
+            }
+            #b1,#b2{
+                height: 3rem;
+                width: 12rem;
+                border-radius: 5rem;
+                background-color: white;
+                border: 1px solid rgb(41, 39, 39);
+                cursor: pointer;
+                font-size: 1.7rem;
+                color: white;
+                text-align: left;
+                padding-left: 2rem;
+            }
+            #b1{
+                background-color: royalblue;
+            }
+            #b2{
+                margin-left: 240px;
+                background-color: red;
+            }
+            #tabl{
+                width: 90%;
+                margin: auto;
+                height: 37rem;
+            }
+            .tab{
+                margin-top: 2rem;
+                color: black;
+                background-color: whitesmoke;
+                width: 100%;
+                text-align: center;
+                font-size: 1.8rem;
+            }
+            .tab,.tab_r,.tab_c,th{
+                border: solid 0.5px black;
+                border-collapse: collapse;
+            }
+            #bt{
+                margin-left:70%;
+            }
+            #upt,#del,#pr{
+                border: none;
+                color: white;
+                font-size: 1.8rem;
+                width: 10rem;
+                height: 3rem;
+                border-radius: 1rem;
+                cursor: pointer;
+            }
+            #pr{
+                background-color: blue;
+            }
+            #upt{
+                margin-left: 2rem;
+                background-image: url(update\ \(1\).png);
+                background-color: #31af53;
+            }
+            #del{
+                background-image: url(delete\ \(1\).png);
+                background-color: red;
+                margin-left: 2rem;
+            }
+            @media (max-width:998px) {
+                html{
+                    font-size: 55%;
+                }
+            }
+            @media (max-width:768px) {
+                html{
+                    font-size: 45%;
+                }
+            }
+        </style>
+    </head>
+    <body oncontextmenu="return false;" style="user-select: none;">
+        <div id="outer">
+            <div id="menu">
+                <a href="DipoENtryForm.html"><button id="entery">Entry Form</button></a>
+                <a href="DipoServiceForm.html"><button id="search">Service Form</button></a>
+                <a href="dashboard_pl.html" id="home"><font size="4rem">&#x1F3E0;</font> HOME</a>
+            </div>
+            <div id="body">
+                <div id="d1">
+                    <h2>DEPOT &nbsp;&nbsp;&nbsp; SERVICE &nbsp;&nbsp;&nbsp; FORM</h2>
+                </div>
+            <form>
+                <div id="d2">  
+                    <div id="d21">
+                        <table id="t1">
+                            <tr>
+                                <td id="td1">
+                                    <b>Principal Company Name</b> <br> 
+                                    <select id="s1"><option disabled selected value="dn" id="dn">---Select Principal Company Name---</option>
+                                    </select>
+                                </td>
+                                <td id="td2"></td>
+                                <td id="td1">
+                                    <b>District</b> <br>
+                                        <select id="s2"><option disabled selected value="dist" id="dist">---Select District---</option>
+                                        </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div><br><br>
+                    <div id="d22">
+                        <input type="button" value="SEARCH" id="b1" class="ser">
+                        <i class='fas fa-search' style='font-size:18px;margin-left: -28px;'></i>
+                        <input type="reset" value="REFRESH" id="b2" class="ref">
+                    </div>
+                </div>
+            </form>
+            </div>
+            <span style="margin-left: 8%;color: white;" id="span"></span>
+                <div id="bt">
+                    <input type="button" value="Downlod" id="pr" class="b1" hidden>
+                    <input type="button" value="UPDATE" id="upt" hidden>
+                    <input type="button" value="DELETE" id="del" hidden>
+                </div>
+                <div id="tabl" style="overflow-y: auto;"></div>
+            </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+        <script>
+            var role=localStorage.getItem('role').trim()
+            $(document).on('click','#pr',function(){
+                $(".tab").table2excel({
+                    exclude: "#th1",
+                    filename: "depot.xls"
+               });
+            }); 
+            $(document).ready(function(){
+                a=document.referrer;
+                if(!(a=='http://localhost/pl_test/DipoServiceForm.html' || a=='http://localhost/pl_test/DipoENtryForm.html'))
+                    window.location.href='index.html';
+            });
+            function ready1(){
+                $.ajax({
+                    url:'DipoEntSer.py',
+                    method:'post',
+                    data:{
+                        x:'cb1'
+                    },
+                    success: function(data){
+                        var j=data.split(',,,')
+                        $('#s1').append(j[0]);
+                        $('#s2').append(j[1]);
+                    }
+                });
+            }
+            $(document).ready(function(){
+                $("#search").css('background-color','#78de93');
+                ready1()
+            });
+            $('.ref').on('click',function(){
+                // $('#tabl').html('');
+                // $('#upt').hide();
+                // $('#del').hide();
+                // $('#pr').hide();
+                // $('#s1').html('<option disabled selected value="dn" id="dn">---Select Principal Company Name---</option>')
+                // $('#s2').html('<option disabled selected value="dist" id="dist">---Select District---</option>')
+                // ready1()
+                // window.location.href='DipoServiceForm.html'
+                location.reload()
+            });
+            $('.ser').on('click',function(){
+                flag=true
+                var cb1=$("#s1 option:selected").val();
+                var cb2=$("#s2 option:selected").val();
+                // if(cb1=='dn'&& cb2=='dist'){
+                //     alert("Please Select Anyone Of them!")
+                //     flag=false
+                // }
+                if(flag){
+                    $.ajax({
+                        url:'DipoEntSer.py',
+                        method:'post',
+                        data:{
+                            x:'search',
+                            t1:cb1,
+                            t2:cb2
+                        },
+                        success:function(data){
+                            if(data==0){
+                                alert("No Record Found!")
+                                $('#tabl').html('');
+                                $('#upt').hide();
+                                $('#del').hide();
+                                $('#pr').hide();
+                            }
+                            else{
+                                $('#tabl').html(data);
+                                $('#del').show();
+                                $('#upt').show();
+                                $('#pr').show();
+                            }
+                        }
+                    });
+                }
+            });
+            $(document).on('click', '.del_bt', function () {
+                if ($(this).prop('checked')) 
+                    $(this).closest('tr').css("background-color","yellow")
+                else if($(this).prop('checked')==false)
+                    $(this).closest('tr').css("background-color","white")
+            });
+            $('#del').on('click',function(){
+                var j=$('input[name="rad"]:checked').closest('tr').children("td").text().split('  ');
+                var hh=j[0]
+                var conf=confirm("Are you sure want to Delete Record!")
+                if(conf){
+                        $.ajax({
+                            url:'DipoEntSer.py',
+                            method:'post',
+                            data:{
+                                x:'delete',
+                                t1:hh
+                            },
+                            success:function(data){
+                                alert(data)
+                                $('input[name="rad"]:checked').closest('tr').remove();
+                            }
+                        });
+                }
+            });
+            $('#upt').on('click',function(){
+                var j=$('input[name="rad"]:checked').closest('tr').children("td").text().split('  ');
+                    q=j[0]
+                    w=j[1]
+                    e=j[2]
+                    r=j[3]
+                    t=j[4]
+                    y=j[5]
+                    u=j[6]
+                    i=j[7]
+                    o=j[8]
+                    p=j[9]
+                    gst=j[10]
+                var conf=confirm("Are you sure want to Update Record!")
+                if(conf){
+                        $.ajax({
+                            url:'DipoEntSer.py',
+                            method:'post',
+                            data:{
+                                x:'update',
+                                t1:q,
+                                t2:w,
+                                t3:e,
+                                t4:r,
+                                t5:t,
+                                t6:y,
+                                t7:u,
+                                t8:i,
+                                t9:o,
+                                t10:p,
+                                t11:gst
+                            },
+                            success:function(data){
+                                alert(data)
+                                // console.log(data)
+                            }
+                        });
+                }
+            });
+            $(document).on('keydown','.z',function(){
+                $(this).css('color','green')
+            });
+            $(document).on('blur','.z',function(){
+                a=$(this).text()
+                $(this).text(a+'  ')
+            });
+            $(document).on('focus','.z',function(){
+                a=$(this).text().trim()
+                $(this).text(a)
+            })
+        </script>
+    </body>
+</html>

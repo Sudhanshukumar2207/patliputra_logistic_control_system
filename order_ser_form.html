@@ -1,0 +1,409 @@
+<html>
+    <head>
+        <title>Order Service Form</title>
+        <link rel="icon" href="pcpllogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html{
+                font-size: 10px;
+            }
+            h2{
+                text-align: center;
+                font-size: 2.4rem;
+            }
+            #outer{
+                width: 100%;
+                height: 100%;
+            }
+            #menu{
+                height: 5rem;
+                width: 100%;
+                background: linear-gradient(to right,rgb(225, 135, 93) 0%,rgb(219, 217, 87) 100%);
+            }
+            #entery,#search{
+                height:4.5rem;
+                width: 15rem;
+                margin-top: .5rem;
+                border: none;
+                border-radius: 1rem 1rem 0 0;
+                cursor: pointer;
+                font-size: 1.4rem;
+            }
+            #entery{
+                margin-left: .5rem;
+                background-color: rgb(217, 186, 106);
+            }
+            #search{
+                background-color: #78de93;
+            }
+            #home{
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: blue;
+                margin: 1.7rem 5%;
+                float: right;
+            }
+            body{
+                background: linear-gradient(to bottom,#78de93 0%,#6991c7 100%);
+            }
+            #body{
+                width: 95%;
+                margin: auto;
+            }
+            #d1{
+                height: 3.5rem;
+                width: 100%;
+                background-color: rgb(230, 236, 238);
+                padding-top: 1px;
+                margin-top: 3rem;
+                padding-bottom:3rem;
+            }
+            option{
+                padding-left: 2rem;
+            }
+            #t1{
+                color: white;
+                height: 10rem;
+                width: 100%;
+                font-size: 2.2rem;
+            }
+            td{
+                width: 25%;
+            }
+            #s1,#s2,#s3,#s4{
+                width: 90%;
+                height: 3rem;
+                border-radius:.5rem;
+                margin-top: .5rem;
+            }
+            #da1,#da2{
+                height: 3rem;
+                width: 50%;
+                margin-left: 10%;
+                border-radius: 5px;
+            }
+            #d22{
+                height: 5rem;
+                width: 40rem;
+                margin: auto;
+            }
+            #b01,#b02{
+                height: 3rem;
+                width: 12rem;
+                border-radius: 5rem;
+                background-position: right;
+                background-repeat: no-repeat;
+                background-color: white;
+                border: 1px solid rgb(41, 39, 39);
+                cursor: pointer;
+                font-size: 1.7rem;
+            }
+            #b01{
+                background-image: url(search.png);
+            }
+            #b02{
+                background-image: url(refresh.png);
+                margin-left: 15rem;
+            }
+            #dd{
+                height: auto;
+                width: 100%;
+                margin: auto;
+            }
+            .print{
+                background-color: rgb(81, 10, 223);
+            }
+            .b1{
+                background-color: rgb(28, 169, 28);
+                margin-left: 2%;
+            }
+            .b2{
+                background-color: red;
+                margin-left: 2%;
+            }
+            .pr{
+                background-color: blue;
+                margin:0% 2% 0% 58%;
+            }
+            #b1 {
+                height: 3rem;
+                width: 8%;
+                border: 0;
+                border-radius: 5.6rem;
+                color: #fff;
+                cursor: pointer;
+                font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+                font-size: 1.8rem;
+                transition: all .3s;
+            }
+            #b1:before {
+                background-color: initial;
+                background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+                border-radius: 12.5rem;
+                content: "";
+                opacity: .5;
+                transition: all .3s;
+            }
+            #b1:hover {
+                box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+                transform: scale(1.05);
+            }
+            #d_s{
+                margin-top: 2rem;
+                width: 100%;
+                height: 29rem;
+                overflow-y: auto;
+            }
+            #d_s thead th{
+                position: sticky;
+                top: 0px;
+            }
+            #t2{
+                width: 100%;
+                background-color: white;
+            }
+            #t2 th{
+                background-color: lightgray;
+            }
+            #th{
+                width: 7%;
+            }
+            #th3{
+                width: 4.2%;
+            }
+            #th2{
+                width: 4%;
+            }
+            #th1{
+                width: 3.5%;
+            }
+            #t2,#t2 th,#t2 td{
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align:center;
+            }
+            @media (max-width:998px) {
+                html{
+                    font-size: 55%;
+                }
+            }
+            @media (max-width:768px) {
+                html{
+                    font-size: 45%;
+                }
+            }
+        </style>
+    </head>
+    <body oncontextmenu="return false;" style="user-select: none;">
+        <div id="outer">
+            <div id="menu">
+                <a href="order_ent_form.html"><button id="entery">Entry Form</button></a>
+                <a href="order_ser_form.html"><button id="search">Service Form</button></a>
+                <a href="dashboard_pl.html" id="home"><font size="4rem">&#x1F3E0;</font> HOME</a>
+            </div>
+            <div id="body">
+                <div id="d1">
+                    <h2>ORDER &nbsp;&nbsp;&nbsp; SERVICE &nbsp;&nbsp;&nbsp; FORM</h2>
+                </div>
+                <form>
+                    
+                <div id="d2">  
+                    <div id="d21">
+                        <table id="t1">
+                            <tr>
+                                <td>
+                                    <b>LR &nbsp;&nbsp; Number</b> <br> 
+                                    <select id="s1">
+                                        <option disabled selected align="center" value="">---Select LR Number---</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <b>Distributor &nbsp;&nbsp; Name</b> <br>
+                                    <select id="s2">
+                                        <option disabled selected align="center" value="">---Select Distributor Name---</option>
+                                    </select>
+                                </td>
+                                <td>
+                                   <b>Transporter &nbsp;&nbsp; Name</b> <br>
+                                    <select id="s3">
+                                        <option disabled selected align="center" value="">---Select Transporter Name---</option>
+                                    </select>
+                                </td>
+                                <td>
+                                   <b>Distributor &nbsp;&nbsp; Town</b> <br>
+                                    <select id="s4">
+                                        <option disabled selected align="center" value="">---Select Distributor Town---</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td><td><label for="da1">From &nbsp; Date</label><input type="date" id="da1"></td>
+                                <td><label for="da2">To &nbsp; Date</label><input type="date" id="da2"></td><td></td>
+                            </tr>
+                        </table>
+                    </div><br><br>
+                    <div id="d22">
+                        <input type="button" id="b01" value="Search" onclick="ser()">
+                        <input type="reset" id="b02" value="Refresh">
+                    </div>
+                </form>
+                </div>
+                <div id="dd">
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+        <script>
+            var did=localStorage.getItem('did').trim()
+                var role=localStorage.getItem('role').trim();
+            $(document).ready(function(){
+                a=document.referrer;
+                if(!(a=='http://localhost/pl_test/order_ent_form.html' || a=='http://localhost/pl_test/order_ser_form.html' || a=='http://localhost/pl_test/invoice.html' || a=='http://localhost/pl_test/order_update_form.html'))
+                    window.location.href='index.html';
+            });
+            $(document).on('click','.pr',function(){
+                $("#t2").table2excel({
+                    exclude: "#th1",
+                    filename: "order.xls"
+               });
+            }); 
+            function ready1(){
+                $.ajax({
+                    url:'order_ser_form.py',
+                    method:'post',  
+                    data:{
+                        t1:did
+                    },
+                    success:function(data){
+                        t=data.split(',,,')
+                        $('#s1').append(t[0])
+                        $('#s2').append(t[1])
+                        $('#s3').append(t[2])
+                        $('#s4').append(t[3])
+                    }
+                });
+            }
+            $(document).ready(function(){
+                ready1()
+            });
+            function ser(){
+                flag=true
+                x=document.querySelector('#s1')
+                a=x.value
+                x=document.querySelector('#s2')
+                b=x.value
+                x=document.querySelector('#s3')
+                c=x.value
+                x=document.querySelector('#s4')
+                d=x.value
+                e=$('#da1').val()
+                f=$('#da2').val()
+                if(e=='' && f!=''){
+                    flag=false
+                    alert('Please enter statring date')
+                    $('#da1').focus()
+                }
+                if(f=='' && e!=''){
+                    flag=false
+                    alert('Please enter ending date')
+                    $('#da2').focus()
+                }
+                if(a=='' && b=='' && c=='' && d=='' && e=='' && f==''){
+                    alert('Please select any one')
+                    flag=false
+                }
+                if (flag){
+                    $.ajax({
+                        url:'order_ser_form.py',
+                        method:'post',
+                        data:{
+                            t:'search',
+                            t1:a,
+                            t2:b,
+                            t3:c,
+                            t4:d,
+                            t5:e,
+                            t6:f,
+                            t7:did
+                        },
+                        success:function(data){
+                            if (data==0){
+                            $('#dd').html('')
+                            alert("Data not found")
+                            }
+                            else{   
+                            $('#dd').html(data)
+                                if(role=='1' || role=='2')
+                                    $('.b2').hide()
+                            }
+                        }
+                    })
+                }
+            }
+            $('#b02').click(function(){
+                location.reload()
+            })
+        $(document).on('click', '#ch1', function () {
+            if ($(this).prop('checked')) 
+            {
+                $(this).closest('tr').css("background-color","yellow")
+            }
+        });
+        $(document).on('click', '.b2', function () {
+            var cell=$('input[name="a"]:checked').closest('tr').children("td").text().split('   ');
+                d1=cell[0]
+            var flag=confirm("Are you sure want to delte!")
+            if(flag)
+            $.ajax({
+                url:'order_ser_form.py',
+                 method:'post',
+                 data:{
+                        t:'delete',
+                        t1:d1
+                    },
+                    success:function(data){
+                        alert(data)
+                        $('input[name="a"]:checked').closest('tr').remove()
+                    }
+                })
+        })
+        $(document).on('click','.b1',function(){
+            var cell=$('input[name="a"]:checked').closest('tr').children("td").text();
+            var lr=cell.split('   ')[0]
+            if(lr!=''){
+                localStorage.setItem('cells',cell)
+                window.location.href='order_update_form.html'
+            }
+            else
+            alert('Please select any row')
+        })
+        $(document).on('click','.print',function(){
+            var cell=$('input[name="a"]:checked').closest('tr').children("td").text().split('   ');
+            var lr=cell[0]
+            if(lr!=''){
+                flag=confirm('Are you sure want to print this')
+                if (flag){
+                        localStorage.setItem('a',lr)
+                        localStorage.setItem('b',cell[1])
+                        localStorage.setItem('c',cell[2])
+                        localStorage.setItem('d',cell[3])
+                        localStorage.setItem('g',cell[6])
+                        localStorage.setItem('i',cell[8])
+                        localStorage.setItem('j',cell[9])
+                        localStorage.setItem('k',cell[10])
+                        localStorage.setItem('p',cell[5])
+                        localStorage.setItem('m',cell[12])
+                        localStorage.setItem('e',cell[4])
+                        localStorage.setItem('l',cell[11])
+                        localStorage.setItem('pd',cell[19])
+                        localStorage.setItem('invo','1')
+                        window.location.href='invoice.html'
+                    }
+            }
+            else
+            alert('Please select any row')
+        })
+        </script>
+    </body>
+</html>

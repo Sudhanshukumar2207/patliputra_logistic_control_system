@@ -1,0 +1,372 @@
+<html>
+    <head>
+        <title>Vehicle Repairing Service Form</title>
+        <link rel="icon" href="pcpllogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <style>
+            html{
+                font-size: 10px;
+            }
+            h2{
+                text-align: center;
+                font-size: 2.4rem;
+            }
+            #outer{
+                width: 100%;
+                height: 100%;
+            }
+            #menu{
+                height: 5rem;
+                width: 100%;
+                background: linear-gradient(to right,rgb(225, 135, 93) 0%,rgb(219, 217, 87) 100%);
+            }
+            #entery,#search{
+                height:4.5rem;
+                width: 15rem;
+                margin-top: .5rem;
+                border: none;
+                border-radius: 1rem 1rem 0 0;
+                cursor: pointer;
+                font-size: 1.4rem;
+            }
+            #entery{
+                margin-left: .5rem;
+                background-color: rgb(217, 186, 106);
+            }
+            #search{
+                background-color: #78de93;
+            }
+            #home{
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: blue;
+                margin: 1.7rem 5%;
+                float: right;
+            }
+            body{
+                background: linear-gradient(to bottom,#78de93 0%,#6991c7 100%);
+            }
+            #body{
+                width: 85%;
+                margin: auto;
+                height: 25%;
+            }
+            #d1{
+                height: 3.5rem;
+                background-color: rgb(230, 236, 238);
+                padding-top: .1rem;
+                padding-bottom: 2rem;
+                margin-top: 3rem;
+                padding-bottom: 2rem;
+            }
+            #t1{
+                color: white;
+                height: 10rem;
+                width: 100%;
+                font-size: 2rem;
+            }
+            #t1 td{
+                width: 33.33%;
+            }
+            #s1,#s2,#s3{
+                width: 95%;
+                height: 3rem;
+                border-radius: .5rem;
+                margin-top: .5rem;
+                text-align: center;
+                font-size: 1.8rem;
+            }
+            #d22{
+                height: 50px;
+                width: 500px;
+                margin: auto;
+            }
+            #b1,#b2{
+                height: 3rem;
+                width: 12rem;
+                border-radius: 5rem;
+                background-color: white;
+                background-repeat: no-repeat;
+                background-position: left;
+                border: 1px solid rgb(41, 39, 39);
+                cursor: pointer;
+                font-size: 1.7rem;
+                color: rgb(29, 28, 28);
+                /* text-align: right; */
+                padding-left: 3rem;
+            }
+            #b1{
+                /* background-color: royalblue; */
+                background-image: url(search.png);
+            }
+            #b2{
+                margin-left: 20rem;
+                background-image: url(refresh.png);
+                /* background-color: red; */
+            }
+            #t2{
+                width: 100%;
+                border-collapse:collapse;
+                background-color: white;
+                text-align: center;
+            }
+            #t2 th{
+                background-color: wheat;
+                position: sticky;
+                top: 0;
+            }
+            #t2 tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+            #t2 th,#t2 td{
+                height: 3rem;
+                border: 1px solid black;
+            }
+            #t21{
+                text-align: right;
+            }
+            #t22{
+                height: 250px;
+                overflow-y: auto;
+            }
+            .b1 {
+                height: 3rem;
+                margin-right: 3rem;
+                width: 9%;
+                border: 0;
+                border-radius: 5.6rem;
+                color: #fff;
+                cursor: pointer;
+                font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+                font-size: 1.8rem;
+                transition: all .3s;
+            }
+            .b1:before {
+                background-color: initial;
+                background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+                border-radius: 12.5rem;
+                content: "";
+                opacity: .5;
+                transition: all .3s;
+            }
+            .b1:hover {
+                box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+                transform: scale(1.05);
+            }
+            #b3{
+                background-color: blue;
+                width: 11%;
+            }
+            #b4{
+                background-color: green;
+            }
+            #b5{
+                background-color: red;
+            }
+            @media (max-width:998px) {
+                html{
+                    font-size: 55%;
+                }
+            }
+            @media (max-width:768px) {
+                html{
+                    font-size: 45%;
+                }
+            }
+        </style>
+    </head>
+    <body oncontextmenu="return false;" style="user-select: none;">
+        <div id="outer">
+            <div id="menu">
+                <a href="Veh_Rep.html"><button id="entery">Entry Form</button></a>
+                <a href="Veh_Rep_Ser.html"><button id="search">Service Form</button></a>
+                <a href="dashboard_pl.html" id="home"><font size="4rem">&#x1F3E0;</font> HOME</a>
+            </div>
+            <div id="body">
+                <div id="d1">
+                    <h2>VEHICLE &nbsp;&nbsp;&nbsp; REPAIRING &nbsp;&nbsp;&nbsp; SERVICE &nbsp;&nbsp;&nbsp; FORM</h2>
+                </div>
+                <form>
+                    <div id="d2">  
+                        <div id="d21">
+                            <table id="t1">
+                                <tr>
+                                    <td id="td1">
+                                        <b>Vehicle &nbsp;&nbsp; Number</b> <br> 
+                                        <select id="s1">
+                                            <option disabled selected value="dn" id="dn">---Select Vehicle Number---</option>
+                                        </select>
+                                    </td>
+                                    <!-- <td id="td2"></td> -->
+                                    <td id="td1"><b>From &nbsp; Date</b><br><input type="date" id="s2"></td>
+                                    <td id="td1"><b>To&nbsp; Date</b><br><input type="date" id="s3"></td>
+                                    <!-- <td id="td1">
+                                        <b>Repairing &nbsp;&nbsp; Date</b> <br>
+                                        <input type="date" id="s2" >
+                                    </td> -->
+                                </tr>
+                            </table>
+                        </div><br><br>
+                        <div id="d22">
+                            <input type="button" value="SEARCH" id="b1" class="ser">
+                            <input type="reset" value="REFRESH" id="b2" class="ref">
+                        </div>
+                    </div>
+                </form>
+                <div id="val"></div>
+            </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                a=document.referrer;
+                if(!(a=='http://localhost/pl_test/Veh_Rep.html' || a=='http://localhost/pl_test/Veh_Rep_Ser.html'))
+                    window.location.href='index.html';
+            });
+            function date(){
+                var dt=new Date()
+                dd=dt.getDate()
+                yy=dt.getFullYear()
+                mm=dt.getMonth()+1
+                if (dd<10)
+                    dd='0'+dd
+                if (mm<10)
+                    mm='0'+mm
+                cd=yy+'-'+mm+'-'+dd;
+                $('#s2').attr('max',cd);
+                $('#s3').attr('max',cd);
+            }
+            $(document).on('click','#b3',function(){
+                var conf=confirm("Are you sure want to Download All Record!");
+                if(conf){
+                    $("#t2").table2excel({
+                        exclude: "#th1",
+                        filename: "Vehicle_Repairing.xls"
+                    });
+                }
+            });  
+            function ready1(){
+                $.ajax({
+                    url:'vehicle_expense.py',
+                    method:'post',
+                    data:{
+                        t:'load_rep'
+                    },
+                    success: function(data){
+                        $('#s1').append(data);
+                    }
+                });
+            }
+            $(document).ready(function(){
+                $("#search").css('background-color','#78de93');
+                ready1();
+                date();
+            });
+            $('.ref').on('click',function(){
+                $('#val').html('');
+            })
+            $('.ser').on('click',function(){
+                flag=true
+                var cb1=$("#s1 option:selected").val();
+                e=$('#s2').val()
+                f=$('#s3').val()
+                if(e=='' && f!=''){
+                    flag=false
+                    alert('Please Enter Statring Date!')
+                    $('#s2').focus()
+                }
+                if(f=='' && e!=''){
+                    flag=false
+                    alert('Please Enter Ending Date!')
+                    $('#s3').focus()
+                }
+                if(e!='' && f!=''){
+                    if(e>f){
+                        flag=false;
+                        alert("From Date Cannot be greater than To Date!")
+                    }
+                }
+                if(flag){
+                    $.ajax({
+                        url:'vehicle_expense.py',
+                        method:'post',
+                        data:{
+                            t:'search_rep',
+                            t1:cb1,
+                            t2:e,
+                            t3:f
+                        },
+                        success:function(data){
+                            var j=data.split(',,,')
+                            if(j[1]==10){
+                                $('#val').html('')
+                                alert(j[0])
+                            }
+                            else
+                                $('#val').html(j[0])
+                        }
+                    });
+                }
+            });
+            $(document).on('click','#b5',function(){
+                var j=$('input[name="a"]:checked').closest('tr').children("td").text().split('   ');
+                if(j[0]!=''){
+                    var conf=confirm("Are you sure want to Delete Record!")
+                    if(conf){
+                        $.ajax({
+                            url:'vehicle_expense.py',
+                            method:'post',
+                            data:{
+                                t:'delete_rep',
+                                t1:j[0]
+                            },
+                            success:function(data){
+                                alert(data)
+                                $('input[name="a"]:checked').closest('tr').remove();
+                            }
+                        });
+                    }
+                }
+                else
+                    alert("Please Select Any Row!");
+            });
+            $(document).on('click','#b4',function(){
+                var j=$('input[name="a"]:checked').closest('tr').children("td").text().split('   ');
+                if(j[0]!=''){
+                    var conf=confirm("Are you sure want to Update Record!")
+                    if(conf){
+                        $.ajax({
+                            url:'vehicle_expense.py',
+                            method:'post',
+                            data:{
+                                t:'update_rep',
+                                t1:j[0],
+                                t2:j[1],
+                                t3:j[2],
+                                t4:j[3],
+                                t5:j[4]
+                            },
+                            success:function(data){
+                                alert(data)
+                            }
+                        });
+                    }
+                }
+                else
+                    alert("Please Select Any Row!")
+            });
+            $(document).on('keydown','#e',function(){
+                $(this).css('color','green')
+            });
+            $(document).on('blur','#e',function(){
+                a=$(this).text()
+                $(this).text(a+'   ')
+            });
+            $(document).on('focus','#e',function(){
+                a=$(this).text().trim()
+                $(this).text(a)
+            })
+        </script>
+    </body>
+</html>

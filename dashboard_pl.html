@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Welcome to Dashboard</title>
+    <link rel="icon" href="pcpllogo.png">
+    <!-- <script>
+        function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .html {
+            font-size: 62.5%;
+        }
+
+        @media(max-width:998px) {
+            html {
+                font-size: 55%;
+            }
+        }
+
+        @media(max-width:768px) {
+            html {
+                font-size: 45%;
+            }
+            .t34{
+                font-size: 2rem;
+            }
+        }
+        .div1 {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+        .h1{
+            height: 4rem;
+            width: auto;
+        }
+        .h2{
+            height: 4rem;
+            width: auto;
+            font-size: 3rem;
+            margin-left: 2rem;
+            color: white;
+        }
+        .t30 {
+            font-size: 3rem;
+            color: white;
+            padding-left: 2rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .t33 {
+            border-radius:10rem;
+            background-color: red;
+            cursor: pointer;
+            position: sticky;
+            box-shadow: 0 0 1rem white;
+        }
+        .t37 {
+            color: white;
+            cursor: pointer;
+        }
+
+        .div8,.div10 {
+            /* border: solid .2rem #6ab5dd; */
+            height: 5rem;
+            width: 25rem;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            background-color: #6ab5dd;
+            cursor: pointer;
+            margin-top: 5rem;
+        }
+        .div8:hover,.div10:hover{
+            color: white;
+            background-color: rgb(68, 68, 245);
+            box-shadow:5px 5px 10px black;
+        }
+        #d1 a{
+            text-decoration: none;
+        }
+        #d1 i{
+            font-size: 3rem;
+        }
+        #ve{
+            position: absolute;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-left: 2rem;
+        }
+        #d1 p{
+            margin-top: 3rem;
+            height: 5rem;
+            background-color: #6ab5dd;
+            font-size: 2rem;
+            color: black;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        #d1 p:hover{
+            background-color: rgb(68, 68, 245);
+            color: white;
+            box-shadow:5px 5px 10px black;
+        }
+        .t32 {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .div10 {
+            margin-top: 3rem;
+        }
+        .div2 {
+            width: 30rem;
+            height: 100%;
+            background-color: lightskyblue;
+            border: solid .1rem black;
+        }
+
+        #da_ta{
+            height:8rem;
+            background-color: lightskyblue;
+            box-shadow: 0 .5rem 1rem  gray;
+            justify-content: space-around;
+            display: flex;
+            align-items: center;
+        }
+        .date{
+            font-size: 2.5rem;
+            float: left;
+            margin: .8rem 0 0 4rem;
+        }
+        .dpo_1{
+            height: auto;
+            max-width: 30rem;
+        }
+        #dp_i{
+            height: 3.5rem;
+            width: 30rem;
+            background-color: #efeded;
+            box-shadow: 0 0 1rem black;
+            font-size: 1.7rem;
+            margin-top: .9rem;
+            border-radius: 0.5rem;
+        }
+        .time{
+            font-size: 2.5rem;
+            float: right;
+            margin: .8rem 4rem 0 0;
+        }
+        .l{
+            height: 5rem;
+            width: 5rem;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .l:hover{
+            color: white;
+        }
+        #pl_dt{
+            margin-top: 4rem;
+            height: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        .div4,.div5,.div6,.div16,.div17{
+            height: 16rem;
+            width: 18.5%;
+            border-radius: 2.5rem;
+            float: left;
+            /* margin-bottom: 2rem; */
+            padding: 1.5rem 0 0 2rem;
+            cursor: pointer;
+        }
+        .div4 {
+            border: solid .1rem lightskyblue;
+            background-color: lightskyblue;
+        }
+
+        .div5 {
+            border: solid .1rem rgb(129, 57, 129);
+            background-color: rgb(129, 57, 129);
+        }
+
+        .div6 {
+            border: solid .1rem #4D455D;
+            background-color: #4D455D;
+        }
+        .div16 {
+            border: solid 2px 	#4169E1;
+            background-color: 	#4169E1;
+        }
+        .div17 {
+            border: solid 2px #bdb047;
+            background-color: #bdb047;
+        }
+        .t34 {
+            font-size: 2.5rem;
+            color: white;
+            margin-top: 1rem;
+        }
+        .div3 {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(239, 237, 237);
+            overflow: hidden;
+            /* border: 1px solid rgb(232, 17, 17); */
+        }
+        
+        .tab{
+            height: 55%;
+            width: 96%;
+            margin: auto;
+            margin-top: 2rem;
+            overflow-y: auto;
+        }
+        #d2{
+            /* border: 1px solid red; */
+            width: 60rem;
+            margin: auto;
+        }
+        /* .t_r {
+            height: 100%-8rem;
+            background-color: rgb(239, 237, 237);
+            overflow-y: auto;
+            font-size: 1.77rem;
+            padding-left: 2rem;
+        } */
+        .table_1{
+            border: .1rem solid black;
+            width: 99%;
+        }
+        .table_1 tr{
+            height: 4rem;
+        }
+        .table_1 th{
+            background-color: lightblue;
+        }
+        /* .t_r2{
+            width: auto;
+            height: 30rem;
+            background-color: rgb(239, 237, 237);
+            overflow-y: auto;
+        } */
+        .table_3,.table_3 th,.table_3 td{
+            height: 2rem;
+            border-collapse: collapse ;
+        }
+        .table_3 th{
+            border: solid .1rem black;
+            background-color: lightblue;
+            position: sticky;
+            top: 0;
+        }
+        .table_3{
+            width: 100%;
+        }
+        .table_3 tr{
+            height: 3rem;
+        }
+        td,th {
+            border: .1rem solid black;
+            text-align: center;
+            height: 4rem;
+        }
+        .th_1{
+            height: 2rem;
+            background-color: lightblue;
+        }
+        /* .t_r3{
+            height: 2rem;
+        } */
+        .t36 {
+            background-color: #C3CFE2;
+            height: 2rem;
+        }
+
+        .t41 {
+            padding-left: 2rem;
+            
+        }
+        #dipo,#a_i,#ro{
+            height: 100%;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            background-color: #efeded;
+        }
+        #set:hover{
+            color: blue;
+        }
+        #srh{
+            background-color: teal;
+            border-radius: 1rem;
+            color: white;
+            cursor: pointer; font-size: 1.5rem;height: 3rem;width: 10rem;
+            border: solid .1rem teal;
+        }
+        #srh:hover{
+            background-color: blue;
+            box-shadow: 0 0 1rem black;
+        }
+        #srh2{
+            background-color: teal;
+            border-radius: 1rem;
+            color: white;
+            cursor: pointer; font-size: 1.5rem;height: 3rem;width: 10rem;
+            border: solid .1rem teal;
+        }
+        #srh2:hover{
+            background-color: blue;
+            box-shadow: 0 0 1rem black;
+        }
+    </style>
+</head>
+<body hidden  oncontextmenu="return false;" style="user-select: none;">
+    <div class="div1 z" id="d_form">
+        <div class="div2">
+            <div class="h1">
+                <b><p class="t30">WELCOME</p></b>
+            </div>
+
+            <div class="h2">
+                <b><div id="tab2"></div></b>
+            </div>
+                <div class="div8 h" id="h" onclick="table_record()">
+                    &nbsp; &nbsp; <i class="fa fa-database" id="H" style="font-size:3rem;"></i>
+                    <label class="t32 h" id="H"> &nbsp; &nbsp; Records</label>
+                </div>
+                <div class="div10 e" id="e" onclick="search_record()">
+                    &nbsp; &nbsp; <i style="font-size:3rem;" class="fa">&#xf002;</i>
+                    <label class="t32 e" id="E"> &nbsp; &nbsp; Search</label>
+                </div>
+                <div id="d1">
+                    <a href="Drv_Pay.html"><p>&nbsp; &nbsp;<i class="material-symbols-outlined"><b>paid</b></i><b> &nbsp;&nbsp;Driver Payment</b></p></a>
+                    <a href="vehicle_expenses.html"><p>&nbsp; &nbsp;<i class="material-symbols-outlined"><b>local_shipping</b></i><span id="ve" class="material-symbols-outlined">attach_money</span><b> &nbsp;&nbsp;Vehicles Expense</b></p></a>
+                    <a href="Veh_Rep.html"><p>&nbsp; &nbsp;<i class="material-symbols-outlined"><b>build</b></i><b>&nbsp; &nbsp;Part Expense</b></p></a>
+                    <a href="expense_report.html"><p>&nbsp; &nbsp;<i class="material-symbols-outlined"><b>lab_profile</b></i><b>&nbsp; &nbsp;Expense Report</b></p></a>
+                </div>
+            <!-- <div class="LOG_2">
+                <button class="t33 l"><i class="fa fa-power-off" style="font-size:4rem;color:white;margin-left: -.1rem;"></i></button>
+                <p class="t37 l">LOG OUT</p>
+            </div> -->
+        </div>
+        <div class="div3">
+            <div id="da_ta">
+                <div id="date" class="date"></div>
+                <div class="dp_1">
+                    <select name="dipo_id" id="dp_i">
+                        <option disabled selected value="" align="center">-----Select any one Depot-----</option>
+                    </select>
+                </div>
+                <div id="clock" class="time"></div>
+                <div class="l"><i class="fa fa-power-off" style="font-size:4rem;"></i></div>
+            </div>
+            <div id="pl_dt">
+                <div class="div4 o" id="o">
+                    <i class="glyphicon" style="font-size:4.5rem;color:white;">&#xe116;</i>
+                    <p class="t34">Order Details</p>
+                </div>
+                <div class="div5 d_p" id="d_p">
+                    <i class='fas fa-warehouse' style="font-size:4.5rem;color:white;"></i>
+                    <p class="t34">Depot Details</p>
+                </div>
+                <div class="div6 d" id="d">
+                    <i style="font-size:4.5rem;color:white;" class='fas'>&#xf472;</i>
+                    <p class="t34">Distributor Details</p>
+                </div>
+                <div class="div16 t" id="t">
+                    <i style="font-size:4.5rem;color:white;" class='fas'>&#xf48b;</i>
+                    <p class="t34">Transporter Details</p>
+                </div>
+                <div class="div17 v" id="v">
+                    <i style="font-size:4.5rem;color:white;" class="fa">&#xf0d1;</i>
+                    <p class="t34">Vehicles Details</p>
+                </div>
+            </div>
+            <div class="tab"></div>
+            <form>
+            <div id="s_r" style="width: auto;" hidden>
+                <div id="d2" style="height: auto; margin-top: 3rem;display: flex;">
+                    <div style="height: auto;width: auto;">
+                        <i style="font-size:3rem;" class="fa">&#xf0c0;</i>
+                    </div>&nbsp;&nbsp;&nbsp;
+                    <div style="height: auto;width: auto;">
+                        <select name="Any_one" id="a_o" class="a_o" style="width: 30rem; height: 3.5rem;font-size: 1.5rem;">
+                            <option value="Select any one of them" hidden>Select any one of them</option>
+                            <option value="Username">Username</option>
+                            <option value="UserID">UserID</option>
+                        </select>
+                        <span style=" color: red;" id="A_O"></span>
+                    </div>&nbsp;&nbsp;&nbsp;
+                    <div style="height: auto;width: auto;">
+                        <i class="fa fa-refresh fa-spin set" style="font-size:3rem;cursor: pointer;"></i> 
+                    </div>&nbsp;
+                    <div style="height: auto;width: auto;">
+                        <input type="reset" value="REFRESH" style=" border: hidden; font-size: 1.5rem; cursor: pointer;height: 3rem;width: 10rem;" id="set" class="set">
+                    </div>
+                </div>    
+                <div id="d2" style="height: auto; margin-top: 1rem; display: flex;">
+                        <div style="height: auto;width: auto;">
+                            <i style="font-size:3rem;cursor: pointer;" onclick="finalcheck_3()" class="fa srh">&#xf002;</i>
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div style="height: auto;width: auto;">
+                            <input style="width: 30rem; height: 3.5rem;" type="text" name="user" id="U_id"
+                            onfocusout="checkblank_3('U_id','u_ID','*Field is mandatory!')" onfocusin="cleardata_3('U_id','u_ID')">
+                            <span style=" color: red; " id="u_ID"></span>
+                        </div>&nbsp;&nbsp;&nbsp;
+                        <div style="height: auto;width: auto;">
+                            <input type="button" onclick="finalcheck_3()" id="srh" class="srh" value="Search"></input>
+                        </div>&nbsp;&nbsp;&nbsp; 
+                        <div style="height: auto;width: auto;">
+                            <input type="button" id="srh2" class="srh2" value="Search All"></input>
+                        </div>  
+                    </div>    
+                </div>          
+                <div class="tab_3" style="height: 28rem;overflow-y: auto; width: 95%; margin: auto; margin-top:20px;"></div>
+            
+            </div>
+            </form>
+    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+        // window.location.href='index.html'
+            var role;
+            var u_n=localStorage.getItem('u_n').trim();
+            // var us_id=localStorage.getItem('u_id').trim();
+            // var us_pas=localStorage.getItem('u_pas').trim();
+            var us_id=sessionStorage.getItem('u_id')
+            var us_pas=sessionStorage.getItem('u_pas')
+            if(us_id!=null)
+                us_id=us_id.trim()
+            if(us_pas!=null)
+                us_pas=us_pas.trim()
+            $(document).ready(function(){
+                $.ajax({
+                    url:'log_Pl.py',
+                    method:'post',
+                    data:{
+                        x:'dash_chk',
+                        t1:us_id,
+                        t2:us_pas
+                    },
+                    success:function(data){
+                        if(data==0)
+                            window.location.href='index.html'
+                        else{
+                            data=data.split(',,,')
+                            if(data[0].trim()=='0')
+                                window.location.href='index.html'
+                            else{
+                                role=data[1].trim()
+                                localStorage.setItem('role',role);
+                            }
+                        }
+                        if(role=='1')
+                        {
+                            $('.h').hide();
+                            $('.e').hide();
+                            $('.d_p').hide();
+                            $('#dp_i').hide();
+                            $('#tab2').html(u_n);
+                            $('body').show();
+                            $('#d1').hide();
+                        }
+                        else if(role=='0')
+                        {
+                            $('#tab2').html(u_n);
+                            $(".o").hide();
+                            $(".d").hide();
+                            $(".v").hide();
+                            $(".t").hide();
+                            $('body').show();
+                            dipo();
+                            show();
+                        }
+                        else if (role=='2'){
+                            $('.h').hide();
+                            $('.e').hide();
+                            $('.d_p').hide();
+                            $(".d").hide();
+                            $(".v").hide();
+                            $(".t").hide();
+                            $('#dp_i').hide();
+                            $('#tab2').html(u_n);
+                            $('body').show();
+                            $('#d1').hide();
+                        }
+                        else
+                        {
+                            window.location.href='index.html'
+                            $('body').hide();
+                        }
+                    }
+                })
+            });
+        // ###########################################################################################################################
+        $("#U_id").keydown(function(e){
+        if(e.which==13)
+            return false;
+        })
+        // ###########################################################################################################################
+            $(".l").click(function (){
+                window.location.href="index.html"
+                localStorage.setItem('role','5')
+                sessionStorage.setItem('u_id','')
+                sessionStorage.setItem('u_pas','')
+                // localStorage.setItem('u_id','')
+                // localStorage.setItem('u_pas','')
+            });
+        // ###########################################################################################################################
+            function dipo(){
+                $.ajax({
+                    url:'log_Pl.py',
+                    method:'post',
+                    data:{
+                        x:'dp_id'
+                    },
+                    success:function(data){
+                        $("#dp_i").append(data)
+                    }
+                })
+            }
+        // ###########################################################################################################################
+            $(document).on('change','#dp_i',function(){
+            a=$(this).val().split('-')
+            localStorage.setItem('did',a[1]) 
+            $("#o").show()
+            $("#d").show()
+            $("#t").show()
+            $("#v").show()
+        });
+         // ################################################################# script of DASHBOARD #####################################################################
+         $(document).ready(function(){
+			function clock(){
+				var d = new Date();
+				var time = d.toLocaleTimeString();
+                var date = d.toDateString();
+                $("#date").html(date);
+				$("#clock").html(time);
+			}
+
+			setInterval(clock,1000);
+            
+		});
+        // ###########################################################################################################################
+        function show()
+        {
+            $.ajax({
+                url:"log_Pl.py",
+                method:"post",
+                data:{
+                    x:"show"
+                },
+                success:function(data){
+                    $(".tab").html(data);
+                }
+            })
+        }
+        // $(".h").click(function(){
+        //     $('.tab_3').hide()
+        //     show();
+        // });
+        // ###########################################################################################################################
+
+        // ###########################################################################################################################
+        function table_record(){
+            $('#s_r').hide()
+            $('.tab_3').html('')
+            $('.tab').show()
+            show();
+        }
+        // ##########################################################################################################################
+        $(".t").mouseenter(function () {
+            $("#t").css('box-shadow', '5px 5px 10px black')
+        });
+        $(".t").mouseleave(function () {
+            $("#t").css('box-shadow', '0px 0px 0px')
+        });
+        $(".t").click(function () {
+            $(".ta").removeAttr("hidden", "false")
+        });
+        // ##########################################################################################################################      
+        function search_record(){
+            $('#s_r').show()
+            $('.tab').hide()
+        }
+        // ########################################################################################################################## 
+        $("#U_n").on('keypress', function (e) {
+            if (!(e.which >= 65 && e.which <= 90 || e.which >= 97 && e.which <= 122 || e.which == 32)) {
+                $("#u_N").html("*Only alphabet allowed!")
+                $("#U_n").css('border-color', 'red')
+                $("#U_n").css('box-shadow', '0 0 5px 0 red')
+                audio_play()
+                return false;
+            }
+        });
+        $('#U_n').on('click', function () {
+            $("#U_n").css('border-color', '')
+            $("#U_n").css('box-shadow', '')
+            $("#u_N").html("")
+        });
+         // ##########################################################################################################################
+            $(document).on('click','#srh',function(){
+                $('.tab_3').show()
+                a=$("#a_o").val();
+                b=$("#U_id").val();
+                if(a=='Username')
+                {
+                    $.ajax({
+                        url:'log_Pl.py',
+                        method:'post',
+                        data:{
+                            x:"search_2",
+                            b:b
+                        },
+                        success:function(data){
+                            $(".tab_3").html(data)
+                        }
+                    });
+                }
+                else if(a=='UserID')
+                {
+                    $.ajax({
+                        url:'log_Pl.py',
+                        method:'post',
+                        data:{
+                            x:"search_2",
+                            c:b
+                        },
+                        success:function(data){
+                            $(".tab_3").html(data)
+                        }
+                    });
+                }
+                else
+                    alert("Select username or userid first!")
+            });
+        // ##########################################################################################################################
+        $(document).on('click','#srh2',function(){
+                $('.tab_3').show()
+                    $.ajax({
+                        url:'log_Pl.py',
+                        method:'post',
+                        data:{
+                            x:"search_3",
+                        },
+                        success:function(data){
+                            $(".tab_3").html(data)
+                        }
+                    });
+            });
+        // ########################################################################################################################## 
+        $(".set").on("click",function(){
+            $(".tab_3").html('')
+        });
+        // ##########################################################################################################################
+        $(".p").mouseenter(function () {
+            $("#p").css('box-shadow', '5px 5px 10px black')
+        });
+        $(".p").mouseleave(function () {
+            $("#p").css('box-shadow', '0px 0px 0px')
+        });
+        // ##########################################################################################################################
+        $(".u").mouseenter(function () {
+            $("#u").css('box-shadow', '5px 5px 10px black')
+        });
+        $(".u").mouseleave(function () {
+            $("#u").css('box-shadow', '0px 0px 0px')
+        });
+        // ##########################################################################################################################
+        $(document).ready(function(){
+            $("#o").mouseenter(function () {
+            $("#o").css('box-shadow', '5px 5px 10px #9796F0')
+            });
+            $("#o").mouseleave(function () {
+                $("#o").css('box-shadow', '0px 0px 0px')
+            });
+            $("#d_p").mouseenter(function () {
+                $("#d_p").css('box-shadow', '5px 5px 10px #9796F0')
+            });
+            $("#d_p").mouseleave(function () {
+                $("#d_p").css('box-shadow', '0px 0px 0px')
+            });
+            $("#d").mouseenter(function () {
+                $("#d").css('box-shadow', '5px 5px 10px #9796F0')
+            });
+            $("#d").mouseleave(function () {
+                $("#d").css('box-shadow', '0px 0px 0px')
+            });
+            $("#t").mouseenter(function () {
+                $("#t").css('box-shadow', '5px 5px 10px #9796F0')
+            });
+            $("#t").mouseleave(function () {
+                $("#t").css('box-shadow', '0px 0px 0px')
+            });
+            $("#v").mouseenter(function () {
+                $("#v").css('box-shadow', '5px 5px 10px #9796F0')
+            });
+            $("#v").mouseleave(function () {
+                $("#v").css('box-shadow', '0px 0px 0px')
+            });
+        });
+        // ##########################################################################################################################
+        var u1 = "", u2 = "", u3 = ""
+        $(document).on('click', '.up', function () {
+            if ($(this).prop('checked') ){ 
+                var cell = $(this).closest('tr').children("td").text().split('   ');
+                u1 = cell[0]
+                u2 = $(this).closest("tr").children('td').children('#a_i').val()
+                u3=$(this).closest("tr").children('td').children('#dipo').val()
+                u4=$(this).closest('tr').children('td').children('#ro').val()
+                if (u3==0)
+                    alert('Please select Depot')
+                else{
+                    u3=u3.split('-')
+                    var a = confirm("Are you sure want to update this data?");
+                    if (a) {
+                        $.ajax({
+                            url: 'log_Pl.py',
+                            method: 'post',
+                            data:
+                            {
+                                x: "up1",
+                                a: u1,
+                                b: u2,
+                                c: u3[1],
+                                d:u4
+                            },
+                            success: function (data) {
+                                alert(data)
+                            }
+                        });
+                    }
+                }
+            }
+        });
+        // ########################################################################################################################## 
+        $(document).on('blur','#e',function(){
+            a=$(this).text()
+            $(this).text(a+"   ")
+        });
+        $(document).on('focus','#e',function(){
+            a=$(this).text().trim()
+            $(this).text(a)
+        })
+        $(document).on('keypress', '.u', function () {
+            $(this).closest('tr').children("td").css('background', 'yellow')
+        });
+        // ########################################################################################################################## 
+        function audio_play() {
+            const audio = new Audio();
+            audio.src = "mixkit-alert-bells-echo-765.wav";
+            audio.play();
+        }
+        // ########################################################################################################################## 
+        $(function () {
+            $('input').on('keydown', function (e) {
+                if (e.which === 32 && e.target.selectionStart === 0) {
+                    return false;
+                }
+            });
+        });
+        // ########################################################################################################################## 
+        $(function () {
+            $(document).on('keypress', '.double', function (e) {
+                var a = $(this).closest('tr').children('td:eq(2)').text();
+                if(!(e.which>=48 && e.which<=49))
+                {
+                    alert("Only 0 &1 digit allow here for role! ")
+                    $(this).closest('tr').children('td:eq(2)').css('background-color', '#FF7F50')
+                    return false;
+                }
+                else{
+                    $(this).closest('tr').children('td:eq(2)').text('');
+                    $(this).closest('tr').children('td:eq(2)').css('background-color', '')
+                }     
+            });
+        });
+        // ########################################################################################################################## 
+        $(function () {
+            $(document).on('keypress', '.third', function (e) {
+                var a = $(this).closest('tr').children('td:eq(3)').text();
+                if(!(e.which>=48 && e.which<=49))
+                {
+                    alert("Only 0 & 1 digit allow here for role! ")
+                    $(this).closest('tr').children('td:eq(3)').css('background-color', '#FF7F50')
+                    return false;
+                }
+                else{
+                    $(this).closest('tr').children('td:eq(3)').text('');
+                    $(this).closest('tr').children('td:eq(3)').css('background-color', '')
+                }              
+            });
+        });
+        // ########################################################################################################################## 
+        $(document).on('keypress', '#l_pwd', function (e) {
+            if (e.keyCode == 13)
+                $('#l_i').click();
+        });
+        // ########################################################################################################################## 
+        $(document).on('click','.r1',function(){
+            var cell = $(this).closest('tr').children("td").text().split('   ');
+            if($(this).prop('checked'))
+            {
+                v=$('#a_o').val()
+                v1 = cell[0]
+                v2 = cell[1]
+                v3 = $(this).closest("tr").children('td').children('#a_i').val()
+                $(this).closest('tr').css('background-color','yellow')
+                var b = confirm("Are you want to update this data?");
+                if (b) {
+                    $.ajax({
+                        url: "log_Pl.py",
+                        method: "post",
+                        data:
+                        {
+                            x: "up3",
+                            a: v,
+                            b: v1,
+                            c: v2,
+                            d: v3
+                        },
+                        success: function (data) {
+                            alert(data)
+                        }
+                    });
+                }
+            }
+            });
+        // ########################################################################################################################## 
+        $(document).on('keypress', '.u2', function () {
+            $(this).closest('tr').children("td").css('background', 'yellow')
+        });
+        $(document).on('keypress', '.U2', function () {
+            $(this).closest('tr').children("td").css('background', 'yellow')
+        });
+        // ###########################################################################################################################
+        $('#d_p').click(function(){
+            window.location.href="DipoENtryForm.html"
+        })
+        $('#d').click(function(){
+            window.location.href="Distributor_Details.html"
+        })
+        $('#t').click(function(){
+            window.location.href="Transporterentry.html"
+        })
+        $('#v').click(function(){
+            window.location.href="vehicle_ent_form.html"
+        })
+        $('#o').click(function(){
+            window.location.href="order_ent_form.html"
+        })
+        $(document).on('click', '.dl', function () {
+            if ($(this).prop('checked') ){ 
+                var cell = $(this).closest('tr').children("td").text().split('   ');
+                u1 = cell[0]
+                    var a = confirm("Are you sure want to delete this data?");
+                    if (a) {
+                        $.ajax({
+                            url: 'log_Pl.py',
+                            method: 'post',
+                            data:
+                            {
+                                x: "delete",
+                                a: u1
+                            },
+                            success: function (data) {
+                                alert(data)
+                                $(this).closest('tr').remove()
+                            }
+                        });
+                    }
+            }
+        });
+        </script>
+</body>
+</html>

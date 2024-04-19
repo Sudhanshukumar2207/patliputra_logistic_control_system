@@ -1,0 +1,969 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title>Welcome to Patliputra Logistics</title>
+    <link rel="icon" href="pcpllogo.png">
+    <!-- <script>
+        function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script> -->
+    <style>
+        /* ################################################################ CSS of LOG IN ############################################################################## */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .html {
+            font-size: 62.5%;
+        }
+        body{
+            background-color:#87CEFA;
+        }
+        .main {
+            height: auto;
+            width: auto;
+        }
+        @media(max-width:998px) {
+            html {
+                font-size: 55%;
+            }
+        }
+
+        @media(max-width:768px) {
+            html {
+                font-size: 30%;
+            }
+        }
+        .div13 {
+            border: solid .2rem #7B68EE;
+            height: 50rem;
+            max-width: 120rem;
+            margin: auto;
+            margin-top: 8%;
+            background-color:#7B68EE;
+            min-width: auto;
+        }
+
+        .div14 {
+            border: solid .2rem white;
+            height: 62rem;
+            width: 42rem;
+            min-width: auto;
+            margin-top: -39rem;
+            margin-left: 5%;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 0 1rem black;
+        } 
+        .div15 {
+            border: solid .2rem ehite;
+            height: 62rem;
+            width: 42rem;
+            min-width: auto;
+            margin-top: -39rem;
+            margin-left: 46%;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 0 1rem black;
+        }   
+        .label{
+            height: 4rem;
+            width: 100%;
+            min-height: auto;
+            min-width: auto;
+            margin-top: 20rem;
+            display: flex;
+            justify-content: space-around;
+        }
+        .l_one, .l_two, .l_three, .l_four{
+            width: auto;
+            height: auto;
+        }
+        .l_three{
+            padding-right: 5rem;
+        }
+        .l_four{
+            padding-right: 5rem;
+        }
+        .label_two{
+            height: 4rem;
+            width: 100%;
+            margin-top: 5rem;
+            display: flex;
+            justify-content: space-around;
+        }
+        .t1 {
+            font-size: 2.5rem;
+            color: white;
+        }
+        .tt{
+            font-size: 2.5rem;
+            color: white;
+        }
+        .t2, .t4 {
+            width: 13rem;
+            height: 4.2rem;
+            background-color: #734AE8;
+            border: solid .2rem white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: 0 0 1rem white;
+        }
+        .one{
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin-top: 15rem;
+            justify-content: space-around;
+        }
+        .one_first-child{
+            width: auto;
+            margin-top: 1rem;
+        }
+        .one_second-child{
+            width: auto;
+            height: auto;
+            padding-right: 3rem;
+            font-size: 1.7rem;
+        }
+        .t5{
+            height: 4.5rem;
+            width: 30rem;
+            outline: none;
+            border: solid .2rem black;
+            box-shadow: 0 0 1rem black;
+            padding-left: 1rem;
+        }
+        .t5:hover{
+            box-shadow: 0 0 1rem blue;
+            border: solid .2rem blue;
+        }
+        .two{
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin-top:5rem;
+            justify-content: space-around;
+        }
+        .two_first-child{
+            width: auto;
+            margin-top: 1rem;
+        }
+        .two_second-child{
+            width: auto;
+            height: auto;
+            padding-right: 3rem;
+            font-size: 1.7rem;
+        }
+        .t6{
+            border: solid .2rem black;
+            box-shadow: 0 0 1rem black;
+            height: 4.5rem;
+            width: 30rem;
+            outline: none;
+            padding-left: 1rem;
+        }
+        .t6:hover{
+            box-shadow: 0 0 1rem blue;
+            border: solid .2rem blue;
+        }
+        .three{
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin-top:2rem;
+        }
+        .three_first-child{
+            width: auto;
+            margin-top: -.1rem;
+            margin-left: 20rem;
+        }
+        .three_second-child{
+            width: auto;
+            font-size: 1.7rem;
+        }
+        .t7,.t16 {
+            height: 4rem;
+            width: 15rem;
+            border-radius: 2rem;
+            background-color: rgb(232, 47, 109);
+            box-shadow: 0 0 2rem black;
+            border-color: rgb(232, 47, 109);
+            border-right: hidden;
+            border-bottom: hidden;
+            color: white;
+            margin-left: 15rem;
+            margin-top: 4rem;
+            font-size: 1.9rem;
+        }
+        .t7:hover{
+            background-color: blue;
+            border: solid .2rem blue;
+        }
+        .t16 {
+            height: 3rem;
+            width: 13rem;
+            border-radius: 2rem;
+            background-color: rgb(232, 47, 109);
+            box-shadow: 0 0 2rem black;
+            border-color: rgb(232, 47, 109);
+            border-right: hidden;
+            border-bottom: hidden;
+            color: white;
+            margin-left: 15rem;
+            margin-top: 3rem;
+            font-size: 1.9rem;
+        }
+        .t16:hover{
+            background-color: blue;
+            border: solid .2rem blue;
+        }
+        #fp{
+            margin-top: 5rem;
+            margin-left: 16.5rem;
+            font-size: 1.5rem;
+        }
+        #fp a:hover{
+            color: red;
+        }
+        .si_one{
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin-top: 1rem;
+            justify-content: space-around;
+        }
+        .si_one-firstchild{
+            width: auto;
+            margin-top: 1rem;
+        }
+        .si_one-secondchild{
+            width: auto;
+            height: auto;
+            padding-right: 3rem;
+            font-size: 1.7rem;
+        }
+        .si_two{
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin-top: 2rem;
+            justify-content: space-around;
+        }
+        .si_two-firstchild{
+            width: auto;
+            margin-top: 1rem;
+        }
+        .si_two-secondchild{
+            width: auto;
+            height: auto;
+            padding-right: 3rem;
+            font-size: 1.7rem;
+        }
+        .si_three{
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin-top: 2rem;
+            justify-content: space-around;
+        }
+        .si_three-firstchild{
+            width: auto;
+            margin-top: 1rem;
+        }
+        .si_three-secondchild{
+            width: auto;
+            height: auto;
+            padding-right: 3rem;
+            font-size: 1.7rem;
+        }
+        .si_four{
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin-top: 1rem;
+        }
+        .si_four-firstchild{
+            width: auto;
+            margin-top: .1rem;
+            margin-left: 20rem;
+        }
+        .si_four-secondchild{
+            width: 20.3rem;
+            height: auto;
+            padding-left: 1rem;
+            font-size: 1.7rem;
+        }
+        .si_five{
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin-top: 1rem;
+            justify-content: space-around;
+        }
+        .si_five-firstchild{
+            width: auto;
+            margin-top: 1rem;
+        }
+        .si_five-secondchild{
+            width: auto;
+            height: auto;
+            padding-right: 3rem;
+            font-size: 1.7rem;
+        }
+        .si_six{
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin-top: 2rem;
+            justify-content: space-around;
+        }
+        .si_six-firstchild{
+            width: auto;
+            margin-top: 1rem;
+        }
+        .si_six-secondchild{
+            width: auto;
+            height: auto;
+            padding-right: 3rem;
+            font-size: 1.7rem;
+        }
+        .si_seven{
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin-top: 2rem;
+            justify-content: space-around;
+        }
+        .si_seven-firstchild{
+            width: auto;
+            margin-top: 1rem;
+        }
+        .si_seven-secondchild{
+            width: auto;
+            height: auto;
+            padding-right: 3rem;
+            font-size: 1.7rem;
+        }
+        .t8,.t9,.t10,.t13,.t14,.t15 {
+            border: solid .2rem black;
+            box-shadow: 0 0 1rem black;
+            height: 4.5rem;
+            width: 30rem;
+            outline: none;
+            padding-left: 1rem;
+        }
+        .t8:hover{
+            box-shadow: 0 0 1rem blue;
+            border: solid .2rem blue;
+        }
+        .t9:hover{
+            box-shadow: 0 0 1rem blue;
+            border: solid .2rem blue;
+        }
+        .t10:hover{
+            box-shadow: 0 0 1rem blue;
+            border: solid .2rem blue;
+        }
+        .t13:hover{
+            box-shadow: 0 0 1rem blue;
+            border: solid .2rem blue;
+        }
+        .t14:hover{
+            box-shadow: 0 0 1rem blue;
+            border: solid .2rem blue;
+        }
+        .t15:hover{
+            box-shadow: 0 0 1rem blue;
+            border: solid .2rem blue;
+        }
+        #ONE_show{
+            height: 3rem;
+        }
+        #TWO_show{
+            height: 3rem;
+        }
+        .A {
+            font-size: 2rem;
+            color: red;
+            padding-left: 2rem;
+            margin-top: 1rem;
+        }
+
+        .A_1 {
+            padding-left: 2rem;
+            font-size: 1.8rem;
+            color: #0D25B9;
+        }
+        .t17{
+            color: red;
+            position: absolute;
+            margin-top: -2rem;
+            margin-left: 15rem;
+            font-size: 1.5rem;
+        }
+        .t18{
+            color: red;
+            font-size: 1.5rem;
+            margin-left: 7rem;
+            position: absolute;
+        }
+        .cap{
+            display: flex;
+            height: auto;
+            width: auto;
+            margin-top: 1rem;
+        }
+        .cap .CAP{
+            height: 3rem;
+            width: 12rem;
+            margin-left: 8rem;
+            border: none;
+            outline: none;
+            font-size: 2.5rem;
+        }
+        #cap_r{
+            margin-top: 1.3rem;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+        .CAP_M{
+            height: 3rem;
+            width: 12rem;
+            margin-left: 4rem;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<!-- ############################################################### HTML of LOG IN ########################################################################### -->
+
+<body oncontextmenu="return false;" style="user-select: none;">
+    <div class="main l_form" id="l_form">
+        <div class="div13">
+            <div class="label">
+                <div class="l_one">
+                    <label class="t1">Have an account?</label>
+                </div>
+                <div class="l_two">
+                    <label class="tt">Don't have an account?</label>
+                </div>
+            </div>
+            <div class="label_two">
+                <div class="l_three">
+                    <input type="button" value="Log in" class="t2 log" onclick="blank1()" style="border-radius: 0.4rem;">
+                </div>
+                <div class="l_four">
+                    <input type="button" value="Sign up" class="t4 sin" onclick="blank()" style="border-radius: 0.4rem;">
+                </div>
+            </div>
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+                <div class="div14 lo" id="li">
+                    <div class="one">
+                        <div class="one_first-child">
+                            <i class="glyphicon" id="ii1" style="font-size: 2.5rem;">&#xe008;</i>
+                        </div>
+                        <div class="one_second-child">
+                            <input type="text" name="User_id" class="t5 U" id="l_id" placeholder="User Id" onfocusout="ch('#l_id')" onfocus="ch1('#l_id')" required autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="two">
+                        <div class="two_first-child">
+                            <i class="fa" id="ii2" style="font-size: 2.5rem;">&#xf023;</i>
+                        </div>
+                        <div class="two_second-child">
+                            <input type="password" name="pass" class="t6 U" id="l_pwd" placeholder="Password" onfocusout="ch('#l_pwd')" onfocusin="ch1('#l_pwd')">
+                        </div>
+                    </div>
+                    <div class="three">
+                        <div class="three_first-child">
+                            <input type="checkbox" id="p2" onclick="Toggle_two()" class="t39" style="height: 2rem;"> 
+                        </div>
+                        <div class="three_second-child">
+                            <label for="p2" class="t40">Show Password</label>
+                        </div>
+                    </div>
+                    <input type="button" value="Log in" class="t7" id="l_i"><br>
+                    <p id="fp"><a href="f_p.html">Forget password?</a></p>
+                </div>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+                <div class="div15 si" id="su" hidden>
+                    <div id="ONE_show"> </div>
+                    <div id="TWO_show"></div>
+                    <div id="THREE_show" hidden></div>
+                    <br>
+                    <div class="si_one">
+                        <div class="si_one-firstchild">
+                            <i class="glyphicon" id="ii3" style="font-size: 2.5rem;">&#xe008;</i>
+                        </div>
+                        <div class="si_one-secondchild">
+                            <input type="text" name="User_n" class="t8 U" id="s_n" placeholder="Username" onfocusout="ch('#s_n')" onfocus="ch1('#s_n')" autocomplete="off" onkeydown="kd()">
+                        </div>
+                        <samp class="t17" id="S_N"></samp>
+                    </div>
+                    <div class="si_two">
+                        <div class="si_two-firstchild">
+                            <i class='fas' id="ii2" style="font-size: 2.5rem;">&#xf2bb;</i>
+                        </div>
+                        <div class="si_two-secondchild">
+                            <input type="text" name="user_id" class="t9 U" id="s_id" placeholder="User Id" onfocusout="ch('#s_id')" onfocusin="ch1('#s_id')" autocomplete="off">                    
+                        </div>
+                    </div>
+                    <div class="si_three">
+                        <div class="si_three-firstchild">
+                            <i class="fa" id="ii2" style="font-size: 2.5rem;">&#xf023;</i>
+                        </div>
+                        <div class="si_three-secondchild">
+                            <input type="password" name="Pass" class="t10 U" id="pwd" placeholder="Password" title="Must contain at least one number and one alphabet and special character, and at least 8 or more characters" required onfocusout="ch('#pwd')" onfocus="ch1('#pwd')" oninput="pass()">                        
+                        </div>
+                    </div>
+                    <samp id="w" class="t18"></samp>
+                    <div class="si_four">
+                        <div class="si_four-firstchild">
+                            <input type="checkbox" id="p1" onclick="Toggle_one()" class="t11">
+                        </div>
+                        <div class="si_four-secondchild">
+                            <label for="p1" class="t12" style="margin-right: 23%;">Show Password</label>                        
+                        </div>
+                    </div>
+                    <div class="si_five">
+                        <div class="si_five-firstchild">
+                            <i class="fa" id="ii2" style="font-size: 2.5rem;">&#xf023;</i>
+                        </div>
+                        <div class="si_five-secondchild">
+                            <input type="password" name="Rep_pass" class="t13 U" id="r_pwd" placeholder="Repeat Password" title="Password and Repeat password should be match for signup!" required onfocusout="ch('#r_pwd')" onfocus="ch1('#r_pwd')">                        
+                        </div>
+                    </div>
+                    <div class="si_six">
+                        <div class="si_six-firstchild">
+                            <i class="fa" id="ii2" style="font-size: 2.5rem;">&#xf059;</i>                        
+                        </div>
+                        <div class="si_six-secondchild">
+                            <select class="t14 U" name="sec_qus" id="s_q" onfocusout="co()" onfocus="co1()">
+                                <option value="" selected disabled>Security Question</option>
+                                <option value="What Is your favorite book?">What Is your favorite book?</option>
+                                <option value="What was the name of your first/current/favorite pet?">What was the name of yourfirst/current/favorite pet?</option>
+                                <option value="Where did you go to high school/college?">Where did you go to high school/college?</option>
+                                <option value="What is your favorite food?">What is your favorite food?</option>
+                                <option value="What city were you born in?">What city were you born in?</option>
+                                <option value="Where is your favorite place to vacation?">Where is your favorite place to vacation?</option>
+                            </select>                        
+                        </div>
+                    </div>
+                    <div class="si_seven">
+                        <div class="si_seven-firstchild">
+                            <i class="fa" id="ii2" style="font-size: 2.5rem;">&#xf044;</i>                        
+                        </div>
+                        <div class="si_seven-secondchild">
+                            <input type="text" name="sec_ans" class="t15 U" id="s_a" placeholder="Security Answer" onfocusout="ch('#s_a')" onfocusin="ch1('#s_a')" required autocomplete="off">                        
+                        </div>
+                    </div>
+                    <div class="cap">
+                        <input type="text" name="captcha" id="cap" class="CAP" placeholder="" readonly>
+                        <i class="fa fa-refresh" id="cap_r"></i>
+                        <input type="text" id="cap_m" placeholder="Enter Captcha" class="CAP_M">
+                    </div>
+                    <input type="button" value="Sign up" class="t16" id="s_i">
+                </div>
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // ----------
+        window.onunload=function(){
+            alert('hiii')
+        }
+        // ------------
+        var role;
+        var flag = true;
+        var log = true;
+        var log_2 = true;
+        var flag1 = flag2 = flag3 = true;
+            // document.addEventListener('contextmenu', event => event.preventDefault());
+        // ######################################################################### Script of LOG IN ################################################################
+            function blank(){
+                $('#l_id').val('')
+                $('#l_id').css({'border':'1px solid black','color':'black'})
+                $('#l_pwd').val('')
+                $('#l_pwd').css({'border':'1px solid black','color':'black'})
+            }
+            function blank1(){
+                $('#s_n').val('')
+                $('#s_id').val('')
+                $('#pwd').val('')
+                $('#w').html('')
+                $('#r_pwd').val('')
+                $('#R_PWD').html('')
+                $('#s_a').val('')
+                $('#s_q').val('')
+                $('#S_Q').html('')
+                $('#s_n').css({'border':'1px solid black','color':'black'})
+                $('#s_id').css({'border':'1px solid black','color':'black'})
+                $('#pwd').css({'border':'1px solid black','color':'black'})
+                $('#r_pwd').css({'border':'1px solid black','color':'black'})
+                $('#s_a').css({'border':'1px solid black','color':'black'})
+                $('#s_q').css({'border':'1px solid black','color':'black'})
+
+            }
+            $(document).on('keydown','#pwd',function(e){
+                if(e.which==9)
+                $('#p1').focus()
+            })
+            function pch(){
+                a=$('#pwd').val()
+                b=$('#r_pwd').val()
+                if (a!=b){
+                    log=false
+                    alert('Password does not match')
+                }
+            }
+        // ---------------------------------------------------------------------------
+        function ch(t){
+            if (t=='#s_n')
+            kd()
+            var a=$(t).val()
+            if (a==''){
+                log=false
+                if(t=='#l_pwd' || t=='#pwd' || t=='#r_pwd')
+                $(t).removeAttr('type','password')
+                $(t).val('*field is mandatory')
+                $(t).css({'border':'2px solid red','color':'red'})
+            }
+            else if(a=='*field is mandatory')
+            log=false
+        }
+        function ch1(t){
+            var a=$(t).val()
+            if (a=='*field is mandatory')
+                $(t).val('')
+                $(t).css({'border':'2px solid blue','color':'black'})
+                if(t=='#l_pwd' || t=='#pwd' || t=='#r_pwd')
+                $(t).attr('type','password')
+        }
+        function co(){
+            a=$('#s_q option:selected').val()
+            if (a==''){
+                log=false
+                $('#s_q').css('border','2px solid red')
+                $('#S_Q').html('*security question is mandatory')
+            }
+        }
+        function co1(){
+            $('#s_q').css('border','2px solid blue')
+            $('#S_Q').html('')
+        }
+        // ----------------------Default focus--------------------------
+            $(document).ready(function(){
+                $('#l_id').focus()
+            })
+            // $('.log').click(function(){
+            //     $('#l_id').focus()
+            // })
+            // $('.sin').click(function(){
+            //     $('#s_n').focus()
+            // })
+        // -------------------------------------------------
+        function kd(){
+            $("#S_N").html("")
+            $("#s_n").css('border-color', 'black')
+            $("#s_n").on('keypress', function (e) {
+            if (!(e.which >= 65 && e.which <= 90 || e.which >= 97 && e.which <= 122 || e.which == 32)) 
+            {
+                $("#S_N").html("*Only alphabet allowed!")
+                $("#s_n").css('border-color', 'red')
+                $("#s_n").css('box-shadow', '0 0 5px 0 red')
+                // audio_play()
+                return false;
+            }
+        });
+        }
+        $('#s_n').on('click', function () {
+            $("#s_n").css('border-color', '')
+            $("#s_n").css('box-shadow', '')
+            $("#S_N").html("")
+        });
+        $(document).on('focusout','.a_o',function(){
+            a=$(".a_o").val();
+            if(a=='Select any one of them')
+            {
+                $(".a_o").css('border','solid 2px red')
+                $("#A_O").html("*Field is mandatory!")
+            }
+        });
+        $('.a_o').on('click', function () {
+            $(".a_o").css('border-color', '')
+            $("#A_O").html("")
+        });
+        $("#r_pwd").focusout(function () {
+            c=$('#pwd').val()
+            if(c!='' && c!='*field is mandatory')
+            pch()
+        });
+        function cleardata_3(id1, id2) {
+            document.getElementById(id2).innerHTML = ""
+            document.getElementById(id1).style.boxShadow = ""
+            document.getElementById(id1).style.border = "solid 2px black"
+        }
+        function finalcheck_3() {
+            checkblank_3('U_id', 'u_ID', '*Field is mandatory!');
+        }
+        $(document).on('keydown', '#U_id', function (e) {
+            if (e.which == 13){
+                $(".srh").focus();
+                return false
+            }
+        });
+        $("#l_pwd").keypress(function(e){
+            if(e.which==13)
+                $("#l_i").click();
+        });
+        $("#s_a").keypress(function(e){
+            if(e.which==13)
+                $("#s_i").click();
+        });
+        $("#cap_m").keypress(function(e){
+            if(e.which==13)
+                $("#s_i").click();
+        });
+        // ###########################################################################################################################################################
+        function capt(){
+            a=btoa(Math.random()*10000000000)
+            a=a.substr(5,6)
+            $("#cap").attr('placeholder',a)
+        }
+        $(".sin").click(function(){
+            capt();
+        });
+        $("#cap_r").click(function(){
+            capt();
+        });
+        function cap(){
+            a=$("#cap").attr('placeholder');
+            b=$(".CAP_M").val();
+            if(a!=b)
+               log =false; 
+        }
+        // ###########################################################################################################################################################
+        $(document).ready(function () {
+            $('.log').click(function () {
+                $('#su').animate(
+                    { left: '-28%' }, function () {
+                        $(".si").hide();
+                        $('.log').hide();  
+                        $(".t1").hide();                                                                                    
+                    });
+                $("#li").animate(
+                    { left: '14%' }, function () {
+                        $(".lo").show();
+                        $('.sin').show();
+                        $(".tt").show();
+                    });
+            });                                                                     //This script is for animation of div field.                                                      
+            $('.sin').click(function () {
+                $('#li').animate(
+                    { left: '50%' }, function () {
+                        $('.lo').hide();
+                        $('.sin').hide();
+                        $(".tt").hide();
+                    });
+                $('#su').animate(
+                    { left: '10%' }, function () {
+                        $('.si').show();
+                        $('.log').show();
+                        $(".t1").show();
+                    });
+            });
+        });
+        // #############################################################################################################################################################
+        $(".U").keypress(function () {
+            $(this).css("box-shadow", "0 0 5px 1px #97ABFF")
+        });                                                                   //This script is for changing the textfield box-shadow when we keypress.
+        $(".U").keydown(function () {
+            var key = event.keyCode || event.charCode;                                                 //&//
+            if (key == 8)
+                $(this).css('box-shadow', '')                                  //This script is use for when to remove box-shadow when we press backspace.
+        });
+        // #############################################################################################################################################################
+        function Toggle_one() {
+            var temp = document.getElementById("pwd");
+            if (temp.type === "password")
+                temp.type = "text";                                           //This script is use when we want to show or hide the password. 
+            else
+                temp.type = "password";
+        }
+        $("#r").prop("checked", true)
+        // #############################################################################################################################################################
+        function Toggle_two() {
+            var temp = document.getElementById("l_pwd");
+            if (temp.type === "password")
+                temp.type = "text";                                           //This script is use when we want to show or hide the password. 
+            else
+                temp.type = "password";
+        }
+        // ###########################################################################################################################################################
+        var ctr = 0;
+        function pass() {
+
+            var a = document.getElementById("w");
+            var ch = document.getElementById("pwd").value;
+            if (ch.length == 0)                                                      //This script is work to check password strength
+            {
+                ctr = 0
+                a.innerHTML = " "
+                flag1 = flag2 = flag3 = true;
+            }
+            else {
+                ch = ch.charCodeAt(ch.length - 1)
+                if (flag1 && ((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122))) {
+                    ctr++;
+                    flag1 = false;
+                }
+                else if (flag2 && ((ch >= 48) && (ch <= 57))) {
+                    ctr++;
+                    flag2 = false;
+                }
+                else if (flag3 && !((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122) || (ch >= 48) && (ch <= 57))) {
+                    ctr++;
+                    flag3 = false;
+                }
+                if (ctr == 1) {
+                    a.innerHTML = "week password"
+                    a.style.color = "red"
+                }
+                else if (ctr == 2) {
+                    a.innerHTML = "average password"
+                    a.style.color = "orange"
+                }
+                else {
+                    a.innerHTML = "strong password"
+                    a.style.color = "green"
+                }
+            }
+        }
+        // ############################################################################################################################################################
+        $(document).ready(function () {                             //This script is use to show the role of the user 
+            $.ajax({
+                url: 'log_Pl.py',
+                method: 'post',
+                data: {
+                    x: 'search'
+                },
+                success: function (data) { 
+                    if(data==0)
+                        sts=data
+                    else{
+                        s = data.split(',,,')
+                        $('#ONE_show').html(s[0]);
+                        $('#TWO_show').html(s[1]);
+                        sts = s[2]
+                        // $('#THREE_show').html(sts);
+                    }                                                
+                }
+            });
+        });
+        // ############################################################################################################################################################
+        $('#s_i').click(function () {
+            log=true
+            ch('#s_n')
+            ch('#s_id')
+            ch('#pwd')
+            ch('#r_pwd')
+            ch('#s_a')
+            co()
+            pch()
+            // cap()
+            if (log) {
+                cap()
+                if(log){
+                var b = $('#s_n').val().trim();
+                var c = $('#s_id').val().trim();
+                var d = $('#pwd').val().trim();
+                var e = $('#s_q').val();
+                var f = $('#s_a').val().trim();
+                $.ajax({
+                    url: 'log_Pl.py',
+                    method: 'post',
+                    data: {
+                        x: 'insert',
+                        u_n: b,
+                        u_i: c,
+                        pas: d,
+                        s_qus: e,
+                        s_ans: f
+                    },
+                    success: function (data) {
+                        alert(data)
+                        window.location.reload();
+                    }
+                });
+                }
+                else
+                {
+                    alert("Captcha not match!")
+                    capt();
+                    $("#cap_m").val('')
+                }
+            }
+            else{
+                capt();
+                $("#cap_m").val('')
+                alert("All fields are mandatory!")
+
+            }
+        });
+        var role;
+        // ############################################################################################################################################################
+        $("#l_i").click(function () {
+            log=true
+            ch('#l_id')
+            ch('#l_pwd')
+            if (log) {
+                var user_id = $('#l_id').val();
+                var pass = $('#l_pwd').val();
+                    $.ajax({
+                        url: 'log_Pl.py',
+                        method: 'post',
+                        data: {
+                            x: 'match',
+                            u_id: user_id,
+                            p: pass
+                        },
+                        success: function (data) {
+                            if(data==4){
+                                alert("Userid and password are not available")
+                            }
+                            else if(data==3)
+                                alert("Wait for approval")
+                            else {
+                                    data=data.split(',,,')
+                                    window.location.href="dashboard_pl.html"
+                                    localStorage.setItem('u_n',data[0])
+                                    localStorage.setItem('did',data[1])
+                                    // localStorage.setItem('u_id',data[2])
+                                    // localStorage.setItem('u_pas',data[3]) 
+                                    sessionStorage.setItem('u_id',data[2])
+                                    sessionStorage.setItem('u_pas',data[3]) 
+                                }
+                            }
+                    });
+                }
+                else
+                    alert("you have to enter userid and password firsts!")
+        });
+    </script>
+</body>
+
+</html>

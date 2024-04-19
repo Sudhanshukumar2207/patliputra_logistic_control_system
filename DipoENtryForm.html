@@ -1,0 +1,578 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="pcpllogo.png">
+        <style>
+            html{
+                font-size: 10px;
+            }
+            h2{
+                text-align: center;
+                font-size: 2.4rem;
+            }
+            #outer{
+                width: 100%;
+                height: 100%;
+            }
+            #menu{
+                height: 5rem;
+                width: 100%;
+                background: linear-gradient(to right,rgb(225, 135, 93) 0%,rgb(219, 217, 87) 100%);
+            }
+            #entery,#search{
+                height: 4.5rem;
+                width: 15rem;
+                margin-top: .5rem;
+                border: none;
+                border-radius: 1rem 1rem 0 0 ;
+                cursor: pointer;
+                font-size: 1.4rem;
+            }
+            #entery{
+                margin-left: .5rem;
+                background-color: rgb(143, 143, 233);
+            }
+            #search{
+                background-color: rgb(219, 185, 97);
+            }
+            #home{
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: blue;
+                margin: 1.7rem 5%;
+                float: right;
+            }
+                body{
+                    background: linear-gradient(to bottom,rgb(143, 143, 233) 0%,rgb(159, 210, 159) 100%);
+                }
+                #d1{
+                    height: 2.5rem;
+                    width: 96.2%;
+                    background-color: rgb(230, 236, 238);
+                    padding-top: 1px;
+                    padding-bottom: 2rem;
+                    margin-top: 15px;
+                    padding-bottom: 3rem;
+                    margin-left: 2%;
+                    text-align: center;
+                }
+                #d2{
+                    width: 99%;
+                    height: 440px;
+                    margin-top: -15px;
+                    background-color: rgb(230, 236, 238);
+                    margin-left: -5px;
+                }
+                table{
+                    margin-top: 2.5rem;
+                    font-size: 1.8rem;
+                    margin-left: 2rem;
+                    width: 100%;
+                    
+                }
+                form{
+                    margin-left: 2.5rem;
+                }
+                #td1{
+                    height: 6rem;
+                    width: 20%;
+                }
+                #td2{
+                    height: 6rem;
+                    width: 30%;
+                }
+                #p_n,#st,#o_n,#m_n,#m_c,#d_c,#d_t,#dist,#dp_id,#st,#gst{
+                    height: 3rem;
+                    width: 90%;
+                    text-transform: capitalize;
+                    font-size: 1.5rem;
+                    border: 1px solid rgb(128, 137, 140);
+                }
+                .sub{
+                    background-color: rgb(28, 169, 28);
+                    box-shadow: 5px 5px 10px black;
+                }
+                .kk{
+                    background-color: blue;
+                    margin-left: 3rem;
+                    box-shadow: 5px 5px 10px black;
+                }
+                .can{
+                    background-color: red;
+                    box-shadow: 5px 5px 10px black;
+                    margin-left: 30px;
+                }
+                #b1 {
+                    width: 12rem;
+                    border: 0;
+                    border-radius: 5.6rem;
+                    color: #fff;
+                    cursor: pointer;
+                    font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+                    font-size: 1.8rem;
+                    transition: all .3s;
+                }
+                #b1:before {
+                    background-color: initial;
+                    background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+                    border-radius: 12rem;
+                    content: "";
+                    height: 3rem;
+                    transition: all .3s;
+                    width: 10rem;
+                }
+                #b1:hover {
+                    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+                    transform: scale(1.05);
+                    border: solid 2px black;
+                }
+                #test,#dp_txt,#dn_txt,#pn_txt,#on_txt,#mn_txt,#mc_txt,#dc_txt,#dt_txt,#add_txt,#lg{
+                    color: red;
+                }
+                #outbord{
+                    width: 96%;
+                    height: auto;
+                    background-color: rgb(156, 160, 161);
+                    margin-left: 2%;
+                    border: solid 2px rgb(230, 236, 238);
+                }
+                .div_inner{
+                    width: 89%;
+                    height: 3rem;
+                    background-color: rgb(230, 236, 238);
+                    margin-left: 11%;
+                    margin-top: -4rem;
+                }
+                .line{
+                    width: 15rem;
+                    height: 4px;
+                    background-color: red;
+                    margin-top: 0px;
+
+                }
+                font{
+                    color: red;
+                }
+                #gst{
+                    text-transform: uppercase;
+                }
+            @media (max-width:998px) {
+                html{
+                    font-size: 55%;
+                }
+            }
+            @media (max-width:768px) {
+                html{
+                    font-size: 45%;
+                }
+            }
+        </style>
+        <title>Depot Details</title>
+    </head>
+    <body oncontextmenu="return false;" style="user-select: none;">
+        <div id="outer">
+                <div id="menu">
+                    <a href="DipoENtryForm.html"><button id="entery">Entry Form</button></a>
+                    <a href="DipoServiceForm.html"><button id="search">Service Form</button></a>
+                    <a href="dashboard_pl.html" id="home"><font>&#x1F3E0;</font>HOME</a>
+                </div>
+            <div id="body">
+                        
+                <div id="d1">
+                    <h2><b>DEPOT&nbsp;&nbsp;ENTRY&nbsp;&nbsp;FORM</b></h2>
+                </div>
+            <div id="outbord">
+                    <div class="line"></div>
+                        <b><p style="margin-left: 35px;margin-top: 2px;">+Fill Details</p></b>
+                        <div class="div_inner"></div>
+                <form>
+                    <div id="d2">
+                        <table>
+                                <tr>
+                                    <td id="td1"><label for="dp_id"><b>Depot &nbsp; ID</b></label><font>*</font></td>
+                                    <td id="td2">
+                                    <input type='text' id='dp_id' style="text-transform: uppercase;" onfocusout="flcheck('#dp_id','*Field is mandatory!')" onfocusin="fgcheck('#dp_id')">
+                                    <br><span id="dp_txt" class="l"></span>
+                                    </td>
+                                    <td id="td1"><label for="p_n"><b>Principal Company Name</b></label><font>*</font></td>
+                                    <td id="td2"><input type="text" id="p_n" class="clear" data-toggle="tooltip" title="Only Alphabet Allowed!" autofocus autocomplete="off" placeholder="Enter Principal Company Name" onkeydown="keychk('#p_n','#pn_txt')" onfocusout="flcheck('#p_n','*Field is mandatory!')" onfocusin='fgcheck("#p_n")'><br><span id="pn_txt" class="l" style="position: absolute;"></span></td>
+                                    
+                                    </tr>
+                                <tr>
+                                    <td id="td1"><label for="o_n"><b>Operational Company Name</b></label> <font>*</font></td>
+                                    <td id="td2"><select name="" id="o_n" onchange="cmbchk()">
+                                        <option >Patliputra Logistics</option>
+                                        <option >Patliputra Cands</option>
+                                    </select>
+                                    <br><span id="on_txt" class="l" style="position: absolute;"></span></td>
+                                    <td id="td1"><label for="m_n"><b>Depot Manager Name</b></label><font>*</font></td>
+                                    <td id="td2"><input type="text" id="m_n" class="clear" data-toggle="tooltip" title="Only Alphabet Allowed!" autocomplete="off" placeholder="Enter Manager Name" onkeydown="keychk('#m_n','#mn_txt')" onfocusout="flcheck('#m_n','*Field is mandatory!')" onfocusin="fgcheck('#m_n')"><br><span id="mn_txt" class="l" style="position: absolute;"></span></td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td id="td1"><label for="m_c"><b>Depot Manager Mobile &nbsp; Number</b></label><font>*</font></td>
+                                    <td id="td2"><input type="text" data-toggle="tooltip" title="Only Digit Allowed!" id="m_c" class="cont" maxlength="10"  autocomplete="off" placeholder="Enter Manager Contact Number" onkeydown="keychk('#m_c','#mc_txt')" onfocusout="flcheck('#m_c','*Field is mandatory!')" onfocusin="fgcheck('#m_c')"><br><span id="mc_txt" class="l" style="position: absolute;"></span></td>
+                                    <td id="td1"><label for="d_c"><b>Depot Mobile Number</b></label></td>
+                                    <td id="td2"><input type="text" id="d_c" class="cont h" data-toggle="tooltip" title="Only Digit Allowed!" maxlength="10"  autocomplete="off" placeholder="Enter Depot Contact Number"  onkeydown="keychk('#d_c','#dc_txt')" onfocusin="fgcheck('#d_c')"><br><span id="dc_txt" class="txt" style="position: absolute;"></span></td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td id="td1"><label for="d_t"><b>Depot Telephone Number</b></label></td>
+                                    <td id="td2"><input type="text" id="d_t" class="clear h" data-toggle="tooltip" title="Only Digit & Hyphen Allowed!" maxlength="15"  autocomplete="off" placeholder="Optional"  onkeydown="keychk('#d_t','#dt_txt')" onfocusin="fgcheck('#d_t')"><br><span id="dt_txt" class="txt" style="position: absolute;"></span></td>
+                                    <td id="td1"><label for="st"><b>State</b></label><font>*</font></td>
+                                    <td id="td2">
+                                        <select name="" id="st"  style="text-align: center;" onfocusout="combochk()" onfocusout="combochk()">
+                                            <option value="state" hidden>----------Select State----------</option>
+                                            <option  id="t">Andhra Pradesh</option>
+                                            <option >Arunachal Pradesh</option>
+                                            <option >Assam</option>
+                                            <option >Bihar</option>
+                                            <option >Chattisgarh</option>
+                                            <option >Delhi</option>
+                                            <option >Goa</option>
+                                            <option >Gujarat</option>
+                                            <option >Haryana</option>
+                                            <option >Himachal Pradesh</option>
+                                            <option >Jammu & Kashmir</option>
+                                            <option >Jharkhand</option>
+                                            <option >Karnataka</option>
+                                            <option >Kerala</option>
+                                            <option >Lakshadweep</option>
+                                            <option >Madhya Pradesh</option>
+                                            <option >Maharashtra</option>
+                                            <option >Manipur</option>
+                                            <option >Meghalaya</option>
+                                            <option >Mizoram</option>
+                                            <option >Nagaland</option>
+                                            <option >Odisha</option>
+                                            <option >Punjab</option>
+                                            <option >Rajasthan</option>
+                                            <option >Sikkim</option>
+                                            <option >Tamil Nadu</option>
+                                            <option >Telangana</option>
+                                            <option >Tripura</option>
+                                            <option >Uttar Pradesh</option>
+                                            <option >Uttarakhand</option>
+                                            <option >West Bengal</option>
+                                            <option >Andaman & Nicobar</option>
+                                            <option >Dadra & Nagar Haveli and Daman & Diu</option>
+                                            <option >Pondicherry</option>
+                                        </select><br><span id="test" class="tt" style="position: absolute;"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td1"><label for="dist"><b>District</b></label><font>*</font></td>
+                                    <td id="td2"><select name="" id="dist"  style="text-align: center;" onfocusout="combochk2()" onchange="combochk2()">
+                                        <option value="district" hidden id="y">----------Select District----------</option>
+                                        </select>
+                                        <br><span id="dist_txt" class="tt" style="position: absolute;color: red;"></span></td>
+                                        <td id="td1"><label for="add"><b>Address</b></label><font>*</font></td>
+                                    <td id="td2"><textarea data-toggle="tooltip" title="Only Alphabet, Hyphen & Comma Allowed!" style="width: 90%;height: 7rem;text-transform: capitalize;resize: none;" id="add" class="clear ent" autocomplete="off" placeholder="Enter Address" onkeydown="keychk('#add','#add_txt')" onfocusout="flcheck('#add','*Field is mandatory!')" onfocusin="fgcheck('#add')"></textarea><br><span id="add_txt" class="l" style="position: absolute;margin-top: -30px;"></span></td>
+                                        
+                                </tr>
+                                <tr>
+                                    <td><label for="gst"><b>GST &nbsp; Number</b></label><font>*</font></td>
+                                    <td><input type="text" id="gst" maxlength="15" minlength="15" class="cont" required="true" placeholder="Enter GST Number"  autocomplete="off"><br><label id="lg" style="position: absolute;"></label></td>
+                                    <td colspan="2" style="padding-left: 8rem;"><br><input type="button" value="SUBMIT" id="b1" class="sub" onfocus="br('.sub')" onfocusout="br1('.sub')">
+                                </tr>
+                            </table>
+                        </div>
+                </form>
+            </div>
+            </div>   
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                a=document.referrer;
+                if(!(a=='http://localhost/pl_test/dashboard_pl.html' || a=='http://localhost/pl_test/DipoServiceForm.html' || a=='http://localhost/pl_test/DipoENtryForm.html'))
+                    window.location.href='index.html';
+            });
+            function br(t){
+                $(t).css('border','2px solid black')
+            }
+            function br1(t){
+                $(t).css('border','none')
+            }
+           var flag=true,a,b,c;
+           ctr=0;
+           var conf=true
+           //####################### AUTOGENERATE OF ID ################################
+            $(document).ready(function(){
+                $("#entery").css('background-color','rgb(143, 143, 233)');
+                $.ajax({
+                    url: 'DipoEntSer.py',
+                    method: 'post',
+                    success: function (data) {
+                        var j=data.split(',,,')
+                        c=j[0]
+                        a=j[1]
+                        b=j[2]
+                        $('#dp_id').val(j[2]);
+                    }
+                });
+            });
+            //####################### SUBMIT BUTTON CLICKED ON ENTER KEY IN ADDRESS ################################
+            $('.ent').on('keypress',function(e){
+                if(e.which==13){
+                    $('.sub').click();
+                    $('.ent').blur();
+                }
+            });
+            //####################### STATE COMBOBOX ################################
+            function combochk(){
+                var choosen = $("#st option:selected").text();
+                if(choosen=='----------Select State----------'){
+                    $('#test').text("*Please Select Any of them!");
+                    flag=false;
+                }
+                else{
+                    $('#test').text("");
+                }
+            }
+            $('#st').on('change',function(){
+                var choosen = $("#st option:selected").text();
+                    $("#dist option[value!='district']").remove(); 
+                    $.ajax({
+                        url: 'DipoEntSer.py',
+                        method: 'post',
+                        data:{
+                            x:'distadd',
+                            t1:choosen
+                        },
+                        success: function (data) {
+                            // console.log(data)
+                            $('#dist').append(data);
+                        }
+                });
+            });
+            //####################### DISTRICT COMBOBOX ################################
+            function combochk2(){
+                var chk = $("#dist option:selected").text();
+                if(chk=='----------Select District----------'){
+                    $('#dist_txt').text("*Please Select Any of them!");
+                    flag=false;
+                }
+                else{
+                    $('#dist_txt').text("");
+                }
+            }
+            $('.h').focusout(function(){
+                $('.txt').text("");
+            });
+            function numchk(){
+                var st=$('#d_c').val();
+                var st2=$('#d_t').val();
+                if(st.length!=0||st2.length!=0){
+                    $('.txt').text("");
+                }
+                else{
+                    flag=false
+                }
+            }
+            //####################### FOCUS LOST OF FIELD ################################
+            function flcheck(id,msg){
+                $('.l').text("");
+                var txt=$(id).val();
+                if(txt.trim().length==0){
+                    $(id).val(msg);
+                    $(id).css({"border":"solid 1px red","color":"red"});
+                    flag=false;
+                }
+                else if(txt=="*Field is mandatory!"){
+                    flag=false;
+                }
+            }
+            //####################### FOCUS GAIN OF FIELD ################################
+            function fgcheck(chk) {
+                $(chk).css({"border":"solid 1px grey","color":"black"});
+                var name =$(chk).val();
+                if(name=="*Field is mandatory!")
+                    $(chk).val("");
+            }
+            //####################### INPUT CHECK OF FIELD ################################
+            function keychk(chk,d){
+                $(d).text("");
+                if(chk=='#d_c'||chk=='#m_c'){
+                    $(chk).on('keypress',function(e){
+                        if(e.which==48 && e.target.selectionStart==0){
+                            $(d).text("Zero At First Not Allowed!");
+                            return false
+                        }
+                        if(!(e.which>=48 && e.which<=57||e.which==8||e.which==13)){
+                            $(d).text("Only Digit Allowed!");
+                            return false;}
+                        else{
+                            $(d).text("");
+                            numchk();
+                        }
+                    });
+                }
+                else if(chk=='#add'){
+                    $(chk).on('keypress',function(e){
+                        if(e.which === 32 && e.target.selectionStart === 0 ||e.which==44 && e.target.selectionStart==0 ||e.which==45 && e.target.selectionStart==0||e.which==46 && e.target.selectionStart==0||e.which==47 && e.target.selectionStart==0 || e.which==48 && e.target.selectionStart==0){
+                            $(d).text("Space,.,-,0 At First Not Allowed!");
+                            return false;
+                        }
+                        if(!(e.which >= 65 && e.which <= 90 || e.which >= 97 && e.which <= 122 || e.which >= 48 && e.which <= 57 || e.which === 32 || e.which === 46 || e.which === 44 || e.which === 45 || e.which === 47 ||e.which=== 13)){
+                            $(d).text("Only Alphabet, Hyphen & Comma Allowed!");
+                            return false;}
+                        else{
+                            $(d).text("");
+                        }
+                    });
+                }
+                else if(chk=='#p_n'||chk=='#m_n'){
+                    $(chk).on('keypress',function(e){
+                        if(e.which==32 && e.target.selectionStart==0||e.which==46 && e.target.selectionStart==0){
+                            $(d).text("Space and Dot At First Not Allowed!");
+                            return false;
+                        }
+                        else if(!(e.which>=65 && e.which<=90 || e.which>=97 && e.which<=122 || e.which===32||e.which==13||e.which==46)){
+                            $(d).text("Only Alphabet Allowed!");
+                            return false;}
+                        else if(e.which==32 && $(this).val().slice(-1)==' '){
+                            e.preventDefault();
+                        }
+                        else{
+                            $(d).text("");
+                        }
+                    });
+                }
+                else{
+                    $(chk).on('keypress',function(e){
+                        if(e.which==45 && e.target.selectionStart==0){
+                            $(d).text("Hyphen At First Not Allowed!");
+                            return false;
+                        }
+                        if(!(e.which>=48 && e.which<=57||e.which==13||e.which==45)){
+                            $(d).text("Only Digit & Hyphen Allowed!");
+                            return false;}
+                        else{
+                            $(d).text("");
+                            numchk();
+                        }
+                    });
+                }
+            }
+            $('#gst').on('keypress',function(a){
+                $('#lg').html('')
+                if(!(a.which>=65 && a.which<=90 || a.which>=97 && a.which<=122 || a.which>=48 && a.which<=57)){
+                    $('#lg').html('Only digit and alphabate allowed')
+                    return false
+                }
+                else if(((a.which>=65 && a.which<=90) || (a.which>=97 && a.which<=122) ) && a.target.selectionStart==0){
+                    $('#lg').html('only digit allow at first')
+                    return false
+                }
+            })
+            function gst(){
+                aa=$('#gst').val()
+                if (aa.length==0){
+                    flag=false
+                    $('#lg').html('*Field is mandatory!')
+                }
+                else if (aa.length!=15){
+                    flag=false
+                    alert('GST no must be 15 digit!')
+                }
+            }
+            $('#gst').focusout(function(){
+                gst()
+            })
+            $('#gst').focus(function(){
+                $('#lg').html('')
+            })
+            //####################### FINALCHECK FOR SUBMIT ################################
+            function finalchk(){
+                flcheck('#dp_id','*Field is mandatory!')
+                flcheck('#p_n','*Field is mandatory!')
+                flcheck('#m_n','*Field is mandatory!')
+                flcheck('#m_c','*Field is mandatory!')
+                flcheck('#add','*Field is mandatory!')
+                combochk()
+                combochk2()
+                var st=$('#d_c').val();
+                var st2=$('#d_t').val();
+                if(st.length==0&&st2.length==0){
+                    $('.txt').text('Please Fill Any of them');
+                    flag=false
+                }
+                else{
+                    if(st.length!=0)
+                        if(st.length!=10){
+                            flag=false
+                            $("#dc_txt").text("Must be 10 digit!")
+                        }
+                }
+                var abc=$('#m_c').val();
+                if(abc.length!=10){
+                    flag=false
+                    $("#mc_txt").text("Must be 10 digit!")
+                }
+            }
+            //####################### NEXT BUTTON ################################
+            $(".sub").click(function(){
+                flag=true;
+                finalchk();
+                gst()
+                if(flag){
+                    var conf=confirm("Are you sure want to Insert Data!")
+                    if(conf){
+                        var dcode=$("#dp_id").val().trim();
+                        var p_n=$("#p_n").val().trim();
+                        var o_n = $("#o_n option:selected").text();
+                        var m_n=$("#m_n").val();
+                        var m_c=$("#m_c").val();
+                        var d_c=$("#d_c").val();
+                        var d_t=$("#d_t").val();
+                        var stat=$("#st option:selected").text();
+                        var distr=$("#dist option:selected").text();
+                        var addres=$("#add").val();
+                        var gst1=$('#gst').val();
+                        // alert(a,typeof(a))
+                        $.ajax({
+                            url:"DipoEntSer.py",
+                            method:"post",
+                            data:{
+                                x: "inst",
+                                t1:dcode,
+                                t3:p_n,
+                                t4:o_n,
+                                t5:m_n,
+                                t6:m_c,
+                                t7:d_c,
+                                t8:d_t,
+                                t9:stat,
+                                t10:distr,
+                                t11:addres,
+                                t12:a,
+                                t13:b,
+                                t14:c,
+                                t15:gst1
+                            },
+                            success:function(data){
+                                if(data==5)
+                                    alert('This GST no allready Submited!')
+                                else{
+                                    var j=data.split(',,,')
+                                    if(j[1]==0){
+                                        alert(j[0])
+                                        window.location.reload()
+                                    }
+                                    else{
+                                        alert(data)
+                                    }
+                                }
+                            }
+                        });
+                    }
+                }
+            });
+        $('input').on('keypress',function(a){
+            if (a.which==13)
+                $('#b1').click()
+        })
+        </script>
+    </body>
+</html>

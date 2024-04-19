@@ -1,0 +1,414 @@
+<html>
+    <head>
+        <title>Transporter Service Form</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="pcpllogo.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <style>
+        html{
+            font-size: 10px;
+        }
+            h2{
+                text-align: center;
+                font-size: 2.4rem;
+            }
+        *{
+            box-sizing: border-box;
+        }
+        #outer{
+            width: 100%;
+            height: 100%;
+        }
+            .parent5{
+                border: 1px solid rgba(0, 0, 0, 0.219);
+                background: linear-gradient(to right,rgb(225, 135, 93) 0%,rgb(219, 217, 87) 100%);
+                color: black;
+                width: 100%; 
+                height: 5rem;
+            }
+            .id3,
+            .id4 {
+                height: 4rem;
+                width: 15rem;
+                font-size: 1.6rem;
+                border: none;
+                color: black;
+                border-radius: 1rem 1rem 0px 0px;
+                cursor: pointer;
+                margin-top: 1rem;
+            }
+
+            .id3 {
+                background-color: rgb(143, 143, 233);
+                margin-left: 1rem;
+            }
+
+            .id4 {
+                background-color: #78de93;
+            }
+            #body{
+                width: 90%;
+                margin: auto;
+            }
+            #d1{
+                border: 1px solid rgba(0, 0, 0, 0.219);
+                background-color:lightyellow ;
+                color: black;
+                width: 100%;
+                height: 7rem;
+                margin-top: 2rem;
+            }
+            #d2{
+                height: 13rem;
+                width: 90%;
+                margin: auto;
+            }  
+            #table{
+                width: 100%;
+                margin-top: 3rem;
+                font-size: 1.6rem;
+            }
+            #table td{
+                width: 25%;
+            }
+            label{
+                font-size: 2.3rem;
+                color: white;
+            }
+            #home{
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: blue;
+                margin: 1.7rem 5%;
+                float: right;
+            }
+           
+
+            #ser{
+                background-color: rgb(90, 130, 204);
+            }
+            #refr{
+                background-color:rgba(4, 194, 4, 0.863);
+                margin-left: 5rem;
+            }
+            #upt{
+                background-color: #0b8d2e;
+                margin-top: 10px;
+                margin-left: 1rem;
+            }
+            #del{
+                background-color: red;
+                margin-left: 1rem;
+            }
+            #pr{
+                margin-left: 70%;
+                background-color: blue;
+            }
+            .b1 {
+            height: 3.5rem;
+            width: 12rem;
+            border: 0;
+            border-radius: 5.6rem;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+            font-size: 1.8rem;
+            transition: all .3s;
+        }
+
+        .b1:before {
+            background-color: initial;
+            background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+            border-radius: 12rem;
+            content: "";
+            height: 3rem;
+            transition: all .3s;
+            width: 10rem;
+        }
+
+        .b1:hover {
+            box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+            transform: scale(1.05);
+            border: solid 2px black;
+        }
+           #s1,#s2,#s3,#s4{
+            height: 3.5rem;
+            width: 95%;
+           }
+            #d_s{
+                margin-top: 20px;
+                width: 100%;
+                height: 290px;
+                overflow-y: auto;
+            }
+            #d_s thead th{
+                position: sticky;
+                top: 0px;
+            }
+           #tabl{
+            margin: auto;
+            width: 100%;
+            height: auto;
+            height: 39rem;
+           }
+           .tab{
+                color: black;
+                background-color: whitesmoke;
+                width: 100%;
+                text-align: center;
+                font-size: 18px;
+           }
+           .tab th{
+            background-color: lightgray;
+           }
+           .tab,.tab_r,.tab_c{
+                border: solid 0.5px black;
+                border-collapse: collapse;
+            }
+            .tab_c{
+                height: 30px;
+            }
+            @media (max-width:998px) {
+                html{
+                    font-size: 55%;
+                }
+            }
+            @media (max-width:768px) {
+                html{
+                    font-size: 45%;
+                }
+            }
+       </style>
+    </head>
+    <body style="background-image:linear-gradient(to bottom, #78de93 0%,#6991c7 100%); user-select: none;" oncontextmenu="return false;">
+    <div id="outer">    
+        <div class="parent5">
+            <a href="Transporterentry.html"><button class="id3">Entry Form</button></a>
+            <a href="Transporterservice.html"><button class="id4">Service Form</button></a>
+            <a href="dashboard_pl.html" id="home"><font size="4rem">&#x1F3E0;</font> HOME</a>
+             
+        </div>
+        <div id="body">
+            <div id="d1">
+                <h2>TRANSPORT &nbsp; SERVICE  &nbsp; FORM</h2></div>
+            </div>
+            <div id="d2">
+                <form>
+                    <table id="table">
+                        <tr>
+                            <td>
+                                <label>Tranporter Name</label><br>
+                                <select id="s1" style="text-align: center;"><option disabled selected value="">---Select Transporter Name---</option></select>
+                            </td>
+                            <td>
+                                <label>District</label><br>
+                                <select id="s2" style="text-align: center; "><option disabled selected value="">---Select District---</option></select>
+                            </td>
+                            <td>
+                                <label>State</label> <br>
+                                <select id="s3" style="text-align: center; "><option disabled selected value="">---Select State---</option></select>
+                            </td>
+                            <td>
+                                <label>Vehicle_type</label><br>
+                                <select id="s4" style="text-align: center;" ><option disabled selected value="">---Select Vehicle Type---</option></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;" colspan="4"><br>
+                                <input type="button" value="SEARCH" class="b1" id="ser">
+                                <input type="reset" class="b1" id="refr" value="REFRESH">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div id="tabl"></div> 
+        </div> 
+    </div>
+</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
+    <script>
+        var dipo=localStorage.getItem('did').trim()
+                var role=localStorage.getItem('role').trim();
+            $(document).ready(function(){
+                a=document.referrer;
+                if(!(a=='http://localhost/pl_test/Transporterentry.html' || a=='http://localhost/pl_test/Transporterservice.html'))
+                    window.location.href='index.html';
+            });
+            $(document).on('click','#pr',function(){
+                $(".tab").table2excel({
+                    exclude: "#th1",
+                    filename: "transport.xls"
+               });
+            }); 
+            function ready1(){
+                $.ajax({
+                url:'TransEntSer.py',
+                method:'post',
+                data:{
+                        x:'cb1',
+                        t1:dipo
+                },
+                success:function(data){
+                        var j=data.split(',,,')
+                        $('#s1').append(j[0]);
+                        $('#s2').append(j[1]);
+                        $('#s3').append(j[2]);
+                        $('#s4').append(j[3]);
+                    }
+                });
+            }
+        $(document).ready(function(){
+            ready1()
+        });
+        $('#ser').on('click',function(){
+            flag=true
+            x=document.querySelector('#s1')
+            cb1=x.value
+            x=document.querySelector('#s2')
+            cb2=x.value
+            x=document.querySelector('#s3')
+            cb3=x.value
+            x=document.querySelector('#s4')
+            cb4=x.value
+
+            // if(cb1=='' && cb2=='' && cb3=='' && cb4==''){
+            //     alert("Please Select Anyone Of them!")
+            //     flag=false
+            //     }
+            if(flag){
+                $.ajax({
+                    url:'TransEntSer.py',
+                    method:'post',
+                    data:{
+                        x:'search',
+                        t1:cb1,
+                        t2:cb2,
+                        t3:cb3,
+                        t4:cb4,
+                        t5:dipo
+                    },
+                    success:function(data){
+                        if(data==0)
+                        {
+                        $('#tabl').html('');
+                        alert("No Record Found!")
+                        }
+                        else{
+                        $('#tabl').html(data)
+                                if(role=='1')
+                                    $('#del').hide()
+                        }
+                    }
+                })
+            }
+        });
+        var cb1="",cb2="",cb3="", ch4="";
+        $(document).on('click','.ch1',function(){
+            if($(this).prop('checked'))
+            {
+                var cell = $(this).closest('tr').children("td").text().split('  ');
+                $(this).closest('tr').css("background-color","yellow")
+
+                 cb1=cell[0]
+            }
+            else
+            {
+                $(this).closest('tr').css("background-color","white")  
+            }
+        });
+        $(document).on('click','#del',function(){
+            var cell=$('input[name="rad"]:checked').closest('tr').children("td").text().split('  ');
+
+                 cb1=cell[0]   //id
+            var flag=confirm("Are you sure you wanna delete!")
+            if(flag)
+            $.ajax({
+               url:'TransEntSer.py',
+               method:'post',
+               data:{
+                        x:'delete',
+                        t1:cb1     
+                    },
+                success:function(data){
+                    alert(data)
+                    $("input[name='rad']:checked").closest('tr').remove();
+                }
+            });
+        });
+        $(document).on('click','#upt',function(){
+            var cell=$('input[name="rad"]:checked').closest('tr').children("td").text().split('  ');
+
+                cb1=cell[0]   //id
+                cb2=cell[1] 
+                cb3=cell[2] 
+                cb4=cell[3] 
+                cb5=cell[4] 
+                cb6=cell[5] 
+                cb7=cell[6] 
+                cb8=cell[7]
+                cb9=cell[8] 
+                cb10=cell[9] 
+                cb11=cell[10]  
+                cb12=cell[11] //ifsc
+                cb13=cell[12] //vehtype
+
+            var flag=confirm("Are you sure you wanna update!")
+            if(flag)
+            $.ajax({
+               url:'TransEntSer.py',
+               method:'post',
+               data:{
+                        x:'update',
+                        t1:cb1,
+                        t2:cb2,
+                        t3:cb3,
+                        t4:cb4,
+                        t5:cb5,
+                        t6:cb6,
+                        t7:cb7,
+                        t8:cb8,
+                        t9:cb9,
+                        t10:cb10,
+                        t11:cb11,
+                        t12:cb12,
+                        t13:cb13,
+                    },
+                success:function(data){
+                    alert(data)
+                    console.log(data)
+                }
+            });
+        });
+    
+        $(document).on('keydown','.z',function(){
+            $(this).css('background-color','lightgreen')
+            $('.ch1').removeAttr('disabled',false)
+        });
+
+        $(document).on('blur','.z',function(){
+            a=$(this).text()
+            $(this).text(a+'  ')
+        });
+        $(document).on('focus','.z',function(){ //update problem solved
+            a=$(this).text().trim()
+            $(this).text(a)
+        });
+        
+        $('#refr').click(function(){
+            location.reload()
+            // $('#s1').html('<option disabled selected value="">---Select Transporter Name---</option>');
+            // $('#s2').html('<option disabled selected value="">---Select District---</option>');
+            // $('#s3').html('<option disabled selected value="">---Select State---</option>')
+            // $('#s4').html('<option disabled selected value="">---Select Vehicle Type---</option>')
+            // $('#tabl').html('')
+            // ready1()
+       });
+    
+    </script>
+    </body>     
+</html>        
+            

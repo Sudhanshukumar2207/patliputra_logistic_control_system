@@ -1,0 +1,1125 @@
+<html>
+    <head>
+        <title>Order Entry Form</title>
+        <link rel="icon" href="pcpllogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html{
+                font-size: 10px;
+            }
+            h2{
+                text-align: center;
+                font-size: 2.4rem;
+            }
+            #outer{
+                width: 100%;
+                height: 100%;
+            }
+            #menu{
+                height: 5rem;
+                width: 100%;
+                background: linear-gradient(to right,rgb(225, 135, 93) 0%,rgb(219, 217, 87) 100%);
+            }
+            #entery,#search{
+                height: 4.5rem;
+                width: 15rem;
+                margin-top: .5rem;
+                border: none;
+                border-radius: 1rem 1rem 0 0 ;
+                cursor: pointer;
+                font-size: 1.4rem;
+            }
+            #entery{
+                margin-left: .5rem;
+                background-color: rgb(143, 143, 233);
+            }
+            #search{
+                background-color: rgb(219, 185, 97);
+            }
+            #home{
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: blue;
+                margin: 1.7rem 5%;
+                float: right;
+            }
+            body{
+                height: 75rem;
+                background: linear-gradient(to bottom,rgb(143, 143, 233) 0%,rgb(159, 210, 159) 100%);
+            }
+            #body{
+                width: 80%;
+                margin: auto;
+            }
+            #d1{
+                height: 3.5rem;
+                background-color: rgb(230, 236, 238);
+                padding-top: .1rem;
+                margin-top: 2rem;
+                padding-bottom: 3rem;
+            }
+            #d2{
+                width: 100%;
+                height: 58rem;
+                margin-top: 2rem;
+                background-color: rgb(230, 236, 238);
+                border: 1px solid black;
+            }
+            table{
+                width: 100%;
+                margin-top: 2rem;
+                font-size: 1.8rem;
+                padding-bottom: 2rem;
+                
+            }
+            form{
+                margin-left: 5rem;
+            }
+            #td1{
+                width: 20%;
+            }
+            #td2{
+                width: 30%;
+            }
+            td{
+                height: 4.8rem;
+            }
+            #t,#t1,#t2,#t3,#t4,#t5,#t6,#t7,#t8,#t9,#t10,#t11,#t12,#t13,#t14,#t15,#t160,#t16,#t17,#t19,#t10a,#t14a,#pd,#lrp{
+                height: 3rem;
+                font-size: 1.5rem;
+                border-radius: .5rem;
+                border: 1px solid rgb(128, 137, 140);
+                padding-left: 2rem;
+            }
+            #t1,#t2,#t3,#t4,#t5,#t7,#t8,#t9,#t11,#t12,#t13,#t15,#t17,#t19,#pd,#lrp{
+                width: 90%;
+            }
+            #t6,#t16{
+                width: 60%;
+                margin-left: 2%;
+            }
+            #t10,#t14{
+                width: 67%;
+            }
+            #t10a,#t14a{
+                width: 21%;
+            }
+            #t,#t160{
+                width: 28%;
+            }
+            /* #b1{
+                background-color: rgb(28, 169, 28);
+                margin-left: 6rem;
+                width: 40%;
+            } */
+            #sub,#lp{
+                width: 30%;
+                background-color: green;
+            }
+            #lp{
+                background-color: blue;
+                float: right;
+                margin-right: 10%;
+            }
+            .b1 {
+                height: 3rem;
+                border: 0;
+                border-radius: 5.6rem;
+                color: #fff;
+                cursor: pointer;
+                font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+                font-size: 1.8rem;
+                transition: all .3s;
+            }
+            .b1:before {
+                background-color: initial;
+                background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+                border-radius: 12.5rem;
+                content: "";
+                opacity: .5;
+                transition: all .3s;
+            }
+            .b1:hover {
+                box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+                transform: scale(1.05);
+            }
+            #dig,#dig1,#dig4,#dig6,#vl1,#vl2,#ls1,#ls2,#ls3,#ls4,#tt,#rr,#l19,#dig2{
+                color: red;
+                margin-left: 2.5rem;
+            }
+            label{
+                position: absolute;
+            }
+            font{
+                color: red;
+            }
+            #t5,#t8{
+                text-transform: uppercase;
+            }
+            #t12,#t13,#t15,#t17,#t19{
+                background-image: url(rs.png);
+                background-repeat: no-repeat;
+                background-size: 5% 90%;
+            }
+            #t16{
+                background-image: url(rs.png);
+                background-repeat: no-repeat;
+                background-size: 7% 90%;
+            }
+            #t160{
+                background-image: url(percent.png);
+                background-repeat: no-repeat;
+                background-position: right;
+                background-size: 40% 90%;
+            }
+            @media (max-width:998px) {
+                html{
+                    font-size: 55%;
+                }
+            }
+            @media (max-width:768px) {
+                html{
+                    font-size: 45%;
+                }
+            }
+        </style>
+    </head>
+    <body oncontextmenu="return false;" style="user-select: none;">
+        <div id="outer">
+            <div id="menu">
+                <a href="order_ent_form.html"><button id="entery">Entry Form</button></a>
+                <a href="order_ser_form.html"><button id="search">Service Form</button></a>
+                <a href="dashboard_pl.html" id="home"><font size="4rem">&#x1F3E0;</font> HOME</a>
+            </div>
+        <div id="body">
+        <div id="d1">
+            
+            <h2><b>ORDER &nbsp;&nbsp;&nbsp; ENTRY &nbsp;&nbsp;&nbsp; FORM</b></h2>
+            
+        </div>
+        <div id="d2">
+            <form>
+            <table>
+                <tr>
+                    <td><label for="t6"><b>LR &nbsp; NO.<font>*</font></b></label></td>
+                        <td>
+                            <input type="text" id="t" readonly>
+                            <input type="text" id="t6" placeholder="LR No." readonly><br><label id="tt"></label><label id="ls" style="font-size: 15px;"></label><br></td>
+                        <td><label for="t7"><b>LR &nbsp; Date<font>*</font></b></label></td>
+                    <td><input type="date" id="t7"></td>
+                </tr>
+                <tr>
+                    <td id="td1"><label for="t1"><b>Distributor &nbsp; Name<font>*</font></b></label></td>
+                    <td id="td2">
+                        <select id="t1" onfocusout="ch3('#t1','#ls1')" onfocus="ch4('#t1','#ls1')">  
+                            <option value="" hidden>------------Distributors Name---------</option>
+                        </select><br><label id="ls1" style="font-size: 15px;"></label></td>
+                    <td id="td1"><label for="t2"><b>Distributor &nbsp; Town<font>*</font></b></label></td>
+                    <td id="td2">
+                        <input type="text" readonly id="t2" placeholder="Distributor Town"><br><label id="ls2" style="font-size: 15px;"></label></td>
+                </tr>
+
+                <tr>
+                    <td id="td1"><label for="t3"><b>Transporter &nbsp; Name<font>*</font></b></label></td>
+                    <td id="td2">
+                        <select id="t3" onfocusout="ch3('#t3','#ls3')" onfocus="ch4('#t3','#ls3')">  
+                            <option value="" hidden>-----------Transporter  Name----------</option>
+                        </select><br><label id="ls3" style="font-size: 15px;"></label></td>
+                    <td id="td1"><label for="t4"><b>Vehicle &nbsp; Type<font>*</font></b></label></td>
+                    <td id="td2">
+                        <select id="t4" class="t2" onfocusout="ch3('#t4','#ls4')" onfocus="ch4('#t4','#ls4')">  
+                            <option value="" hidden>------------Vehicle Type-------------</option>
+                        </select><br><label id="ls4" style="font-size: 15px;"></label></td>
+                </tr>
+                <tr>
+                    <td id="td1"><label for="t5"><b>Vehicle &nbsp; No.<font>*</font></b></label></td>
+                    <td id="td2"><input type="text" id="t5" class="alcont" placeholder="Vehicle No" onfocusout="ch('#t5','#vl1')" onfocus="ch1('#t5')" onkeydown="kd('#t5','#vl1')"><br><label id="vl1" style="font-size: 15px;"></label></td>
+        
+                    <td id="td1"><b>Load &nbsp; Type<font>*</font></b></td>
+                    <td id="td2">
+                        <input type="radio" id="r1" class="r1" name="a" value="FTL">&nbsp;&nbsp;<label for="r1">FTL</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="r2" class="r1" name="a" value="PTL">&nbsp;&nbsp;<label for="r2">PTL</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="r3" class="r1" name="a" value="Weight">&nbsp;&nbsp;<label for="r3">Weight</label><br><label id="rr"></label>
+                    </td>
+                </tr>
+              
+                <tr>
+                    <td><label for="t8"><b>Invoice &nbsp; No.<font>*</font></b></label></td>
+                    <td><input type="text" id="t8" class="alcont" placeholder="Invoice No." onfocusout="ch('#t8','#vl2')" onfocus="ch1('#t8')" onkeydown="kd('#t8','#vl2')"><br><label id="vl2" style="font-size: 15px;"></label></td>
+                    <td><label for="t9"><b>Invoice &nbsp; Value<font>*</font></b></label></td>
+                    <td><input type="text" id="t9" class="digit" placeholder="Invoice Value" onfocusout="ch('#t9','#dig')" onfocus="ch1('#t9')"><br><label id="dig" style="font-size: 15px;"></label></td>
+                </tr>
+                <tr>
+                    <td><label for="t10"><b>Quantity<font>*</font></b></label></td>
+                    <td>
+                        <input type="text" id="t10" class="digit" placeholder="Quantity" onfocusout="ch('#t10','#dig1')" onfocus="ch1('#t10')">
+                        <select id="t10a" align="center" style="padding:0px;">
+                            <option value="Qty" selected>Qty</option>
+                            <option value="Box">Box</option>
+                            <option value="Carton">Carton</option>
+                            <option value="Bag">Bag</option>
+                            <option value="Drum">Drum</option>
+                            <option value="No.">No.</option>
+                        </select><br><label id="dig1" style="font-size: 15px;"></label>
+                    </td>
+                    
+                    <td><label for="t11"><b>Invoice &nbsp; Date<font>*</font></b></label></td>
+                    <td><input type="date" id="t11"></td>
+                </tr>
+                <tr>
+                    <td><label for="t14"><b>Weight<font>*</font></b></label></td>
+                    <td>
+                        <input type="text" id="t14" class="digit" placeholder="Weight" onfocusout="ch('#t14','#dig4')" onfocus="ch1('#t14')">
+                        <select id="t14a" align="center" style="padding:0px;">
+                            <option value="Kgs" selected>kgs</option>
+                            <option value="MT">MT</option>
+                            <option value="Quiantol">Quintol</option>
+                        </select><br><label id="dig4" style="font-size: 15px;"></label>
+                    </td>
+                        
+                    <td><label for="t13"><b>Labour &nbsp; Expense</b></label></td>
+                    <td><input type="text" id="t13" readonly class="digit" value="0" placeholder="Labour Expense"><br><label id="dig3" style="font-size: 15px;"></label></td>
+                </tr>
+                <tr>
+                    <td><label for="t12"><b>Freight</b></label></td>
+                    <td><input type="text" id="t12" class="digit" value="0" placeholder="Freight"><br><label id="dig2" style="font-size: 15px;"></label></td>
+                    <td><label for="t19"><b>Miscallaneous &nbsp; Charge</b></label></td>
+                    <td><input type="text" id="t19" value="0"><br><label id="l19" style="font-size: 15px;"></label></td>
+                </tr>
+                <tr>
+                    <td><label for="t15"><b>Total &nbsp; Amount</b></label></td>
+                    <td><input type="text" id="t15" class="digit" value="0" readonly placeholder="Total Amount"><br><label id="dig5" style="font-size: 15px;"></label></td>
+                    <td><label for="t16"><b>Advance &nbsp; Amount</b></label></td>
+                    <td><input type="text" id="t160" value="0" onkeydown="kd('#t160','#dig6')"><input type="text" id="t16" class="digit" value="0" placeholder="Advance Amount"><br><label id="dig6" style="font-size: 15px;"></label></td>
+                </tr>
+                <tr>
+                    <td><label for="t17"><b>Dues &nbsp; Amount</b></label></td>
+                    <td><input type="text" id="t17" class="digit" value="0" readonly placeholder="Dues Amount"><br><label id="dig7" style="font-size: 15px;"></label></td>
+                    <td><label for="pd"><b>Product<font>*</font></b></label></td>
+                    <td><input type="text" id="pd" placeholder="Enter product" onfocusout="ch('#pd','#xyz')" onfocus="ch1('#pd')"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Submit" onclick="save()" id="sub" class="b1">
+                    <input type="button" value="Preserve LR" id="lp" class="b1"></td>
+                    <td><label for="lrp"><b>LR Preserve</b></label></td>
+                    <td><select id="lrp">
+                        <option value="">---------- Preserve LR No ----------</option>
+                    </select></td>
+                </tr>
+            </table>
+            </form>
+        </div></div></div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+            <script>
+                var did=localStorage.getItem('did').trim();
+                var role=localStorage.getItem('role').trim();
+            $(document).ready(function(){
+                a=document.referrer;
+                if(!(a=='http://localhost/pl_test/dashboard_pl.html' || a=='http://localhost/pl_test/order_ent_form.html' || a=='http://localhost/pl_test/order_ser_form.html' || a=='http://localhost/pl_test/invoice.html'))
+                    window.location.href='index.html';
+            });
+                // $(document).ready(function(){
+                //     if (role=='2')
+                //         $('#search').hide()
+                // })
+                $('#t').val(did)
+                flag=true
+                function ch(t,l){
+                    $(l).html('')
+                    var a=$(t).val();
+                    if (a.trim().length==0)
+                    {
+                        $(t).val('*Field is mandatory');
+                        $(t).css({'border':'2px solid red','color':'red'});
+                        flag=false
+                    }
+                    else if(a=="*Field is mandatory")
+                    flag=false
+                }
+                function ch1(t){
+                    var a=$(t).val()
+                    if(a=="*Field is mandatory"){
+                        $(t).val('');
+                    }
+                        $(t).css({'border':'1px solid black','color':'black'});
+                };
+                function ch3(t,l){
+                    b=document.querySelector(t)
+                    a=b.value
+                    if(a==''){
+                        $(l).html('*Please select any one')
+                        $(t).css({'border':'2px solid red','color':'red'})
+                        flag=false
+                    }
+                }
+                function ch4(t,l){
+                    $(l).html('')
+                    $(t).css({'border':'1px solid black','color':'black'});
+                }
+                var dd
+                var mm
+                var yy
+                function curdate(){
+                    var dt=new Date()
+                    dd=dt.getDate()
+                    yy=dt.getFullYear()
+                    mm=dt.getMonth()+1
+                    if (dd<10)
+                    dd='0'+dd
+                    if (mm<10)
+                    mm='0'+mm
+                    cd=yy+'-'+mm+'-'+dd
+                    $('#t7').val(cd)
+                    $('#t11').val(cd)
+                }
+                $(document).ready(function(){
+                    curdate();
+                })
+            $(function(){
+                var str=0
+                $('#t9').on('keydown',function(e){
+                    $('#dig').html("");
+                    if(e.which==16){
+                        $('#r1').focus()
+                    }
+                    else if (e.which>=33 && e.which<=40 || e.which==12 || e.which==45 || e.which==46){
+                        $('#dig').html("*Please on the numlock");
+                        return false;
+                    }
+                    else if (!(e.which>=48 && e.which<=57 || e.which>=33 && e.which<=40 || e.which==12 || e.which==45 || e.which==46 || e.which>=96 && e.which<=105 || e.which==110 || e.which==190 || e.which==8 || e.which==144 || e.which==9 || e.which==13)){
+                        $('#dig').html("*Only digit allowed");
+                        return false;
+                    }
+                    else{
+                    if ((e.which==110 || e.which==190 || e.which==48 || e.which==96) && e.target.selectionStart==0){
+                        $('#dig').html("*Dot and zero at first not allowed");
+                        str=0
+                        return false;
+                    }
+                    else if((e.which==110 || e.which==190) && str>=1){
+                        $('#dig').html("*Multiple dot not allowed");
+                        return false;
+                    }
+                    else if((e.which>=48 && e.which<=57 || e.which>=96 && e.which<=105) && str>=3){
+                        $('#dig').html('*Only two digit allowed after dicimal')
+                        return false
+                    }
+                    else if(str>=1){
+                            if (e.which==8){
+                                str=str-1
+                            }
+                            else{
+                                str=str+1
+                            }
+                    }
+                    else if((e.which==110 || e.which==190) && str==0){
+                        str=1
+                    }
+                    }
+                })
+            });
+            $('#r1').keyup(function(e){
+                if (e.which==16)
+                $('#t9').focus()
+            })
+            $('#r2').keyup(function(e){
+                if (e.which==16)
+                $('#t10').focus()
+            })
+            $(function(){
+                var str=0
+                $('#t10').on('keydown',function(e){
+                    $('#dig1').html("");
+                    if(e.which==16){
+                        $('#r2').focus()
+                    }
+                    else if (e.which>=33 && e.which<=40 || e.which==12 || e.which==45 || e.which==46){
+                        $('#dig1').html("*Please on the numlock");
+                        return false;
+                    }
+                    else if (!(e.which>=48 && e.which<=57 || e.which>=33 && e.which<=40 || e.which==12 || e.which==45 || e.which==46 || e.which>=96 && e.which<=105 || e.which==110 || e.which==190 || e.which==8 || e.which==144 || e.which==9 || e.which==13)){
+                        $('#dig1').html("*Only digit allowed");
+                        return false;
+                    }
+                    else{
+                    if ((e.which==110 || e.which==190 || e.which==48 || e.which==96) && e.target.selectionStart==0){
+                        $('#dig1').html("*Dot and zero at first not allowed");
+                        str=0
+                        return false;
+                    }
+                    else if((e.which==110 || e.which==190) && str>=1){
+                        $('#dig1').html("*Multiple dot not allowed");
+                        return false;
+                    }
+                    else if((e.which>=48 && e.which<=57 || e.which>=96 && e.which<=105) && str>=3){
+                        $('#dig1').html('*Only two digit allowed after dicimal')
+                        return false
+                    }
+                    else if(str>=1){
+                            if (e.which==8){
+                                str=str-1
+                            }
+                            else{
+                                str=str+1
+                            }
+                    }
+                    else if((e.which==110 || e.which==190) && str==0){
+                        str=1
+                    }
+                    }
+                })
+            });
+            $('#t12').on('keypress',function(a){
+                $('#dig2').html('')
+                if (!(a.which>=48 && a.which<=57 || a.which==13)){
+                    $('#dig2').html("*Only digit allowed");
+                    return false
+                }
+            })
+            $('#t12').focusout(function(){
+                $('#dig2').html('')
+                a=$('#t10').val()
+                if (a!='')
+                $('#t10').focus()
+                // $('#t16').val('0')
+                $('#t19').val('0')
+            })
+            $(function(){
+                var str=0
+                $('#t14').on('keydown',function(e){
+                    $('#dig4').html("");
+                    if(e.which==16){
+                        $('#sub').focus()
+                    }
+                    else if (e.which>=33 && e.which<=40 || e.which==12 || e.which==45 || e.which==46){
+                        $('#dig4').html("*Please on the numlock");
+                        return false;
+                    }
+                    else if (!(e.which>=48 && e.which<=57 || e.which>=33 && e.which<=40 || e.which==12 || e.which==45 || e.which==46 || e.which>=96 && e.which<=105 || e.which==110 || e.which==190 || e.which==8 || e.which==144 || e.which==9 || e.which==13)){
+                        $('#dig4').html("*Only digit allowed");
+                        return false;
+                    }
+                    else{
+                    if ((e.which==110 || e.which==190) && e.target.selectionStart==0){
+                        $('#dig4').html("*Dot at first not allowed");
+                        str=0
+                        return false;
+                    }
+                    else if((e.which==110 || e.which==190) && str>=1){
+                        $('#dig4').html("*Multiple dot not allowed");
+                        return false;
+                    }
+                    else if((e.which>=48 && e.which<=57 || e.which>=96 && e.which<=105) && str>3){
+                        $('#dig4').html('*Only two digit allowed after dicimal')
+                        return false
+                    }
+                    else if(str>=1){
+                            if (e.which==8){
+                                str=str-1
+                            }
+                            else{
+                                str=str+1
+                            }
+                    }
+                    else if((e.which==110 || e.which==190) && str==0){
+                        str=1
+                    }
+                    }
+                })
+            });
+            $('#t14').on('keypress',function(){
+                a=$(this).val()
+                if(a.length==1 && a.charCodeAt(0)==48)
+                    $(this).val('')
+            })
+            $('#t12').on('keypress',function(){
+                a=$(this).val()
+                if(a.length==1 && a.charCodeAt(0)==48)
+                    $(this).val('')
+            })
+            $('#sub').keyup(function(e){
+                if (e.which==16)
+                $('#t14').focus()
+            })
+            $('#b1').keyup(function(e){
+                if (e.which==16)
+                $('#t16').focus()
+            })
+            $('#t16').on('keypress',function(e){
+                a=$('#t16').val()
+                if (a.length==1){
+                    if (a.charCodeAt(0)==48 && (e.which>=48 && e.which<=57))
+                    $('#t16').val('')
+                }
+            })
+            $('#t19').on('keypress',function(e){
+                a=$('#t19').val()
+                if (a.length==1){
+                    if (a.charCodeAt(0)==48 && (e.which>=48 && e.which<=57))
+                    $('#t19').val('')
+                }
+            })
+            $('#t19').on('keypress',function(e){
+                $('#l19').html('')
+                if(!(e.which>=48 && e.which<=57)){
+                    $('#l19').html('Only digit allowed')
+                    return false
+                }
+            })
+            $('#t19').keydown(function(e){
+                if (e.which==8)
+                    $('#l19').html('')
+            })
+            $('#t19').focusout(function(){
+                $('#l19').html('')
+            })
+            $(function(){
+                var str=0
+                $('#t16').on('keydown',function(e){
+                    $('#dig6').html("");
+                    if(e.which==16){
+                        $('#b1').focus()
+                    }
+                    else if (e.which>=33 && e.which<=40 || e.which==12 || e.which==45 || e.which==46){
+                        $('#dig6').html("*Please on the numlock");
+                        return false;
+                    }
+                    else if (!(e.which>=48 && e.which<=57 || e.which>=33 && e.which<=40 || e.which==12 || e.which==45 || e.which==46 || e.which>=96 && e.which<=105 || e.which==110 || e.which==190 || e.which==8 || e.which==144 || e.which==9 || e.which==13)){
+                        $('#dig6').html("*Only digit allowed");
+                        return false;
+                    }
+                    else{
+                    if ((e.which==110 || e.which==190) && e.target.selectionStart==0){
+                        $('#dig6').html("*Dot at first not allowed");
+                        str=0
+                        return false;
+                    }
+                    else if((e.which==110 || e.which==190) && str>=1){
+                        $('#dig6').html("*Multiple dot not allowed");
+                        return false;
+                    }
+                    else if((e.which>=48 && e.which<=57 || e.which>=96 && e.which<=105) && str>=3){
+                        $('#dig6').html('*Only two digit allowed after dicimal')
+                        return false
+                    }
+                    else if(str>=1){
+                            if (e.which==8){
+                                str=str-1
+                            }
+                            else{
+                                str=str+1
+                            }
+                    }
+                    else if((e.which==110 || e.which==190) && str==0){
+                        str=1
+                    }
+                    }
+                })
+            });
+            $('#t16').focusout(function(){
+                $('#dig6').html('')
+            })
+            $('#t160').focusout(function(){
+                $('#dig6').html('')
+            })
+            function kd(t,l){
+                    $(l).html("");
+                $(t).on('keypress',function(e){
+                    if (t=='#t5'){
+                        if (!(e.which>=65 && e.which<=90 ||e.which>=97 && e.which<=122 || e.which>=48 && e.which<=57 || e.which==13)){
+                            $(l).html("*Only digit and alphabet is allowed");
+                            return false;
+                        }
+                                else if ((e.which>=48 && e.which<=57) && e.target.selectionStart==0){
+                                    $('#vl1').html('*Digit at first not allowed')
+                                    return false;
+                                }
+                    }
+                    else if(t=='#t8'){
+                        if (!(e.which>=65 && e.which<=90 ||e.which>=97 && e.which<=122 || e.which>=48 && e.which<=57 || e.which==13 || e.which==47)){
+                            $(l).html("*Only digit, / and alphabet are allowed");
+                            return false;
+                        }
+                        else if(e.which==47 && e.target.selectionStart==0){
+                            $(l).html("*/ at first not allowed");
+                            return false
+                        }
+                        else{
+                            if(e.which===47 && $(this).val().slice(-1)==='/')
+                            e.preventDefault();
+                        }
+                    }
+                    else if(t=='#t160'){
+                        if (!(e.which>=48 && e.which<=57)){
+                            $(l).html('*Only digit allowed')
+                            return false
+                        }
+                        else{
+                            a=$(t).val()
+                            if(a.length>1){
+                                $(l).html('*Only two digit allowed')
+                                return false
+                            }
+                            else if(a.length==1 && a.charCodeAt(0)==48)
+                                $(t).val('')
+                        }
+                    }
+                })
+            }
+            $('#pd').on('keypress',function(a){
+                if(a.which==32 && a.target.selectionStart==0)
+                    return false
+            })
+            $('#t14').keydown(function(e){
+                if(e.which==9)
+                $('#t15').focus()
+            })
+            $('#t16').keydown(function(e){
+                if(e.which==9)
+                $('#t17').focus()
+            })
+            // check for ftl / ptl
+            function rr(){
+                a=$('input[name="a"]:checked').val()
+                if (a!='FTL' && a!='PTL' && a!='Weight'){
+                    $('#rr').html('Please checked any one')
+                    flag=false
+                }
+            }
+            function date_ch(){
+                a=$('#t7').val()
+                b=$('#t11').val()
+                if(a<b){
+                    alert("LR Date can't be less than Invoice Date")
+                    flag=false
+                }
+                else
+                    flag=true
+            }
+            $('#t11').focusout(function(){
+                date_ch()
+            })
+            var lr_no;
+            // ------------------------------- lrno duplicate check ------------------------------
+            // var log1=true;
+            // $('#t6').on('focusout',function(){
+            //     a=$(this).val()
+            //     $.ajax({
+            //         url:'order_ent_form.py',
+            //         method:'post',
+            //         data:{
+            //             t1:'chk1',
+            //             t2:a,
+            //             t3:did
+            //         },
+            //         success:function(data){
+            //             if (data==true)
+            //                 log1=true
+            //             else{
+            //                 log1=false
+            //                 alert("This LR No. already inserted!")
+            //             }
+            //         }
+            //     })
+            // })
+            // -----------------------------------------------------------------------------------
+            
+            function save(){
+                var lr_pre='no';
+                flag=true
+                ch('#t5','#vl1')
+                ch('#t8','#vl2')
+                ch('#t9','#dig')
+                ch('#t10','#dig1')
+                ch('#t14','#dig4')
+                ch('#pd','#xyz')
+                ch3('#t1','#ls1')
+                ch3('#t3','#ls3')
+                ch3('#t4','#ls4')
+                ch3('#t','#tt')
+                rr()
+                if (flag){
+                    date_ch()
+                    if (flag){
+                    flag=confirm('Are you sure you want to insert this record')
+                    if (flag){
+                        if($('#lrp').val()!=''){
+                            $('#lrp option:selected').detach();
+                            lr_pre='yes'
+                        }
+                        a=$('#t6').val()
+                        b=$('#t7').val()
+                        x=document.querySelector('#t1')
+                        c=x.value
+                        d=$('#t2').val().trim()
+                        x=document.querySelector('#t3')
+                        e=x.value
+                        f=$('#t5').val()
+                        x=document.querySelector('#t4')
+                        g=x.value
+                        h=$('input[name="a"]:checked').val()
+                        i=$('#t8').val()
+                        j=$('#t9').val()
+                        k=$('#t11').val()
+                        l=($('#t10').val()+'  '+$('#t10a').val())
+                        m=($('#t14').val()+'  '+$('#t14a').val())
+                        n=$('#t12').val()
+                        o=$('#t13').val()
+                        p=$('#t15').val()
+                        q=$('#t16').val()
+                        r=$('#t17').val()
+                        lr=$('#t6').val()
+                        pd=$('#pd').val()
+                        t=lr.split('/')
+                        u=t[0]
+                        v=t[2]
+                        s=$('#t19').val()
+                        localStorage.setItem('a',a)
+                        localStorage.setItem('b',b)
+                        localStorage.setItem('c',c)
+                        localStorage.setItem('d',d)
+                        localStorage.setItem('g',g)
+                        localStorage.setItem('i',i)
+                        localStorage.setItem('j',j)
+                        localStorage.setItem('k',k)
+                        localStorage.setItem('p',f)
+                        localStorage.setItem('m',m)
+                        localStorage.setItem('e',e)
+                        localStorage.setItem('l',l)
+                        localStorage.setItem('pd',pd)
+                        $.ajax({
+                            url:'order_ent_form.py',
+                            method:'post',
+                            data:{
+                                t1:a,
+                                t2:b,
+                                t3:c,
+                                t4:d,
+                                t5:e,
+                                t6:f,
+                                t7:g,
+                                t8:h,
+                                t9:i,
+                                t10:j,
+                                t11:k,
+                                t12:l,
+                                t13:m,
+                                t14:n,
+                                t15:o,
+                                t16:p,
+                                t17:q,
+                                t18:r,
+                                t19:did,
+                                t20:u,
+                                t21:v,
+                                t22:s,
+                                pd:pd,
+                                lr_no:lr_no,
+                                lr_pre:lr_pre
+                            },
+                            success:function(data){
+                                data=data.split(',,,')
+                                alert(data[0])
+                                if (data[1]==5){
+                                    cleardata()
+                                    log=confirm('Are you want to print this')
+                                    if(log){
+                                        localStorage.setItem('invo','0')
+                                        window.location.href='invoice.html'
+                                    }
+                                }
+                                else
+                                    autolr()
+                            }
+                        })
+                    }
+                }
+                }
+            else
+                alert("Please fill all the records!")
+            }
+
+            $(document).ready(function(){
+                $.ajax({
+                    url:'order_ent_form.py',
+                    method:'post',
+                    data:{
+                        t1:'load',
+                        t2:did
+                    },
+                    success:function(data){
+                        t=data.split(',,,')
+                        $('#t1').append(t[0])
+                        $('#t3').append(t[1])
+                        $('#t4').append(t[2])
+                        $('#lrp').append(t[3])
+                    }
+                })
+            })
+            var le_ex;
+            $('#t1').change(function(){
+                a=$('#t1').val().split('-')[1]
+                $.ajax({
+                    url:'order_ent_form.py',
+                    method:'post',
+                    data:{
+                        t1:'ds_id',
+                        t2:a
+                    },
+                    success:function(data){
+                        data=data.split(',,,')
+                        $('#t2').val(data[0])
+                        le_ex=data[1]
+                        calculation()
+                    }
+                })
+            })
+            function cleardata(){
+                ch1('#t5')
+                ch1('#t8')
+                ch1('#t9')
+                ch1('#t10')
+                ch1('#t14')
+                ch4('#t1','#ls1')
+                ch4('#t2','#ls2')
+                ch4('#t3','#ls3')
+                ch4('#t4','#ls4')
+                ch4('#t','#tt')
+                $('#sub').show()
+                $('#t5').val('')
+                $('#t6').val('')
+                $('#t17').val('0')
+                $('#t8').val('')
+                $('#t9').val('')
+                $('#t10').val('')
+                $('#t16').val('0')
+                $('#t160').val('0')
+                $('#t12').val('0')
+                $('#t13').val('0')
+                $('#t14').val('')
+                $('#t15').val('0')
+                $('#t1').val('')
+                $('#t2').val('')
+                $('#t3').val('')
+                $('#t4').val('')
+                $('#t19').val('0')
+                $('.r1').prop('checked',false)
+                $('#rr').html('')
+                $('#pd').val('')
+                autolr()
+            }
+            // AUTO LR NO
+            function autolr(){
+                    x=$('#t').val()
+                $.ajax({
+                    url:'order_ent_form.py',
+                    method:'post',
+                    data:{
+                        t1:'lr_gen',
+                        t2:x,
+                        t3:yy,
+                        t4:mm,
+                        t5:dd
+                    },
+                    success:function(data){
+                        data=data.trim()
+                        $('#t6').val(data)
+                        lr_no=data;
+                    }
+                    
+                })
+            }
+            $(document).ready(function(){
+                autolr()
+            })
+            // order calculation 
+            function calculation(){
+                a=$('#t2').val().trim()
+                x=document.querySelector('#t4')
+                b=x.value
+                c=$('input[name="a"]:checked').val()
+                if ((a!='' && b!='') && (c=='FTL' || c=='PTL' || c=='Weight')){
+                    $.ajax({
+                        url:'order_ent_form.py',
+                        method:'post',
+                        data:{
+                            t1:'cal',
+                            t2:a,
+                            t3:b,
+                            t4:c,
+                            t5:did
+                        },
+                        success:function(data){
+                            if (data==0){
+                                $('#t12').val('0')
+                                alert('Freight not available for selected city, vehicle type and load type')
+
+                            }
+                            else{
+                                $('#t12').val(data)
+                            }
+                        }
+                    })
+                }
+                $('#t16').val('0')
+                $('#t160').val('0')
+                $('#t19').val('0')
+            }
+            $('.r1').on('click',function(){
+                calculation()
+                c=$('#t10').val()
+                a=$(this).val()
+                if(a=='Weight'){
+                    c=$('#t14').val()
+                    if(c!='')
+                        $('#t14').focus()
+                }
+                else{
+                    c=$('#t10').val()
+                    if(c!='')
+                        $('#t10').focus()
+                }
+            })
+            $('.t2').on('change',function(){
+                calculation()
+                a=$('#t2').val().trim()
+                x=document.querySelector('#t4')
+                b=x.value
+                d=$('input[name="a"]:checked').val()
+                if ((a!='' && b!='') && (d=='FTL' || d=='PTL' || d=='Weight')){
+                    if(d=='Weight'){
+                        c=$('#t14').val()
+                        if(c!='')
+                            $('#t14').focus()
+                    }
+                    else{
+                        c=$('#t10').val()
+                        if(c!='')
+                            $('#t10').focus()
+                    }
+                }
+            })
+            var t_a;
+            $('#t10').on('focusout',function(){
+                a=$('input[name="a"]:checked').val()
+                if (a=='PTL'){
+                    t_a=parseFloat($('#t10').val())*parseFloat($('#t12').val())
+                    $('#t15').val(t_a)
+                    $('#t17').val(t_a)
+                    $('#t13').val('0')
+                }
+                if(a=='FTL'){
+                    ex=parseFloat($('#t10').val())*parseFloat(le_ex)
+                    $('#t13').val(ex)
+                    t_a=parseFloat($('#t12').val())+parseFloat(ex)
+                    $('#t15').val(t_a)
+                    $('#t17').val(t_a)
+                }
+                b=$('#t16').val()
+                if(b!='0')
+                $('#t16').focus()
+            })
+            $('#t14').on('focusout',function(){
+                a=$('input[name="a"]:checked').val()
+                if (a=='Weight'){
+                    t_a=parseFloat($('#t14').val())*parseFloat($('#t12').val())
+                    $('#t15').val(t_a)
+                    $('#t17').val(t_a)
+                    $('#t13').val('0')
+                }
+                b=$('#t16').val()
+                if(b!='0')
+                $('#t16').focus()
+            })
+            function cal1(){
+                a=parseFloat(0+$('#t16').val())
+                b=parseFloat($('#t15').val())
+                $('#t17').val(b-a)
+                c=a*100/b
+                $('#t160').val(parseFloat(c.toFixed(2)))
+            }
+            $('#t19').on('input',function(){
+                $('#t16').val('0')
+                $('#t160').val('0')
+                nt_a=parseFloat(t_a)+parseFloat(0+$('#t19').val())
+                $('#t15').val(nt_a)
+                $('#t17').val(nt_a)
+            })
+            $('#t16').on('input',function(){
+                cal1()
+            })
+            $('#t16').on('focus',function(){
+                cal1()
+            })
+            $('#t160').focus(function(){
+                $('#t160').val('')
+            })
+            $('#t160').on('input',function(){
+                a=parseInt(0+$('#t160').val())
+                b=parseFloat($('#t15').val())
+                p=a*b/100
+                $('#t16').val(p)
+                $('#t17').val(b-p)
+            })
+        $('input').on('keypress',function(a){
+            if (a.which==13)
+                $('#sub').click()
+        })
+        // ----------------------------------------- Presurve LR ---------------------------------------------------
+        $('#lp').click(function(){
+            flag=true;
+            ch3('#t1','#ls1');
+            if (flag){
+                a=$('#t6').val();
+                b=$('#t7').val().trim();
+                c=$('#t1').val();
+                d=$('#t2').val().trim();
+                e=a.split('/')
+                e=e[2]
+                log=confirm("Are you sure want to preserve this!")
+                if(log)
+                    $.ajax({
+                        url:'order_ent_form.py',
+                        method:'post',
+                        data:{
+                            t1:'preserve',
+                            t2:a,
+                            t3:b,
+                            t4:c,
+                            t5:d,
+                            t6:did,
+                            t7:e
+                        },
+                        success:function(data){
+                            alert(data)
+                            location.reload()
+                            // console.log(data)
+                        }
+                    })
+            }
+        })
+        $('#lrp').on('change',function(){
+            a=$(this).val()
+            $('#t6').val(a)
+            $.ajax({
+                url:'order_ent_form.py',
+                method:'post',
+                data:{
+                    t1:'preload',
+                    t2:a,
+                    t3:did
+                },
+                success:function(data){
+                    data=data.split(',,')
+                    d=data[0].trim()
+                    $('#t7').val(d)
+                    $('#t1').val(data[1])
+                    $('#t2').val(data[2])
+                    le_ex=data[3]
+                }
+            })
+        })
+        // ---------------------------------------------------------------------------------------------------------
+          </script>
+      </body>
+  </html>

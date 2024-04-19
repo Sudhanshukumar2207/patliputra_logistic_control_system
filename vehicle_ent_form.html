@@ -1,0 +1,420 @@
+<html>
+    <head>
+        <title>Vehicle Entery Form</title>
+        <link rel="icon" href="pcpllogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html{
+                font-size: 10px;
+            }
+            h2{
+                text-align: center;
+                font-size: 2.4rem;
+            }
+            #outer{
+                width: 100%;
+                height: 100%;
+            }
+            #menu{
+                height: 5rem;
+                width: 100%;
+                background: linear-gradient(to right,rgb(225, 135, 93) 0%,rgb(219, 217, 87) 100%);
+            }
+            #entery,#search{
+                height: 4.5rem;
+                width: 15rem;
+                margin-top: .5rem;
+                border: none;
+                border-radius: 1rem 1rem 0 0 ;
+                cursor: pointer;
+                font-size: 1.4rem;
+            }
+            #entery{
+                margin-left: .5rem;
+                background-color: rgb(143, 143, 233);
+            }
+            #search{
+                background-color: rgb(219, 185, 97);
+            }
+            #home{
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: blue;
+                margin: 1.7rem 5%;
+                float: right;
+            }
+            body{
+                background: linear-gradient(to bottom,rgb(143, 143, 233) 0%,rgb(159, 210, 159) 100%);
+            }
+            #body{
+                width: 80%;
+                margin: auto;
+            }
+            #d1{
+                height: 3.5rem;
+                background-color: rgb(230, 236, 238);
+                padding-top: .1rem;
+                margin-top: 3rem;
+                padding-bottom: 3rem;
+            }
+            #d2{
+                width: 100%;
+                height: 34rem;
+                margin-top: 3rem;
+                background-color: rgb(230, 236, 238);
+                border: 1px solid black;
+            }
+            table{
+                height: 100%;
+                width: 100%;
+                margin-top: 3rem;
+                font-size: 1.8rem;
+            }
+            form{
+                margin-left: 5rem;
+            }
+            #td1{
+                height: 7rem;
+                width: 20%;
+            }
+            #td2{
+                height: 7rem;
+                width: 30%;
+            }
+            #t1,#t2,#t3,#t4{
+                height: 3rem;
+                width: 90%;
+                font-size: 1.5rem;
+                border-radius: .5rem;
+                border: 1px solid rgb(128, 137, 140);
+                padding-left: 2rem;
+            }
+            #t2,#t4{
+                background-image: url(rs.png);
+                background-repeat: no-repeat;
+                background-size: 5% 90%;
+            }
+            .b1{
+                width: 35%;
+                background-color: rgb(28, 169, 28);
+                float: right;
+                margin-right: 20%;
+            }
+            .b2{
+                width: 45%;
+                background-color: red;
+            }
+            #b1 {
+                height: 3rem;
+                border: 0;
+                border-radius: 5.6rem;
+                color: #fff;
+                cursor: pointer;
+                font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+                font-size: 1.8rem;
+                transition: all .3s;
+            }
+            #b1:before {
+                background-color: initial;
+                background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+                border-radius: 12.5rem;
+                content: "";
+                opacity: .5;
+                transition: all .3s;
+            }
+            #b1:hover {
+                box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+                transform: scale(1.05);
+            }
+            font{
+                color: red;
+            }
+            #l1,#l2,#l3,#l4{
+                font-size: 1.7rem;
+                color: red;
+                margin-left: 3rem;
+                position: absolute;
+            }
+            #t1{
+                text-transform: uppercase;
+            }
+            @media (max-width:998px) {
+                html{
+                    font-size: 55%;
+                }
+            }
+            @media (max-width:768px) {
+                html{
+                    font-size: 45%;
+                }
+            }
+        </style>
+    </head>
+    <body oncontextmenu="return false;" style="user-select: none;">
+        <div id="outer">
+            <div id="menu">
+                <a href="vehicle_ent_form.html"><button id="entery">Entry Form</button></a>
+                <a href="vehicle_sr_form.html"><button id="search">Service Form</button></a>
+                <a href="dashboard_pl.html" id="home"><font size="4rem">&#x1F3E0;</font> HOME</a>
+            </div>
+        <div id="body">
+        <div id="d1">
+            <h2><b>VEHICLE'S &nbsp;&nbsp;&nbsp; ENTRY &nbsp;&nbsp;&nbsp; FORM</b></h2>
+        </div>
+        <div id="d2">
+            <form id="f1">
+                <table>
+                <tr>
+                    <td id="td1"><b>Load &nbsp; Type</b></td>
+                    <td id="td2">
+                        <input type="radio" id="r1" name="a" checked value="FTL">&nbsp;&nbsp;<label for="r1">FTL</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="r2" name="a" value="PTL">&nbsp;&nbsp;<label for="r2">PTL</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="r3" name="a" value="Weight"> &nbsp;<label for="r3">Weight</label>
+                    </td>
+                    <td id="td1"><label for="t2"><b>Freight<font>*</font></b></label></td>
+                    <td id="td2"><input type="text" id="t2" placeholder="Enter Freight" maxlength="10" onfocusout="ch('#t2','#l2')" onfocus="ch1('#t2')" class="t2"><br><label id="l2"></label></td>
+                </tr>
+                <tr>
+                    <td id="td1"><label for="t3"><b>City &nbsp; Name<font>*</font></b></label></td>
+                    <td><select id="t3" onfocusout="ch4()" onfocus="ch3()">
+                        <option value="" disabled selected align="center">--------Select City Name--------</option>
+                    </select><br><label id="l3"></label></td>
+                    <td id="td1"><label for="t1" id="l"><b>Vehicle &nbsp; Type<font>*</font></b></label></td>
+                    <td id="td2"><input type="text" id="t1" placeholder="Enter Vehicle Type" onfocusout="ch('#t1','#l1')" onfocus="ch1('#t1')" class="t2"><br><label id="l1"></label></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" id="b1" class="b1" value="Submit"></td>
+                    <td></td>
+                </tr>
+                </table>
+            </form>
+        </div>
+        </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+        <script>
+            var dipo=localStorage.getItem('did').trim()
+            flag=true
+            $(document).ready(function(){
+                a=document.referrer;
+                if(!(a=='http://localhost/pl_test/dashboard_pl.html' || a=='http://localhost/pl_test/vehicle_ent_form.html' || a=='http://localhost/pl_test/vehicle_sr_form.html'))
+                    window.location.href='index.html';
+            });
+            function ch(t,l){
+                $(l).html('')
+                var a=$(t).val();
+                if (a.trim().length==0)
+                {
+                    $(t).val('*Field is mandatory');
+                    $(t).css({'border':'2px solid red','color':'red'});
+                    flag=false
+                }
+                else if(a=="*Field is mandatory")
+                flag=false
+                if(t=='#t1'){
+                    var a=$('input[name="a"]:checked').val();
+                    if (a=='PTL' || a=='Weight'){
+                        $('#t1').val('')
+                        flag=true
+                    }
+                }
+            }
+            function ch1(t){
+                var a=$(t).val()
+                if(a=="*Field is mandatory"){
+                    $(t).val('');
+                }
+                    $(t).css({'border':'1px solid black','color':'black'});
+            };
+            $(function(){
+                var str=0
+                var str1=0
+                $('#t1').on('keydown',function(e){
+                    $('#l1').html("");
+                    if(e.which==16)
+                        $('.b1').focus()
+                    else if (e.which>=33 && e.which<=40 || e.which==12 || e.which==45 || e.which==46){
+                        $('#l1').html("*Please on the numlock");
+                        return false;
+                    }
+                    else if (!(e.which>=65 && e.which<=90 || e.which>=48 && e.which<=57 || e.which>=96 && e.which<=105 || e.which==144 || e.which==32 || e.which==8 || e.which==16 || e.which==20 || e.which==9 || e.which==13 || e.which==189 || e.which==109)){
+                        $('#l1').html("*Only digit and alphabet is allowed");
+                        return false;
+                    }
+                    else{
+                    if((e.which==32 || e.which==189 || e.which==109) && e.target.selectionStart==0){
+                        $('#l1').html("*Space and dash at fist not allowed");
+                        return false;
+                        str=0
+                    }
+                    else if(e.which==32 && str==1){
+                        $('#l1').html("*Double space not allowed");
+                        return false;
+                    }
+                    else if((e.which==189 || e.which==109) && str1==1){
+                        $('#l1').html("*Double dash not allowed");
+                        return false;
+                    }
+                    else if ((e.which>=65 && e.which<=90 || e.which>=48 && e.which<=57 || e.which>=96 && e.which<=105 || e.which==8) && (str==1 || str1==1)){
+                        str=0
+                        str1=0
+                    }
+                    else if((e.which==189 || e.which==109) && str1==0)
+                        str1=1
+                    else if(e.which==32 && str==0){
+                        str=1
+                    }
+                    }
+                })
+            });
+            $('.b1').keyup(function(e){
+                if(e.which==16)
+                $('#t1').focus()
+            })
+            $(function(){
+                    var str=0
+                $('#t2').on('keydown',function(e){
+                    // alert(e.which)
+                    $('#l2').html("");
+                    if(e.which==16){
+                        $('#r1').focus()
+                    }
+                    else if (e.which>=33 && e.which<=40 || e.which==12 || e.which==45 || e.which==46){
+                        $('#l2').html("*Please on the numlock");
+                        return false;
+                    }
+                    else if (!(e.which>=48 && e.which<=57 || e.which>=33 && e.which<=40 || e.which==12 || e.which==45 || e.which==46 || e.which>=96 && e.which<=105 || e.which==110 || e.which==190 || e.which==8 || e.which==144 || e.which==9 || e.which==13)){
+                        $('#l2').html("*Only digit allowed");
+                        return false;
+                    }
+                    else{
+                    if ((e.which==110 || e.which==190 || e.which==48 || e.which==96) && e.target.selectionStart==0){
+                        $('#l2').html("*Dot ya zero at first not allowed");
+                        str=0
+                        return false;
+                    }
+                    else if((e.which==110 || e.which==190) && str>=1){
+                        $('#l2').html("*Multiple dot not allowed");
+                        return false;
+                    }
+                    else if((e.which>=48 && e.which<=57 || e.which>=96 && e.which<=105) && str>=3){
+                        $('#l2').html('*Only two digit allowed after dicimal')
+                        return false
+                    }
+                    else if(str>=1){
+                            if (e.which==8){
+                                str=str-1
+                            }
+                            else{
+                                str=str+1
+                            }
+                    }
+                    else if((e.which==110 || e.which==190) && str==0){
+                        str=1
+                    }
+                    }
+                })
+            });
+            $('#r1').keyup(function(e){
+                if(e.which==16)
+                $('#t2').focus()
+            })
+            function ch4(){
+                b=document.querySelector('#t3')
+                a=b.value
+                if(a==''){
+                    $('#l3').html('*Please select any one')
+                    $('#t3').css({'border':'2px solid red','color':'red'})
+                    flag=false
+                }
+            }
+            function ch3(){
+                $('#l3').html('')
+                $('#t3').css({'border':'1px solid black','color':'black'});
+            }
+            $('#r2').click(function(){
+                $('#t1').val('')
+                $('#t1').hide()
+                $('#l').hide()
+                $('#l1').hide()
+            });   
+            $('#r3').click(function(){
+                $('#t1').val('')
+                $('#t1').hide()
+                $('#l').hide()
+                $('#l1').hide()
+            })
+            $('#r1').click(function(){
+                $('#t1').val('')
+                $('#t1').show()
+                $('#l').show()
+                $('#l1').show()
+                $('#l1').html('')
+
+            }); 
+            $(document).ready(function(){
+                $.ajax({
+                url:'vehicle_ent_form.py',
+                method:'post',
+                data:{
+                    t1:'load',
+                    t2:dipo
+                },
+                success:function(data){
+                    $('#t3').append(data)
+                }
+                })
+            })
+            $('.b1').click(function(){
+                flag=true
+                ch('#t1','#l1');
+                ch('#t2','#l2');
+                ch4('#t3');
+                if (flag){
+                    flag=confirm('Are you sure you want to insert this record')
+                    if(flag){
+                        var a=$('#t1').val().trim()
+                        var b=$('#t2').val()
+                        x=document.querySelector('#t3')
+                        c=x.value
+                        var e=$('input[name="a"]:checked').val();
+                        $.ajax({
+                            url:'vehicle_ent_form.py',
+                            method:'post',
+                            data:{
+                                t1:a,
+                                t2:b,
+                                t3:c,
+                                t5:e,
+                                t6:dipo
+                            },
+                            success:function(data){
+                                if (data==0)
+                                    alert('Record allready inserted')
+                                else{
+                                    alert(data)
+                                    window.location.reload()
+                                }
+                            }
+                        });
+                    }
+                }
+                else{
+                    alert('Please fill the all field')
+                }
+            });
+            $('.b2').click(function(){
+                cldata()
+            });
+            $('.t2').on('keypress',function(a){
+                if (a.which==13)
+                    $('#b1').click()
+            })
+        </script>
+    </body>
+</html>

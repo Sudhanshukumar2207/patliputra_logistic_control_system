@@ -1,0 +1,375 @@
+<html>
+    <head>
+        <title>Driver Payment Entry Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="pcpllogo.png">
+        <style>
+            html{
+                font-size: 10px;
+            }
+            h2{
+                text-align: center;
+                font-size: 2.4rem;
+            }
+            #outer{
+                width: 100%;
+                height: 100%;
+            }
+            #menu{
+                height: 5rem;
+                width: 100%;
+                background: linear-gradient(to right,rgb(225, 135, 93) 0%,rgb(219, 217, 87) 100%);
+            }
+            #entery,#search{
+                height: 4.5rem;
+                width: 15rem;
+                margin-top: .5rem;
+                border: none;
+                border-radius: 1rem 1rem 0 0 ;
+                cursor: pointer;
+                font-size: 1.4rem;
+            }
+            #entery{
+                margin-left: .5rem;
+                background-color: rgb(143, 143, 233);
+            }
+            #search{
+                background-color: rgb(219, 185, 97);
+            }
+            #home{
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: blue;
+                margin: 1.7rem 5%;
+                float: right;
+            }
+            body{
+                background: linear-gradient(to bottom,rgb(143, 143, 233) 0%,rgb(159, 210, 159) 100%);
+            }
+            #body{
+                width: 80%;
+                margin: auto;
+            }
+            #d1{
+                height: 3.5rem;
+                background-color: rgb(230, 236, 238);
+                padding-top: .1rem;
+                margin-top: 2rem;
+                padding-bottom: 3rem;
+            }
+            #d2{
+                width: 100%;
+                height: 40rem;
+                margin-top: 2rem;
+                background-color: rgb(230, 236, 238);
+                border: 1px solid black;
+            }
+            table{
+                width: 100%;
+                margin-top: 2rem;
+                font-size: 1.8rem;
+                padding-bottom: 2rem;
+                
+            }
+            form{
+                margin-left: 5rem;
+            }
+            #td1{
+                width: 42%;
+            }
+            #td2{
+                width: 16%;
+            }
+            td{
+                height: 5.5rem;
+            }
+            select,input{
+                height: 4rem;
+                font-size: 1.7rem;
+                border-radius: .5rem;
+                border: 1px solid rgb(128, 137, 140);
+                padding-left: 2rem;
+                width: 90%;
+            }
+            #l1,#l2,#l3,#l4,#l7,#l8{
+                position: absolute;
+                font-size: 1.7rem;
+                margin: 1rem 0 0 4rem;
+                background:linear-gradient(to bottom, rgb(230, 236, 238) 50%, white 50%);
+            }
+            #l1,#l2,#l3,#l4,#l8{
+                visibility: hidden;
+            }
+            .b1 {
+                height: 3rem;
+                width: 15rem;
+                background-color: green;
+                opacity: .8;
+                border: 0;
+                border-radius: 5.6rem;
+                color: #fff;
+                cursor: pointer;
+                font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+                font-size: 1.8rem;
+                transition: all .3s;
+            }
+            .b1:before {
+                background-color: initial;
+                background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+                border-radius: 12.5rem;
+                content: "";
+                opacity: .5;
+                transition: all .3s;
+            }
+            .b1:hover {
+                box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+                transform: scale(1.05);
+            }
+            #t4,#t8{
+                background-image: url(rs.png);
+                background-repeat: no-repeat;
+                background-size: 4% 80%;
+                background-position: center left;
+            }
+            /* #t16{
+                background-image: url(rs.png);
+                background-repeat: no-repeat;
+                background-size: 7% 90%;
+            }
+            #t160{
+                background-image: url(percent.png);
+                background-repeat: no-repeat;
+                background-position: right;
+                background-size: 40% 90%;
+            } */
+            .b1{
+                padding-left: 0;
+            }
+            @media (max-width:998px) {
+                html{
+                    font-size: 55%;
+                }
+            }
+            @media (max-width:768px) {
+                html{
+                    font-size: 45%;
+                }
+                #t4,#t8{
+                    background-size: 10% 80%;
+                }
+                input{
+                    padding-left: 10%;
+                }
+            }
+            #l7,#l1,#l2,#l4{
+                color: rgb(84, 84, 248);
+            }
+            .l{
+                color: red;
+            }
+        </style>
+    </head>
+    <body oncontextmenu="return false;" style="user-select: none;">
+        <div id="outer">
+            <div id="menu">
+                <a href="Drv_Pay.html"><button id="entery">Entry Form</button></a>
+                <a href="Drv_Pay_Ser.html"><button id="search">Service Form</button></a>
+                <a href="dashboard_pl.html" id="home"><font size="4rem">&#x1F3E0;</font> HOME</a>
+            </div>
+        <div id="body">
+        <div id="d1">
+            
+            <h2><b>DRIVER &nbsp; PAYMENT &nbsp; ENTRY &nbsp; FORM</b></h2>
+            
+        </div>
+        <div id="d2">
+            <form>
+            <table>
+                <tr>
+                    <td id="td1"><label id="l1">Vehicle No.</label><br><input type="text" style="text-transform: uppercase;" id="t1" placeholder="Vehicle No.*" oninput="ch2('#t1','#l1')" onfocusout="ch('#t1')" onfocus="ch1('#t1')" onkeydown="keychk('#t1','#s1')"><br><span id="s1" class="l"></span></td>
+                    <td id="td2"></td>
+                    <td id="td1"><label id="l2">Driver Name</label><br><input type="text" id="t2" style="text-transform: capitalize;" placeholder="Driver Name*" oninput="ch2('#t2','#l2')" onfocusout="ch('#t2')" onfocus="ch1('#t2')" onkeydown="keychk('#t2','#s2')"><br><span id="s2" class="l"></span></td>
+                </tr>
+                <tr>
+                    <td><label id="l7">Salary Month</label><br><input type="month" id="t3" onfocusout="ch('#t3')" onfocus="ch1('#t3')"><br><span id="s3" class="l"></span></td>
+                    <td></td>
+                    <td><label id="l4">Amount</label><br><input type="text" id="t4" placeholder="Amount*" oninput="ch2('#t4','#l4')" onfocusout="ch('#t4')" onfocus="ch1('#t4')" onkeydown="keychk('#t4','#s4')"><br><span id="s4" class="l"></span></td>
+                </tr>
+                <tr>
+                    <td><label id="l7">Payment Date</label><br><input type="date" id="t7" onfocusout="ch('#t7')" onfocus="ch1('#t7')"><br><span id="s7" class="l"></span></td>
+                    <td></td>
+                    <td style="text-align: left;"><br><input type="button" value="Submit" id="b1" class="b1"></td>
+                </tr>
+            </table>
+            </form>
+        </div></div></div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    a=document.referrer;
+                    if(!(a=='http://localhost/pl_test/dashboard_pl.html' || a=='http://localhost/pl_test/Drv_Pay.html' || a=='http://localhost/pl_test/Drv_Pay_Ser.html'))
+                        window.location.href='index.html';
+                });
+                flag=true;var cd,dc;
+                function ch(t){
+                    var a=$(t).val();
+                    if (a.trim().length==0)
+                    {
+                        $(t).val('*Field is mandatory');
+                        $(t).css({'border':'2px solid red','color':'red'});
+                        flag=false
+                    }
+                    else if(a=="*Field is mandatory")
+                    flag=false
+                }
+                function ch1(t){
+                    var a=$(t).val()
+                    if(a=="*Field is mandatory"){
+                        $(t).val('');
+                    }
+                        $(t).css({'border':'1px solid black','color':'black'});
+                };
+                function ch2(t,l){
+                    a=$(t).val()
+                    if(a.trim()!='')
+                        $(l).css('visibility','visible')
+                    else
+                        $(l).css('visibility','hidden')
+                }
+                function keychk(chk,d){
+                    $(d).text("");
+                    if(chk=='#t1'){
+                        $(chk).on('keypress',function(e){
+                            if((e.which==32 || e.which>=48 && e.which<=57)&& e.target.selectionStart==0){
+                                $(d).text("Space and Digit At First Not Allowed!");
+                                return false;
+                            }
+                            else if(!(e.which>=65 && e.which<=90 || e.which>=97 && e.which<=122|| e.which>=48 && e.which<=57||e.which==13)){
+                                $(d).text("Only Alphabet and Digit Allowed!");
+                                return false;
+                            }
+                            // else if(e.which===32 && $(this).val().slice(-1)===' '){
+                            //     e.preventDefault();
+                            // }
+                            else{
+                                $(d).text("");
+                            }
+                        });
+                    }
+                    else if(chk=='#t4'){
+                        $(chk).on('keypress',function(e){
+                            if(e.which==48 && e.target.selectionStart==0){
+                                $(d).text("Zero At First Not Allowed!");
+                                return false;
+                            }
+                            else if(!(e.which>=48 && e.which<=57||e.which==13)){
+                                $(d).text("Only Digit Allowed!");
+                                return false;
+                            }
+                            else{
+                                $(d).text("");
+                            }
+                        });
+                    }
+                    else if(chk=='#t2'){
+                        $(chk).on('keypress',function(e){
+                            if(e.which==32 && e.target.selectionStart==0 || e.which==46 && e.target.selectionStart==0){
+                                $(d).text("Space and Dot At First Not Allowed!");
+                                return false;
+                            }
+                            else if(!(e.which>=65 && e.which<=90 || e.which>=97 && e.which<=122||e.which==13||e.which==32||e.which==46)){
+                                $(d).text("Only Alphabet Allowed!");
+                                return false;
+                            }
+                            else if(e.which===32 && $(this).val().slice(-1)===' ' ||e.which===46 && $(this).val().slice(-1)==='.'){
+                                e.preventDefault();
+                            }
+                            else{
+                                $(d).text("");
+                            }
+                        });
+                    }
+                }
+            $('#t7').focus(function(){
+                $('#s7').text('');
+            })
+            $('#t3').focus(function(){
+                $('#s3').text('');
+            })
+            $('#b1').click(function () {
+                flag=true;
+                ch('#t1');
+                ch('#t2');
+                ch('#t4');
+                if($('#t7').val()==''){
+                    flag=false;
+                    $('#s7').text("Payment Date Is Mandatory!");
+                }
+                else if($('#t7').val()>cd){
+                    flag=false;
+                    $('#s7').text("Payment Date Cannot be greater than Today's Date!")
+                }
+                if($('#t3').val()==''){
+                    flag=false;
+                    $('#s3').text("Salary Month Is Mandatory!");
+                }
+                if(flag){
+                    var conf=confirm('Are you sure want to Insert Data?');
+                    if(conf)
+                        {
+                            var a=$('#t1').val().trim().toUpperCase();
+                            var b=$('#t4').val().trim();
+                            var c=$('#t2').val().replace(/\b[a-z]/g, function(txtVal) {return txtVal.toUpperCase()}).trim();
+                            var d=$('#t7').val().trim();
+                            var e=$('#t3').val().trim();
+                            $.ajax({
+                                url: "vehicle_expense.py",
+                                method: "post",
+                                data: {
+                                    t:'ent_drv',
+                                    d1:a,
+                                    d2:c,
+                                    d3:e,
+                                    d4:b,
+                                    d5:d
+                                },
+                                success: function (data) {
+                                    var abc=data.split(',,,')
+                                    alert(abc[0])
+                                    if(abc[1]==10)
+                                    {
+                                        $('#t1').val('');
+                                        $('#t4').val('');
+                                        $('#t2').val('');
+                                        date();
+                                        ch2('#t4','#l8');
+                                        ch2('#t2','#l2');
+                                        ch2('#t1','#l1');
+                                    }
+                                }
+                            });
+                        }
+                }
+            });
+            function date(){
+                var dt=new Date()
+                dd=dt.getDate()
+                yy=dt.getFullYear()
+                mm=dt.getMonth()+1
+                if (dd<10)
+                    dd='0'+dd
+                if (mm<10)
+                    mm='0'+mm
+                cd=yy+'-'+mm+'-'+dd;
+                dc=yy+'-'+mm;
+                $('#t7').val(cd);
+                $('#t3').val(dc);
+                $('#t7').attr('max',cd);
+                // $('#t3').attr('max',dc);
+            }
+            $(document).ready(function(){
+                date();
+            })
+          </script>
+      </body>
+  </html>

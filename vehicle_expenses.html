@@ -1,0 +1,314 @@
+<html>
+    <head>
+        <title>Vehicle Exp Entry Form</title>
+        <link rel="icon" href="pcpllogo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html{
+                font-size: 10px;
+            }
+            h2{
+                text-align: center;
+                font-size: 2.4rem;
+            }
+            #outer{
+                width: 100%;
+                height: 100%;
+            }
+            #menu{
+                height: 5rem;
+                width: 100%;
+                background: linear-gradient(to right,rgb(225, 135, 93) 0%,rgb(219, 217, 87) 100%);
+            }
+            #entery,#search{
+                height: 4.5rem;
+                width: 15rem;
+                margin-top: .5rem;
+                border: none;
+                border-radius: 1rem 1rem 0 0 ;
+                cursor: pointer;
+                font-size: 1.4rem;
+            }
+            #entery{
+                margin-left: .5rem;
+                background-color: rgb(143, 143, 233);
+            }
+            #search{
+                background-color: rgb(219, 185, 97);
+            }
+            #home{
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: blue;
+                margin: 1.7rem 5%;
+                float: right;
+            }
+            body{
+                background: linear-gradient(to bottom,rgb(143, 143, 233) 0%,rgb(159, 210, 159) 100%);
+            }
+            #body{
+                width: 80%;
+                margin: auto;
+            }
+            #d1{
+                height: 3.5rem;
+                background-color: rgb(230, 236, 238);
+                padding-top: .1rem;
+                margin-top: 2rem;
+                padding-bottom: 3rem;
+            }
+            #d2{
+                width: 100%;
+                height: 42rem;
+                margin-top: 2rem;
+                background-color: rgb(230, 236, 238);
+                border: 1px solid black;
+            }
+            table{
+                width: 100%;
+                margin-top: 2rem;
+                font-size: 1.8rem;
+                padding-bottom: 2rem;
+                
+            }
+            form{
+                margin-left: 5rem;
+            }
+            #td1{
+                width: 42%;
+            }
+            #td2{
+                width: 16%;
+            }
+            td{
+                height: 7rem;
+            }
+            select,input{
+                height: 4rem;
+                font-size: 1.7rem;
+                border-radius: .5rem;
+                border: 1px solid rgb(128, 137, 140);
+                padding-left: 2rem;
+                width: 90%;
+                text-transform: uppercase;
+            }
+            #l1,#l2,#l3,#l4,#l5,#l6,#l7,#l8{
+                position: absolute;
+                font-size: 1.7rem;
+                margin: 1rem 0 0 4rem;
+                color: blue;
+                background:linear-gradient(to bottom, rgb(230, 236, 238) 50%, white 50%);
+            }
+            #l1,#l3,#l4,#l5,#l6{
+                visibility: hidden;
+            }
+            .b1 {
+                height: 3rem;
+                width: 15rem;
+                background-color: green;
+                opacity: .8;
+                border: 0;
+                border-radius: 5.6rem;
+                color: #fff;
+                cursor: pointer;
+                font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+                font-size: 1.8rem;
+                transition: all .3s;
+            }
+            .b1:before {
+                background-color: initial;
+                background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+                border-radius: 12.5rem;
+                content: "";
+                opacity: .5;
+                transition: all .3s;
+            }
+            .b1:hover {
+                box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+                transform: scale(1.05);
+            }
+            #t4,#t6,#t5,#t8{
+                background-image: url(rs.png);
+                background-repeat: no-repeat;
+                background-size: 4% 80%;
+                background-position: center left;
+            }
+            #ll1,#ll2,#ll3,#ll4,#ll5,#ll6{
+                color: red;
+                position: absolute;
+                margin-left: 5rem;
+                font-size: 1.7rem;
+            }
+            @media (max-width:998px) {
+                html{
+                    font-size: 55%;
+                }
+            }
+            @media (max-width:768px) {
+                html{
+                    font-size: 45%;
+                }
+                #t4,#t6,#t5,#t8{
+                    background-size: 10% 80%;
+                }
+                #t1,#t3,#t4,#t5,#t6,#t7,#t8{
+                    padding-left: 10%;
+                }
+            }
+        </style>
+    </head>
+    <body oncontextmenu="return false;" style="user-select: none;">
+        <div id="outer">
+            <div id="menu">
+                <a href="vehicle_expenses.html"><button id="entery">Entry Form</button></a>
+                <a href="vehicle_exp_service.html"><button id="search">Service Form</button></a>
+                <a href="dashboard_pl.html" id="home"><font size="4rem">&#x1F3E0;</font> HOME</a>
+            </div>
+        <div id="body">
+        <div id="d1">
+            <h2><b>VEHICLE &nbsp; EXPENSE &nbsp; ENTRY &nbsp; FORM</b></h2>
+        </div>
+        <div id="d2">
+            <form>
+            <table>
+                <tr>
+                    <td id="td1"><label id="l1">Vehicle No.</label><br><input type="text" id="t1" placeholder="Vehicle No." oninput="ch2('#t1','#l1')" onfocusout="ch('#t1')" onfocus="ch1('#t1')"><br><label id="ll1"></label></td>
+                    <td id="td2"></td>
+                    <td id="td1"><br><select id="t2"><option value="Diesel">Diesel</option><option value="Petrol">Petrol</option><option value="CNG">CNG</option></select><br><label id="ll2"></label></td>
+                </tr>
+                <tr>
+                    <td><label id="l3">Fuel (in ltr)</label><br><input type="text" id="t3" placeholder="Fuel Qty. (in ltr)" oninput="ch2('#t3','#l3')" name="#ll3"><br><label id="ll3"></label></td>
+                    <td></td>
+                    <td><label id="l4">Fuel Amt.</label><br><input type="text" id="t4" placeholder="Fuel Amt." oninput="ch2('#t4','#l4')" onfocusout="ch('#t4')" onfocus="ch1('#t4')" name="#ll4"><br><label id="ll4"></label></td>
+                </tr>
+                <tr>
+                    <td><label id="l5">Toll Amt.</label><br><input type="text" id="t5" placeholder="Toll Amt." oninput="ch2('#t5','#l5')" name="#ll5"><br><label id="ll5"></label></td>
+                    <td></td>
+                    <td><label id="l6">Misc Amt.</label><br><input type="text" id="t6" placeholder="Misc Amt." oninput="ch2('#t6','#l6')" name="#ll6"><br><label id="ll6"></label></td>
+                </tr>
+                <tr>
+                    <td><label id="l7">Exp Date</label><br><input type="date" value="" max="" id="t7" onfocusout="ch('#t7')" onfocus="ch1('#t7')"></td>
+                    <td></td>
+                    <td><label id="l8">Total</label><br><input type="text" readonly id="t8" placeholder="Total"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center;"><br><br><input type="button" value="Submit" id="b1" class="b1"></td>
+                </tr>
+            </table>
+            </form>
+        </div></div></div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    a=document.referrer;
+                    if(!(a=='http://localhost/pl_test/dashboard_pl.html' || a=='http://localhost/pl_test/vehicle_expenses.html' || a=='http://localhost/pl_test/vehicle_exp_service.html'))
+                        window.location.href='index.html';
+                });
+                // ----------------- Date -------------------------
+                $(document).ready(function(){
+                    b=new Date().toLocaleDateString().split('/')
+                    $('#t7').attr({'max':b[2]+'-'+b[1]+'-'+b[0],'value':b[2]+'-'+b[1]+'-'+b[0]})
+                })
+                // ------------------------ Mandatory -------------------
+                flag=true
+                function ch(t){
+                    var a=$(t).val();
+                    if (a.trim().length==0)
+                    {
+                        $(t).val('*Field is mandatory');
+                        $(t).css({'border':'2px solid red','color':'red'});
+                        flag=false
+                    }
+                    else if(a=="*Field is mandatory")
+                    flag=false
+                }
+                function ch1(t){
+                    var a=$(t).val()
+                    if(a=="*Field is mandatory"){
+                        $(t).val('');
+                    }
+                        $(t).css({'border':'1px solid black','color':'black'});
+                };
+                // --------------- Input Lagend --------------------
+                function ch2(t,l){
+                    a=$(t).val()
+                    if(a.trim()!='')
+                        $(l).css('visibility','visible')
+                    else
+                        $(l).css('visibility','hidden')
+                }
+                // ------------------- validation ------------------
+                $('#t1').on('keypress',function(a){
+                    $('#ll1').html('')
+                    if(!(a.which>=65 && a.which<=90 || a.which>=97 && a.which<=122 || a.which>=48 && a.which<=57 || a.which==13)){
+                        $('#ll1').html('Only digit and alphabate allowed')
+                        return false
+                    }
+                    else if(a.which>=48 && a.which<=57 && a.target.selectionStart==0){
+                        $('#ll1').html('Digit not allowed at first')
+                        return false
+                    }
+                })
+                $('#t3,#t4,#t5,#t6').on('keypress',function(a){
+                    c=$(this).attr('name')
+                    b=$(this).val()
+                    $(c).html('')
+                    if(!(a.which>=48 && a.which<=57 || a.which==46 || a.which==13)){
+                        $(c).html('Only digit allowed')
+                        return false
+                    }
+                    else if(a.which==46 && a.target.selectionStart==0)
+                        return false
+                    else if(b.length==1 && b.charCodeAt(0)==48)
+                        $(this).val('')
+                    else{
+                        if(b.charAt(b.length-3)=='.' || (b.charAt(b.length-1)=='.' || b.charAt(b.length-2)=='.') && a.which==46)
+                            return false
+                    }
+                })
+                $('#t1,#t3,#t4,#t5,#t6').on('keydown',function(a){
+                    if(a.which==8)
+                        $('#ll1,#ll3,#ll4,#ll5,#ll6').html('')
+                    else if(a.which==13)
+                        $('#b1').click()
+                })
+                // ------------- Calculation ----------------------------
+                $('#t3,#t4,#t5,#t6').on('input',function(){
+                    $('#t8').val(parseFloat(0+$('#t4').val())+parseFloat(0+$('#t5').val())+parseFloat(0+$('#t6').val()))
+                })
+                // --------------- Entry -------------------------
+                $('#b1').on('click',function(){
+                    flag=true
+                    ch('#t1')
+                    ch('#t3')
+                    ch('#t4')
+                    ch('#t7')
+                    if(flag){
+                        log=confirm("Are you sure want to insert this!")
+                        if(log)
+                            $.ajax({
+                                url:'vehicle_expense.py',
+                                method:'post',
+                                data:{
+                                    t:'ent',
+                                    t1:$('#t1').val().toUpperCase(),
+                                    t2:$('#t2').val().toUpperCase(),
+                                    t3:$('#t3').val(),
+                                    t4:$('#t4').val(),
+                                    t5:$('#t5').val(),
+                                    t6:$('#t6').val(),
+                                    t7:$('#t8').val(),
+                                    t8:$('#t7').val()
+                                },
+                                success:function(data){
+                                    alert(data)
+                                    location.reload()
+                                }
+                            })
+                    }
+                    else
+                        alert('Please fill all the field!')
+                })
+          </script>
+      </body>
+  </html>

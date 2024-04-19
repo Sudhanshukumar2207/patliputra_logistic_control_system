@@ -1,0 +1,382 @@
+<html>
+    <head>
+        <style>
+            .main{
+                width: 100%;
+                height: 100%;
+                border: solid 2px rgb(127, 29, 176);
+            }
+            .div1{
+                background-color: rgb(78, 22, 105);
+                width: 70%;
+                height: 100%;
+                border-radius: 100% / 50%;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                position: absolute;
+                top: -5px;
+                left: -20px;
+            }
+            .div2{
+                border: solid 2px hidden;
+                height: 560px;
+                width: 900px;
+                position: absolute;
+                top: 80px;
+                left: 300px;
+                background-color: white;
+                box-shadow: 0px 15px 20px black;
+            }
+            .div3{
+                border: solid 2px hidden;
+                height: 500px;
+                width: 450px;
+            }
+            .t1{
+                position: absolute;
+                top: 60px;
+                left: 500px;
+            }
+            .t2{
+                position: absolute;
+                top: 90px;
+                left: 500px;
+                height: 26px;
+                width: 300px;
+            }
+            .t3{
+                position: absolute;
+                top: 140px;
+                left: 500px;
+            }
+            .t4{
+                position: absolute;
+                top: 170px;
+                left: 500px;
+                height: 33px;
+                width: 310px;
+            }
+            .t5{
+                position: absolute;
+                top: 220px;
+                left: 500px;
+            }
+            .t6{
+                position: absolute;
+                top: 250px;
+                left: 500px;
+                height: 26px;
+                width: 305px;  
+            }
+            .t7{
+                position: absolute;
+                top: 297px;
+                left: 500px;
+            }
+            .t8{
+                position: absolute;
+                top: 325px;
+                left: 500px;
+                height: 26px;
+                width: 305px;  
+            }
+            .t9{
+                position: absolute;
+                top: 380px;
+                left: 500px;
+            }
+            .t10{
+                position: absolute;
+                top: 405px;
+                left: 500px;
+                height: 26px;
+                width: 305px;  
+            }
+            .t11{
+                position: absolute;
+                top: 470px;
+                left: 500px;
+                height: 35px;
+                width: 120px; 
+                background-color: #2596be;
+                border: hidden;
+                border-radius: 20px;
+                color: white;
+                cursor: pointer;
+            }
+            .t12{
+                position: absolute;
+                top: 470px;
+                left: 695px;
+                height: 35px;
+                width: 120px; 
+                background-color: red;
+                border: hidden;
+                border-radius: 20px;
+                color: white;
+                cursor: pointer;
+            }
+            .t13{
+                position: absolute;
+                top: 157px;
+                left: 590px;
+                color: red;
+            }
+            .s_p{
+                position: absolute;
+                top: 360px;
+                left: 668px;
+            }
+            .mess_s_p{
+                position: absolute;
+                top: 361px;
+                left: 694px;
+            }
+            .m{
+                position: absolute;
+                left: 694px;
+                top: 290px;
+            }
+            #a_l{
+                text-decoration: none;
+                margin-left: 85%;
+                position: absolute;
+                margin-top: 20px;
+            }
+            #ms{
+                position: absolute;
+                top: 425px;
+                left: 100px;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body style="background-color: rgb(127, 29, 176); user-select: none;" oncontextmenu="return false;" style="user-select: none;">
+        <div class="main">
+            <div class="div1"></div>
+            <div class="div2">
+                <label for="u_id" class="t1"><b>User ID</b></label>
+                <input type="text" name="User_Id" id="u_id"  class="t2 s" onfocusout="ch('#u_id')" onfocus="ch1('#u_id')">
+                <!-- <samp class="t17" id="U_ID2"></samp> -->
+                <label for="s_q" class="t3"><b>Security Question</b></label>
+                <select name="Sec_Qus" id="s_q" class="t4" onfocusout="co('#s_q')" onfocus="co1('#s_q')">
+                    <option value="" disabled selected>Select any one</option>
+                    <option value="What Is your favorite book?">What Is your favorite book?</option>
+                    <option value="What was the name of your first/current/favorite pet?">What was the name of
+                        yourfirst/current/favorite pet?</option>
+                    <option value="Where did you go to high school/college?">Where did you go to high school/college?
+                    </option>
+                    <option value="What is your favorite food?">What is your favorite food?</option>
+                    <option value="What city were you born in?">What city were you born in?</option>
+                    <option value="Where is your favorite place to vacation?">Where is your favorite place to vacation?
+                    </option>
+                </select>
+                <samp class="t13" id="S_Q"></samp>
+                <label for="s_a" class="t5"><b>Security Answer</b></label>
+                <input type="text" name="Sec_Ans" id="s_a" class="t6" onfocusout="ch('#s_a')" onfocus="ch1('#s_a')">
+                <!-- <samp class="t14" id="S_A"></samp> -->
+                <!-- <samp class="t18" id="S_A2"></samp> -->
+                <label for="n_p" class="t7"><b>New Password</b></label>
+                <input type="password" name="New_Pass" id="n_p" class="t8" oninput="pass()" onfocusout="ch('#n_p')"
+                onfocus="ch1('#n_p')" readonly>
+                <input type="checkbox" name="show_pass" id="s_p" onclick="show()" class="s_p"><label for="s_p" class="mess_s_p">Show Password</label>
+                <p class="m" id="M"></p>
+                <!-- <samp class="t15" id="N_P"></samp> -->
+                <!-- <samp class="t19" id="N_P2"></samp> -->
+                <label for="r_p" class="t9"><b>Repeat Password</b></label>
+                <input type="password" name="Rep_Pass" id="r_p" class="t10" onfocusout="ch('#r_p')" onfocus="ch1('#r_p')" readonly>
+                <!-- <samp class="t16" id="R_P"></samp> -->
+                <input type="button" value="SAVE" class="t11" id="sa">
+                <input type="reset" value="CANCEL" class="t12" onclick="load()">
+                <div class="div3">
+                    <img style="margin-top: 130px;" src="R.png" alt="Loading..." height="250px">
+                </div>
+                <p id="ms"></p>
+                <a href="index.html" id="a_l"><b>Go to login</b></a>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+        var flag = true;
+        var flag1 = flag2 = flag3 = true;
+        function ch(t){
+            var a=$(t).val()
+            if (a==''){
+                flag=false
+                if(t=='#u_id' || t=='#s_a' || t=='#n_p' || t=='#r_p')
+                $(t).removeAttr('type','password')
+                $(t).val('*field is mandatory')
+                $(t).css({'border':'2px solid red','color':'red'})
+            }
+            else if(a=='*field is mandatory')
+            flag=false
+        }
+        function ch1(t){
+            var a=$(t).val()
+            if (a=='*field is mandatory')
+                $(t).val('')
+                $(t).css({'border':'2px solid blue','color':'black'})
+                if(t=='#n_p' || t=='#r_p')
+                $(t).attr('type','password')
+        }
+        function co(){
+            b=document.querySelector('#s_q')
+            a=b.value
+            if (a==""){
+                flag=false
+                $('#s_q').css('border','2px solid red')
+                $('#S_Q').html('*security question is mandatory')
+            }
+        }
+        function co1(){
+            $('#s_q').css('border','2px solid blue')
+            $('#S_Q').html('')
+        }
+            function match(){
+                var a = $("#n_p").val();                   
+                var b = $("#r_p").val();
+                if (a == b || a=='*field is mandatory') {
+                    $("#R_P").html("")
+                }
+                else {
+                    alert("Password does't matched")
+                    flag=false;
+                }
+            }
+            $("#r_p").focusout(function () {
+                match();
+            });
+            function show() {
+            var temp = document.getElementById("n_p");
+            if (temp.type === "password")
+                temp.type = "text";                                          
+            else
+                temp.type = "password";
+            }
+            var ctr = 0;
+            function pass() {
+
+                var a = document.getElementById("M");
+                var ch = document.getElementById("n_p").value;
+                if (ch.length == 0)                                                    
+                {
+                    ctr = 0
+                    a.innerHTML = " "
+                    flag1 = flag2 = flag3 = true;
+                }
+                else {
+                    ch = ch.charCodeAt(ch.length - 1)
+                    if (flag1 && ((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122))) {
+                        ctr++;
+                        flag1 = false;
+                    }
+                    else if (flag2 && ((ch >= 48) && (ch <= 57))) {
+                        ctr++;
+                        flag2 = false;
+                    }
+                    else if (flag3 && !((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122) || (ch >= 48) && (ch <= 57))) {
+                        ctr++;
+                        flag3 = false;
+                    }
+                    if (ctr == 1) {
+                        a.innerHTML = "week password"
+                        a.style.color = "red"
+                    }
+                    else if (ctr == 2) {
+                        a.innerHTML = "average password"
+                        a.style.color = "orange"
+                    }
+                    else {
+                        a.innerHTML = "strong password"
+                        a.style.color = "green"
+                    }
+                }
+            }
+            function load(){
+                window.location.reload();
+            }
+            var count=3;
+            $('#s_a').on('focusout',function(){
+                flag=true;
+                ch('#u_id')
+                co('#s_q')
+                ch('#s_a')
+                if(flag){
+                    if(count>0){
+                        a=$('#u_id').val()
+                        b=$('#s_q').val()
+                        c=$('#s_a').val()
+                        $.ajax({
+                            url:'log_Pl.py',
+                            method:'post',
+                            data:{
+                                x:'xyz',
+                                a:a,
+                                b:b,
+                                c:c,
+                                e:count
+                            },
+                                success:function(data){
+                                    if(data==1){
+                                        $('#n_p').attr('readonly',false)
+                                        $('#r_p').attr('readonly',false)
+                                    }
+                                    else{
+                                        count=count-1;
+                                        if(count==2)
+                                            $('#ms').css('color','green');
+                                        if(count==1)
+                                            $('#ms').css('color','red');
+                                        $('#ms').html('Only '+count+' attampt remaining');
+                                        alert('User ID,securty question,answer not match!');
+                                        if(count==0)
+                                            $('#ms').html('Sorry you are block please contact to super admin');
+                                    }
+                                }
+                        })
+                    }
+                }
+            })
+            $("#sa").click(function(){
+                flag=true;
+                ch('#u_id')
+                co('#s_q')
+                ch('#s_a')
+                ch('#n_p')
+                ch('#r_p')
+                if(flag){
+                    match();
+                    if(flag){
+                        if(count>0){
+                            var a = $("#u_id").val()
+                            var b = $("#s_q").val()
+                            var c = $("#s_a").val()
+                            var d = $("#n_p").val()
+                            $.ajax({
+                                url:'log_Pl.py',
+                                method:'post',
+                                data:{
+                                x:"f_p",
+                                a:a,
+                                b:b,
+                                c:c,
+                                d:d,
+                                e:count
+                                },
+                                success:function(data){
+                                    alert(data)
+                                }
+                            });
+                        }
+                    }
+                }
+                else
+                    alert('Please fill all the field!')
+            });
+            $('input').on('keydown',function(a){
+                if(a.which==13)
+                    $('#sa').click()
+            })
+        </script>
+    </body>
+</html>

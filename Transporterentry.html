@@ -1,0 +1,756 @@
+<html>
+
+<head>
+    <title>Transporter Entery Form</title>
+    <link rel="icon" href="pcpllogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html{
+            font-size: 10px;
+        }
+            h2{
+                text-align: center;
+                font-size: 2.4rem;
+            }
+        * {
+            box-sizing: border-box
+        }
+        #outer {
+            width: 100%;
+            height: 100%;
+        }
+        .menu {
+                border: 1px solid rgba(0, 0, 0, 0.219);
+                background: linear-gradient(to right,rgb(225, 135, 93) 0%,rgb(219, 217, 87) 100%);
+                color: black;
+                width: 100%;
+                height: 5rem;
+        }
+            #home{
+                font-size: 1.8rem;
+                text-decoration: none;
+                color: blue;
+                margin: 1.7rem 5%;
+                float: right;
+            }
+
+        .body {
+            width: 80%;
+            margin: auto;
+        }
+
+        .id3,
+        .id4 {
+            height: 4rem;
+            width: 15rem;
+            font-size: 1.6rem;
+            border: none;
+            color: black;
+            border-radius: 1rem 1rem 0px 0px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .id3 {
+            background-color: rgb(143, 143, 233);
+            margin-left: 1rem;
+        }
+
+        .id4 {
+            background-color: #78de93;
+        }
+
+        .parent {
+            border: 1px solid rgba(0, 0, 0, 0.219);
+            background-color: lightyellow;
+            color: black;
+            text-align: center;
+            width: 100%;
+            height: 7rem;
+            margin-top: 2rem;
+        }
+
+        form {
+            margin-left: 5rem;
+        }
+
+        .parent1 {
+            display: flex;
+            height: 53rem;
+            width: 100%;
+            margin-top: 2rem;
+            background-color: rgb(230, 236, 238);
+        }
+        table{
+            margin-top: 2rem;
+            font-size: 1.7rem;
+            padding-bottom: 2rem;
+        }
+        #td1{
+            width: 20%;
+        }
+        #td2{
+            width: 30%;
+        }
+        td{
+            height: 6rem;
+        }
+        input,select{
+            height: 3rem;
+            width: 90%;
+            font-size: 1.5rem;
+            border-radius: .5rem;
+            border: 1px solid rgb(128, 137, 140);
+        }
+        input{
+            padding-left: 2rem;
+        }
+        textarea{
+            height: 5rem;
+            width: 90%;
+            font-size: 1.5rem;
+            border-radius: .5rem;
+            border: 1px solid rgb(128, 137, 140);
+            padding-left: 2rem;
+            resize: none;
+        }
+        .label {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        #sub{
+            background-color: rgb(90, 130, 204);
+            box-shadow:5px 5px 10px black;
+        }
+        #next{
+            background-color: rgb(25, 192, 25);
+            margin-left: 50px;
+            box-shadow:5px 5px 10px black; 
+        }
+        #can{
+            background-color: rgb(211, 15, 15);
+            margin-left: 50px;
+            box-shadow:5px 5px 10px black; 
+        }
+        .b1 {
+            height: 3.5rem;
+            width: 12rem;
+            border-radius: 5.6rem;
+            color: #fff;
+            cursor: pointer;
+            font-family: system-ui, -apple-system, system-ui, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+            font-size: 1.8rem;
+            transition: all .3s;
+        }
+
+        .b1:before {
+            background-color: initial;
+            background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+            border-radius: 12rem;
+            content: "";
+            height: 3rem;
+            opacity: .5;
+            transition: all .3s;
+            width: 10rem;
+        }
+        body{
+            background:linear-gradient(to bottom,rgb(143, 143, 233) 0%,rgb(159, 210, 159) 100%)
+        }
+        .b1:hover {
+            box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+            transform: scale(1.05);
+            border: solid 2px black;
+        }
+        input::-ms-reveal,
+        input::-ms-clear {
+            display: none;
+        }
+        #l1,#l2,#l3,#l4,#adds_l,#st_l,#dist_l,#l5,#l6,#l7,#l8,#l9,#l10,#l11 {
+            position: absolute;
+            color: red;
+            font-size: 1.5rem;
+            margin-left: 3rem;
+        }
+        font{
+            color: red;
+        }
+            @media (max-width:998px) {
+                html{
+                    font-size: 55%;
+                }
+            }
+            @media (max-width:768px) {
+                html{
+                    font-size: 45%;
+                }
+            }
+    </style>
+</head>
+<body oncontextmenu="return false;" style="user-select: none;">
+    <div id="outer">
+        <div class="menu">
+            <a href="Transporterentry.html"><button class="id3">Entry Form</button></a>
+            <a href="Transporterservice.html"><button class="id4">Service Form</button></a>
+            <a href="dashboard_pl.html" id="home"><font size="4rem">&#x1F3E0;</font> HOME</a>
+        </div>
+        <div class="body">
+            <div class="parent">
+                <div>
+                    <h2>TRANSPORT &nbsp; ENTRY &nbsp; FORM</h2>
+                </div>
+            </div>
+            <div class="parent1">
+                <form>
+                    <table>
+                        <tr>
+                            <td id="td1"><label for="t_id" class="label">Transporter &nbsp; Id <font>*</font></label></td>
+                            <td id="td2"><input type='text' id='t_id' value="" readonly></td>
+                            <td id="td1"><label for="n5" class="label">Bank &nbsp; Name</label></td>
+                            <td id="td2">
+                                <input type="text" placeholder="Enter Bank Name" id="n5" class="bd" autocomplete="off" style="text-transform: uppercase;">
+                                <br><label id="l5" class="l"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="n1" class="label">Transport &nbsp; Name</label><font>*</font></td>
+                            <td>
+                                <input type="text" placeholder=" Enter Transport Name" id="n1" onfocusout="validate('#n1')" onfocus="cleardata('#n1')" autocomplete="off" style="text-transform: capitalize;" autocorrect="off" autofocus>
+                                <br><label id="l1" class="l"></label>
+                            </td>
+                            <td><label for="n6" class="label">Account &nbsp; Holder &nbsp; Name</label></td>
+                            <td>
+                                <input type="text" placeholder="Enter Account Holder Name" id="n6" class="bd" autocomplete="off" style="text-transform: uppercase;">
+                                <br><label style="width: fit-content;" id="l6" class="l"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="n2" class="label">Mobile &nbsp; No.</label></td>
+                            <td>
+                                <input type="text" placeholder=" Enter Phone number" maxlength="10" id="n2" onfocus="cleardata('#n2')" autocomplete="off" style="text-transform: capitalize;">
+                                <br><label id="l2" class="l mc"></label>
+                            </td>
+                            <td><label for="n7" class="label">Account &nbsp; Number</label></td>
+                            <td>
+                                <input type="password" placeholder="Enter Account Number" id="n7" class="bd" autocomplete="off" maxlength="17">
+                                <br><label id="l7" class="l"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="n3" class="label">Landline &nbsp; No.</label></td>
+                            <td>
+                                <input type="text" placeholder=" Enter Landline number" maxlength="20" id="n3" autocomplete="off">
+                                <br><label id="l3" class="l mc"></label>
+                            </td>
+                            <td><label for="n8" class="label">Confirm &nbsp; Account &nbsp; Number</label></td>
+                            <td>
+                                <input type="text" placeholder="Enter Account Number" id="n8" class="bd" autocomplete="off" maxlength="17">
+                                <br><label id="l8" class="l"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="n4" class="label">Proprietor &nbsp; Name</label><font>*</font></td>
+                            <td>
+                                <input type="text" placeholder=" Enter Propritor Name" id="n4" onfocusout="validate('#n4')" onfocus="cleardata('#n4')" autocomplete="off" style="text-transform: capitalize;">
+                                <br><label id="l4" class="l"></label>
+                            </td>
+                            <td> <label for="n9" class="label">IFSC &nbsp; Code</label></td>
+                            <td>
+                                <input type="text" placeholder="Enter IFSC Code" maxlength="17" id="n9" class="bd" style="text-transform: uppercase;" autocomplete="off">
+                                <br><label id="l9" class="l"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="adds" class="label">Address</label><font>*</font></td>
+                            <td>
+                                <textarea name="Address" cols="42" rows="2" placeholder=" Enter Address" id="adds" style="text-transform: capitalize;" onfocusout="validate('#adds')" onfocus="cleardata('#adds')" autocomplete="off"></textarea>
+                                <br><label id="adds_l" class="l"></label>
+                            </td>
+                            <td><label for="n10" class="label"> Vehicle_type &nbsp; Available</label><font>*</font></td>
+                            <td>
+                                <select id="n10" class="ll" style="width: 125px;">
+                                    <option value="Select any one" hidden>Select any one</option>
+                                </select>
+                                <input type="text" disabled="disabled" id="n11" style="width: 150px;" onfocusout="validate('#n11')" onfocus="cleardata('#n11')" autocomplete="off">
+                                <input type="checkbox" id="ch1" style="width: 13px; height: 13px;">&nbsp; Edit
+                                <br><label id="l10" class="l"></label><label style="margin-left:100px" id="l11" class="l"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="st" class="label">State</label><font>*</font></td>
+                            <td>
+                                <select id="st" class="ll" style="text-align: center;" onfocusout="combochk('#st','#st_l')" onchange="combochk('#st','#st_l')">
+                                    <option value="Select any one" hidden>------------Select any one------------</option>
+                                    <option id="t">Andhra Pradesh</option>
+                                    <option>Arunachal Pradesh</option>
+                                    <option>Assam</option>
+                                    <option>Bihar</option>
+                                    <option>Chattisgarh</option>
+                                    <option>Delhi</option>
+                                    <option>Goa</option>
+                                    <option>Gujarat</option>
+                                    <option>Haryana</option>
+                                    <option>Himachal Pradesh</option>
+                                    <option>Jammu & Kashmir</option>
+                                    <option>Jharkhand</option>
+                                    <option>Karnataka</option>
+                                    <option>Kerala</option>
+                                    <option>Lakshadweep</option>
+                                    <option>Madhya Pradesh</option>
+                                    <option>Maharashtra</option>
+                                    <option>Manipur</option>
+                                    <option>Meghalaya</option>
+                                    <option>Mizoram</option>
+                                    <option>Nagaland</option>
+                                    <option>Odisha</option>
+                                    <option>Punjab</option>
+                                    <option>Rajasthan</option>
+                                    <option>Sikkim</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Telangana</option>
+                                    <option>Tripura</option>
+                                    <option>Uttar Pradesh</option>
+                                    <option>Uttarakhand</option>
+                                    <option>West Bengal</option>
+                                    <option>Andaman & Nicobar</option>
+                                    <option>Chandigarh</option>
+                                    <option>Dadra & Nagar Haveli and Daman & Diu</option>
+                                    <option>Pondicherry</option>
+                                </select><br><label id="st_l" class="l"></label>
+                            </td>
+                            <td colspan="2" rowspan="2" style="text-align: center;">
+                                <input type="button" value="SUBMIT" class="b1" id="sub" onclick="blank()">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="dist" class="label">District</label><font>*</font></td>
+                            <td>
+                                <select id="dist" class="ll" style="text-align: center;" onchange="combochk('#dist','#dist_l')" onfocusout="combochk('#dist','#dist_l')">
+                                    <option value="Select any one" hidden>-------------Select any one-------------</option>
+                                </select><br><label id="dist_l" class="l" ></label>
+                            </td>
+                        </tr>
+                    </table>       
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        var dipo=localStorage.getItem('did').trim()
+        var aid = 0;
+            $(document).ready(function(){
+                a=document.referrer;
+                if(!(a=='http://localhost/pl_test/dashboard_pl.html' || a=='http://localhost/pl_test/Transporterentry.html' || a=='http://localhost/pl_test/Transporterservice.html'))
+                    window.location.href='index.html';
+            });
+        function bank() {
+            // flag=true
+            a = $('#n5').val()
+            b = $('#n6').val()
+            c = $('#n7').val()
+            d = $('#n8').val()
+            e = $('#n9').val()
+            if (a != '' || b != '' || c != '' || d != '' || e != '') {
+                if (a == '') {
+                    flag = false
+                    alert('Please enter bank name')
+                    $('#n5').focus()
+                }
+                else if (b == '') {
+                    flag = false
+                    alert('Please enter account holder name')
+                    $('#n6').focus()
+                }
+                else if (c == '') {
+                    flag = false
+                    alert('Please enter account no')
+                    $('#n7').focus()
+                }
+                else if (d == '') {
+                    flag = false
+                    alert('Please enter confirm account no')
+                    $('#n8').focus()
+                }
+                else if (e == '') {
+                    flag = false
+                    alert('Please enter IFSC CODE')
+                    $('#n9').focus()
+                }
+                else {
+                    if (c != d) {
+                        flag = false
+                        alert('Account no. and confirm acc no. does not match')
+                        $('#n8').focus()
+                    }
+                }
+            }
+        }
+
+        function validate(id) {
+
+            $('.l').text("");
+            var a = $(id).val();
+
+            if (a.trim().length == 0) {
+                $(id).val("*Field is mandatory");
+                $(id).css({ 'border': '2px solid red', 'color': 'red' });
+                flag = false;
+            }
+            else if (a == '*Field is mandatory') {
+                flag = false;
+            }
+            if (id == 'n11') { //vehicle_type textfield
+                if (a.trim().length == 0) {
+                    $('#l10').text("*Please  select any one!")
+                }
+                else {
+                    $('#l10').text("")
+                }
+            }
+        }
+
+        function cleardata(x) {
+            var a = $(x).val();
+            if (a == '*Field is mandatory' || a == '*Please  select any one!') {
+                $(x).val("");
+                $(x).css({ 'border': 'solid 1px black', 'color': 'black' });
+            }
+        }
+
+        function blank() {
+            validate('#n1');
+            validate('#n4');
+            validate('#adds');
+            validate('#n11');
+            combochk('#st', '#st_l')
+            combochk('#dist', '#dist_l')
+
+            var st = $('#n2').val();
+
+            if (st.length != 0)
+                if (st.length != 10) {
+                    flag = false
+                    $("#l2").text("Must be 10 digit!")
+                }
+        }
+
+
+        function Cancel() {
+            window.location.reload()
+        }
+
+        $(function () {
+            $('input').on('keypress', function (e) {
+                if (e.which === 32 && e.target.selectionStart === 0 || e.which === 46 && e.target.selectionStart === 0) {
+                    return false;
+                }
+            });
+        });
+        $(function () {
+            $('.address').on('keypress', function (e) {  //address
+                $('#adds_l').html("")
+                if (!(e.which >= 65 && e.which <= 90 || e.which >= 97 && e.which <= 122 || e.which >= 48 && e.which <= 57 || e.which === 32 || e.which === 46 || e.which === 44 || e.which === 45 || e.which === 47 || e.keyCode === 13)) {
+                    $('#adds_l').html("*Enter valid address")
+                    return false;
+                }
+                if (e.which === 32 && e.target.selectionStart === 0 || e.which == 44 && e.target.selectionStart == 0 || e.which == 45 && e.target.selectionStart == 0 || e.which == 46 && e.target.selectionStart == 0 || e.which == 47 && e.target.selectionStart == 0 || e.which == 48 && e.target.selectionStart == 0) {
+                    $('#adds_l').html("Space,.,-,/,comma,0 At First Not Allowed!")
+                    return false;
+                }
+                else {
+                    $('#adds_l').html("");
+                }
+            });
+        });
+
+        $(function () {
+            $('#n1').on('keypress', function (e) { //transporter name
+                $('#l1').html("")
+                if (!(e.which >= 65 && e.which <= 90 || e.which >= 97 && e.which <= 122 || e.which === 32 || e.which === 46)) {
+                    $('#l1').html("*Only Alphabets, dot and space allowed")
+                    return false;
+                }
+            })
+        })
+
+        $(function () {
+            $('#n4').on('keypress', function (e) {  //propritor name
+                $('#l4').html("")
+                if (!(e.which >= 65 && e.which <= 90 || e.which >= 97 && e.which <= 122 || e.which === 32 || e.which === 46)) {
+                    $('#l4').html("*Only Alphabets, dot and space allowed")
+                    return false;
+                }
+                else if (e.which === 46 && e.target.selectionStart === 0) {
+                    $('#l4').html("*Dot at first not allowed!")
+                    return false;
+                }
+            })
+        })
+        $(function () {
+            $('#n5').on('keypress', function (e) { //bank name
+                $('#l5').html("")
+                if (!(e.which >= 65 && e.which <= 90 || e.which >= 97 && e.which <= 122 || e.which === 32)) {
+                    $('#l5').html("*Only alphabets allowed")
+                    return false;
+                }
+            })
+        })
+        $(function () {
+            $('#n6').on('keypress', function (e) {  //account holder name
+                $('#l6').html("")
+                if (!(e.which >= 65 && e.which <= 90 || e.which >= 97 && e.which <= 122 || e.which === 32 || e.which === 46)) {
+                    $('#l6').html("*Alphabets, dot and space allowed")
+                    return false;
+                }
+            })
+        })
+
+        $(function () {
+            $('#n2').on('keypress', function (e) { //mobile no.
+                if (!(e.which >= 48 && e.which <= 57)) {
+                    $('#l2').html("*Only digits allowed")
+                    return false;
+                }
+                else if (e.which === 48 && e.target.selectionStart === 0) {
+                    $('#l2').html("*Zero at first not allowed!")
+                    return false;
+                }
+                else {
+                    $('#l2').html("");
+                    // numchk()
+                }
+            })
+        })
+        $(function () {
+            $('#n3').on('keypress', function (e) { //landline no.
+                if (!(e.which >= 48 && e.which <= 57)) {
+                    $('#l3').html("*Only digits allowed")
+                    return false;
+                }
+                else if (e.which === 48 && e.target.selectionStart === 0) {
+                    $('#l3').html("*Zero in the starting not allowed!")
+                    return false;
+                }
+                else if (e.which === 32) {
+                    return false;
+                }
+                else {
+                    $('#l3').html("");
+                    // numchk()
+                }
+            })
+        })
+        $(function () {
+            $('#n7').on('keypress', function (e) {  //account no.
+                $('#l7').html("")
+                if (!(e.which >= 48 && e.which <= 57)) {
+                    $('#l7').html("*Only digits allowed")
+                    return false;
+                }
+            });
+        });
+
+        $(function () {
+            $('#n8').on('keypress', function (e) {  //confirm account no.
+                $('#l8').html("")
+                if (!(e.which >= 48 && e.which <= 57)) {
+                    $('#l8').text("*Only digits allowed")
+                    return false;
+                }
+            });
+        });
+
+        $(function () { //validate account no.
+            $('#n8').on('focusout', function (e) {
+                a = $('#n7').val();
+                b = $('#n8').val();
+                if (a != b) {
+                    $('#l8').html("*Enter correct account number!");
+                }
+                else {
+                    $('#l8').html("");
+                }
+            });
+        });
+        $(function () {
+            $('#n9').on('keypress', function (e) {  //IFSC code
+                $('#l9').html("")
+                if (!(e.which >= 65 && e.which <= 90 || e.which >= 97 && e.which <= 122 || e.which >= 48 && e.which <= 57)) {
+                    $('#l9').html("*Only alphabets and digit allowed")
+                    return false;
+                }
+                else if (e.which === 48 && e.target.selectionStart === 0) {
+                    $('#l9').html("*Zero at first not allowed!")
+                    return false;
+                }
+            });
+        });
+        function combochk(iid, lab) { //state,dist
+            $(lab).text(" ")
+            var ca = document.querySelector(iid);
+            if (ca.value == 'Select any one') {
+                $(lab).text("*Please  select any one!");
+                flag = false
+            }
+            else
+                $(lab).text("");
+
+            if (iid == '#st') {
+                var ca = document.querySelector(iid);
+                if (ca.value == 'Select any one') {
+                    $(lab).text("*Please  select any one!");
+                    flag = false
+                }
+                else {
+                    $(lab).text("");
+                }
+            }
+        }
+        $('#st').on('change', function () {
+            $("#dist option[value!='Select any one']").remove();
+            var ca = document.querySelector('#st');
+            $.ajax({
+                url: 'TransEntSer.py',
+                method: 'post',
+                data: {
+                    x: 'distadd',
+                    t1: ca.value
+                },
+                success: function (data) {
+                    $('#dist').append(data);
+                }
+            });
+        });
+        $(document).ready(function () { //inputtypetext,detach
+            $("#n10").click(function () {
+                var a = $("#n10").val();    //vehicle type combo  box
+                if (a !== 'Select any one') {
+                    if ($('#n11').val() == "*Field is mandatory")
+                        $('#n11').val("")
+                    $('#n11').css({ 'border': '2px solid black', 'color': 'black' })
+                    $('#n11').val($('#n11').val() + a + ",")
+                    $('#n10 option:selected').detach();
+                }
+            });
+        });
+        $(document).ready(function () { //checkox clicked
+            $("#ch1").click(function () {
+                if ($('#ch1').is(":checked")) {
+                    $("#n11").removeAttr('disabled');
+                    $('#l11').html("*Please add , after each vehicle type!")
+                } else {
+                    $("#n11").attr('disabled', 'disabled');
+                    $('#l11').html("")
+                }
+            });
+        });
+        function auto(){ // transporter id
+            $.ajax({
+                url: "TransEntSer.py",
+                method: "post",
+                success: function (data) {
+                    var j = data.split(',,,')
+                    aid = j[0]
+                    $('#t_id').val(j[1]);
+                }
+            });
+        }
+        $(document).ready(function () {
+            auto()
+        });
+        $('#sub').click(function () {
+            flag = true
+            blank()
+            var tid = $('#t_id').val();
+            var a = $("#n1").val().trim();
+            var b = $('#n2').val();
+            var c = $('#n3').val();
+            var d = $('#n4').val();
+            var e = $('#adds').val();
+            var f = $('#st option:selected').val();
+            var g = $('#dist option:selected').val();
+            var h = $('#n5').val();
+            var i = $('#n6').val();
+            var j = $('#n7').val();
+            var k = $('#n9').val();
+            var l = $('#n11').val().trim();
+            bank()
+            l = l.substring(0, l.length - 1);
+            // alert(aid)
+
+            if (flag) {
+                flag=confirm('Are you sure you want to insert this record')
+                $.ajax({
+                    url: "TransEntSer.py",
+                    method: "post",
+                    data: {
+                        x: 'inst',
+                        t1: tid,
+                        t2: a,
+                        t3: b,
+                        t4: c,
+                        t5: d,
+                        t6: e,
+                        t7: f,
+                        t8: g,
+                        t9: h,
+                        t10: i,
+                        t11: j,
+                        t12: k,
+                        t13: l,
+                        t14: aid,
+                        t15:dipo
+                    },
+                    success: function (data) {
+                        if(data==5)
+                            alert('Record all ready exist!')
+                        else if(data==4){
+                            alert('This Transportor id already exit, please click ok to generate new ID!')
+                            auto()
+                        }
+                        else{
+                            var j = data.split(',,,')
+                            if (j[1] == 0) {
+                                alert(j[0])
+                                window.location.reload()
+                            }
+                            else {
+                                alert(data)
+                            }
+                        }
+                    }
+                });
+            }
+        });
+        // #######################################################
+        $(document).ready(function(){
+            $.ajax({
+                url:'TransEntSer.py',
+                method:'post',
+                data:{
+                    x:'load',
+                    t1:dipo
+                },
+                success:function(data){
+                    $('#n10').append(data)
+                }
+            })
+        })
+        $('input').on('keydown',function(a){
+            b=$(this).attr('id')
+            if (a.which==13)
+                $('.b1').click()
+            else if(a.which==9 && (b=='n1' || b=='n2' || b=='n4' || b=='n3'))
+                $(this).parent('td').next('td').next('td').children('input').focus()
+            else if(a.which==9 && (b=='n5' || b=='n6' || b=='n7' || b=='n8'))
+                $(this).parent('td').parent('tr').next('tr').children('td').first().next('td').children('input').focus()
+        })
+        // $('input').on('keydown',function(a){
+        //     if(a.which==9)
+        //         $(this).closest('input').val('fgg')
+        // })
+        // #######################################################
+    </script>
+</body>
+
+</html>

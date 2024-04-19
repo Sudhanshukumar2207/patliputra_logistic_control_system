@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <title>Invoice Generation</title>
+        <style>
+            #t1,#t1 th,#t1 td{
+                border: 2px solid black;
+                border-collapse: collapse;
+                padding:5px;
+            }
+            #t1 td{
+                text-align: center;
+            }
+            #t1{
+                height: 520px;
+                width: 900px;
+            }
+            #div1,#div2{
+                float: left;
+            }
+            #div1 img{
+                margin-top: 50%;
+                margin-left: 10px;
+                height: 70px;
+                width: 100px;
+            }
+            #div2{
+                width: 79%;
+            }
+            #button,#b1{
+                margin-left: 40%;
+                margin-top: -4%;
+                position: absolute;
+                height: 30px;
+                width: 100px;
+            }
+            #b1{
+                margin-left: 50%;
+            }
+            @media print{
+                #button{
+                    display: none;
+                }
+                body img {
+                width: 90%; max-height: 400px; 
+                } 
+            }
+            tr{
+                width: 100%;
+            }
+            td{
+                width: 121px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="height: auto; width: 900px;">
+            <b style="margin-left:40%;">Subject to Patna Jurisdiction only &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Office Copy</b>
+            <table id="t1">
+                <tr>
+                   <td colspan="6" >
+                    <div id="div1"><img src="Image PTC.png"></div>
+                    <div id="div2">
+                        <h1><b><label class="pl">Patliputra Logistics</label></b></h1>
+                        <p><b>Adm. office :- Dumri Kothi, Ashok Raj Path, Patna-800001</b></p>
+                        <p>BIHAR 800001</p>
+                        <p>GSTIN : 10AAFHS9990L1Z2</p>
+                    </div>
+                   </td>
+                    <td style="width: 200px;"><b>LR N0 :</b> <label class="lrno">PL/D001/23/000001</label><br><br>
+                        <b>Date :</b> &nbsp; <label class="lrda">2023/03/20</label>
+                   </td>
+                </tr>
+                <tr> 
+                    <td colspan="7">
+                        <table style="width: 900px; border-collapse:collapse; margin: 0px;">
+                            <tr>
+                                <td style="width: 355px;"><b>Consignor</b> 
+                                    <p class="dipo_add">Hello Sudhanshu Kumar, How are you and what do you do Hello Sudhanshu Kumar, How are you and what do you do</p>
+                                </td>
+                                <td style="width: 355px;"><b>Consignee</b>
+                                    <p class="dis_add">Hello Sudhanshu Kumar, How are you and what do you do Hello Sudhanshu Kumar, How are you and what do you do</p>
+                                </td>
+                                <td style="width: 206px;">
+                                    <p><b>From :</b> &nbsp; &nbsp; <label class="from">Patna</label></p>
+                                    <p><b>To :</b> &nbsp; &nbsp; <label class="to">Delhi</label></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><b>No. of Pkgs.</b></td>
+                    <td rowspan="2" colspan="4"><b>particulars of goods said to contained</b></td>
+                    <td rowspan="2"><b>Actual Weight</b></td>
+                    <td rowspan="6">
+                        <table id="t2" style="border-collapse: collapse;">
+                            <tr>
+                                <td rowspan="2"><b>Date</b></td>
+                                <td colspan="2"><b>Amount</b></td>
+                            </tr>
+                            <tr>
+                                <td>Rs.</td>
+                                <td>P.</td>
+                            </tr>
+                            <tr><td>P.F</td><td>0</td><td></td></tr>
+                            <tr><td>Loading</td><td>0</td><td></td></tr>
+                            <tr><td>Ins. Ch.</td><td>0</td><td></td></tr>
+                            <tr><td>B Chrg.</td><td>0</td><td></td></tr>
+                            <tr><td>Total</td><td>0</td><td></td></tr>
+                            <tr><td>Advance</td><td>0</td><td></td></tr>
+                            <tr><td>Balance</td><td>0</td><td></td></tr>
+                        </table>
+                    </td>
+                </tr>
+                
+                <tr>
+                </tr>
+               <tr>
+                    <td></td>
+                    <td colspan="4" style="text-align: left;"><b>RBI GOODS</b>
+                        <p><b>Invno   : &nbsp;</b><label class="i_no">545656565654525</label></p>
+                        <p><b>Inv<b>Date :</b> &nbsp; </b><label class="i_da">2023/03/20</label></p>
+                        <p><b>Permit No  : &nbsp; </b>Attach</p>
+                    </td>
+                    <td rowspan="4"><label class="we">Weight</label></td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="text-align: left;"><b> Grand Total :</b></td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="text-align: left;"><b>Goods Value : &nbsp;&nbsp; </b><label class="i_val">4795865265656</label></td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="text-align: left;"><b> Lorry No. : &nbsp;&nbsp; </b><label class="v_no">54562555656565</label></td>
+                </tr>
+                <tr>
+                    <td colspan="7" style="text-align: left;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+                    <b> Transporter Name : &nbsp; </b><label class="t_n">Tours And travel</label> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
+                    <b> Vehicle Type : &nbsp; </b><label class="v_t">Pickup</label></td>
+                </tr>
+            </table>
+            Remark :- <br>
+            Goods Carried at Owner's Risk, insured with the company against specific risk.<br>
+            Owner's responsibility for Wrong declaration or goods octroi terminal Tax & other on-route for other terms, see overleaf.<br>
+            Absolutely on Owner's Risk Company has no liability towards Insuarance Company.
+            <p><b>Signature</b></p>
+            <input type="button" value="Print" onclick="window.print()" id="button"><input type="button" value="Close" id="b1">
+        </div>
+    </body>
+</html>
